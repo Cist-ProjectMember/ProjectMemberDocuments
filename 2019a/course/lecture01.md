@@ -46,12 +46,14 @@ class PoisonSkill {
 }
 ```
 
-さらに、各スキルには基礎ダメージ値(basePower)が必ず存在し、毒のような付与効果のあるスキルには付与効果リスト(effects)が存在することとする。
+さらに、各スキルには基礎ダメージ値(basePower)やクールタイム(coolTime)、スキル発動のためのコスト(cost)が必ず存在し、毒のような付与効果のあるスキルには付与効果リスト(effects)が存在することとする。
 
 ```java
 // 通常攻撃
 class AttackSkill {
     private long basePower;
+    private long coolTime;
+    private long cost;
     public void cast(Target t){}
     public String getDescription(){}
 }
@@ -59,6 +61,8 @@ class AttackSkill {
 // 毒攻撃
 class PoisonSkill {
     private long basePower;
+    private long coolTime;
+    private long cost;
     // Effectは付与効果の情報を持つ
     private List<Effect> effects;
     public void cast(Target t){}
@@ -66,61 +70,49 @@ class PoisonSkill {
 }
 ```
 
-加えて、
+加えて、防御無視ダメージを与えるスキル、与えたダメージの一部を吸収するスキルなど、数百種類のスキルがこのほかに存在するとする。
+このとき、上に挙げたクラスのbasePowerフィールドやcast()メソッド、getDescription()メソッドはどのクラスにも存在するため、各クラスに同じようなコードが書かれることになる。
+
+ここで、"継承" を用いることによりこの状況を回避できる。
+以下に例を示す。
 
 
 ## 例
 
 ```java
-public class Human {
-    protected int height;
-    protected int weight;
-    protected String name;
-    public Human(String name, int height, int weight){
-        this.name = name;
-        this.height = height;
-        this.weight = weight;
-    }
-
-    public void say(){
-        System.out.println("我は人間なり.");
-    }
+// すべてのスキルの元となるクラス
+public class Skill {
+    protected long basePower;
+    protected long coolTime;
+    protected long cost;
+    public void cast(Target t){}
+    public String getDescription(){}
 }
-```
 
-```java
-// 大統領クラス
-public class President extends Human{
-    public President(String name, int height, int weight){
-        super(name, height, weight);
-    }
-
+// Skillを継承したAttackSkill
+public class AttackSkill extends Skill {
     @Override
-    public void say(){
-        System.out.println("我は大統領なり.");
-    }
+    public void cast(Target t){}
+    @Override
+    public String getDescription(){}
 }
-```
 
-```java
-// メインクラス
-public class Main {
-    public static void main(String[] args) {
-        Human[] humans = new Human[2];
-        humans[0] = new Human("Yamada", 180, 84);
-        humans[1] = new President("Trump", 182, 140);
-        for(Human human : humans){
-            human.say();
-        }
-    }
+// 付与効果を持つスキル
+public class ElementalSkill extends Skill {
+    protected List<Effect> effects;
+    @Override
+    public void cast(Target t){}
+    @Override
+    public String getDescription(){}
 }
-```
 
-実行結果
-
-```text
-我は人間なり.
-我は大統領なり.
+// ElementalSkillを継承したPoisonSkill
+public class PoisonSkill extends ElementalSkill {
+    @Override
+    public void cast(Target t){}
+    @Override
+    public String getDescription(){}
+}
 ```
 
 ## 演習課題
