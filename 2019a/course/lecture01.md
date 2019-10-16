@@ -1,119 +1,103 @@
 # 継承
 
+## キーワード
+
+* 継承
+* extends
+* super
+
 ## 継承とは
 
-似たようなクラスの共通部分(フィールド、メソッド)を別クラスとして切り出し、そのフィールドやメソッドを別クラスで受け継ぐことである。
+似たようなクラスの共通部分(フィールド、メソッド)を別クラスとして切り出し、そのフィールドやメソッドを別クラスに受け継いだり、上書きや追加をすることである。
+とは言っても、なかなか想像しがたいと思われるので、継承のイメージを以下の例でつかんでいただきたい。
 
 ## イメージ
 
-RPGを題として継承を考えてみる。プレイヤーキャラクターは様々なスキルを持ち、あるものはダメージを与え、またあるものは毒効果が付与されるなど、それぞれ対象に与える効果が異なる。ここで「それぞれのスキルクラスを作成せよ」と言われれば、通常なら以下のようにするはずである。
+ここではRPGを題材として継承を考えてみたい。
+プレイヤーキャラクターはattackメソッドを用いてスライムに対して通常攻撃をすることができる。
 
 ```java
-// 通常攻撃
-class AttackSkill {  }
-
-// 毒攻撃
-class PoisonSkill {  }
-```
-
-それぞれのスキルには効果を与える対象がいるため、メソッドが必要となる。(ここではcast(Target)とする)
-
-```java
-// 通常攻撃
-class AttackSkill {
-    public void cast(Target t){}
-}
-
-// 毒攻撃
-class PoisonSkill {
-    public void cast(Target t){}
+public class Player {
+    // スライムへの攻撃メソッド
+    public void attack(Slime slime){
+        slime.setHitPoint(slime.getHitPoint() - 10);
+    }
 }
 ```
 
-ここで新たに、発動するスキルをプレイヤーが選択するのに必要となる、各スキルの持つ効果をString型で返すメソッドを追加する。(ここではgetDescription()とする)
+また、コウモリに対しても通常攻撃することができる。
 
 ```java
-// 通常攻撃
-class AttackSkill {
-    public void cast(Target t){}
-    public String getDescription(){}
-}
-
-// 毒攻撃
-class PoisonSkill {
-    public void cast(Target t){}
-    public String getDescription(){}
+public class Player {
+    // スライムへの攻撃メソッド
+    public void attack(Slime slime){
+        slime.setHitPoint(slime.getHitPoint() - 10);
+    }
+    
+    // コウモリへの攻撃メソッド
+    public void attack(Bat bat){
+        bat.setHitPoint(bat.getHitPoint() - 10);
+    }
 }
 ```
 
-さらに、各スキルには基礎ダメージ値(basePower)やクールタイム(coolTime)、スキル発動のためのコスト(cost)が必ず存在し、毒のような付与効果のあるスキルには付与効果リスト(effects)が存在することとする。
+ここで、引数の型が異なる同名のメソッドを定義しているが、これを **メソッドのオーバーロード** と呼ぶ。
+
+さらに、トラやライオンに対しても通常攻撃できるとすると以下のようになる。
 
 ```java
-// 通常攻撃
-class AttackSkill {
-    private long basePower;
-    private long coolTime;
-    private long cost;
-    public void cast(Target t){}
-    public String getDescription(){}
-}
-
-// 毒攻撃
-class PoisonSkill {
-    private long basePower;
-    private long coolTime;
-    private long cost;
-    // Effectは付与効果の情報を持つ
-    private List<Effect> effects;
-    public void cast(Target t){}
-    public String getDescription(){}
+public class Player {
+    // スライムへの攻撃メソッド
+    public void attack(Slime slime){
+        slime.setHitPoint(slime.getHitPoint() - 10);
+    }
+    
+    // コウモリへの攻撃メソッド
+    public void attack(Bat bat){
+        bat.setHitPoint(bat.getHitPoint() - 10);
+    }
+    
+    // トラへの攻撃メソッド
+    public void attack(Tiger tiger){
+        tiger.setHitPoint(tiger.getHitPoint() - 10);
+    }
+    
+    // ライオンへの攻撃メソッド
+    public void attack(Lion lion){
+        lion.setHitPoint(lion.getHitPoint() - 10);
+    }
 }
 ```
 
-加えて、防御無視ダメージを与えるスキル、与えたダメージの一部を吸収するスキルなど、数百種類のスキルがこのほかに存在するとする。
-このとき、上に挙げたクラスのbasePowerフィールドやcast()メソッド、getDescription()メソッドはどのクラスにも存在するため、各クラスに同じようなコードが書かれることになる。
+続いて、ダンジョンに潜むスケルトンや魔術師、最終階に待ち受ける魔王を...
+そろそろ気づいたかと思われるが、この設計ではモンスターが増えるたびにPlayerクラスの持つattackメソッドが数十、数百と増えることになる。
+ただ、それぞれのattackメソッドの処理を見てみると、どれも変数名は違えど体力をへらすという処理は同じである。
+ここで用いるのが継承である。
 
-ここで、"継承" を用いることによりこの状況を回避できる。
-以下に例を示す。
-
-
-## 例
+継承を使うと、上の膨大なモンスター達は以下のようにまとめることができる。
 
 ```java
-// すべてのスキルの元となるクラス
-public class Skill {
-    protected long basePower;
-    protected long coolTime;
-    protected long cost;
-    public void cast(Target t){}
-    public String getDescription(){}
+// モンスタークラス
+public class Monster {
+    // フィールドやアクセサは省略する
 }
 
-// Skillを継承したAttackSkill
-public class AttackSkill extends Skill {
-    @Override
-    public void cast(Target t){}
-    @Override
-    public String getDescription(){}
+// スライムクラス
+public class Slime extends Monster {
+    // フィールドやアクセサは省略する
 }
 
-// 付与効果を持つスキル
-public class ElementalSkill extends Skill {
-    protected List<Effect> effects;
-    @Override
-    public void cast(Target t){}
-    @Override
-    public String getDescription(){}
-}
-
-// ElementalSkillを継承したPoisonSkill
-public class PoisonSkill extends ElementalSkill {
-    @Override
-    public void cast(Target t){}
-    @Override
-    public String getDescription(){}
+// プレイヤークラス
+public class Player {
+    public void attack(Monster monster){
+        monster.setHitPoint(monster.getHitPoint() - 10);
+    }
 }
 ```
+
+同じようなフィールド、メソッドを持つと分かっているクラスが設計段階で存在するのであれば、事前に抽象的なクラスとしてクラスを定義しておけば、これを継承したクラスを逐一作成することでコード量を削減することに繋がり、加えてバグの発生確率も減らすことができる。
+今回の例の場合では、Playerのattackメソッドに3行程度消費しているため、モンスターの種類が100種類いるのであれば3行\*100種類の300行減らしたことになる。
+実際には何でもかんでも継承を用いればすべてが解決するというわけではないため、場合によって使い分けることが必要である。どういった場合には継承を用いるべきなのかを判断できるようになれば、Java以外のその他のオブジェクト指向言語でもその知識が生かせるだろう。
 
 ## 演習課題
 
