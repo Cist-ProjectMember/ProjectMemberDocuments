@@ -1,1 +1,3 @@
 # ProjectMemberDocuments
+
+公立千歳科学技術大学におけるプロジェクトメンバーのドキュメント
