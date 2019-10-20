@@ -7,6 +7,40 @@
 * 実装
 * implements
 
+## インターフェイスとは
+
+インターフェイス(interface)とは、境界や接触面を表す英語で、Javaにおいてはメソッドの宣言のみが書かれたものの事である。
+C言語を学んだ者に対しては、「Javaにおけるインターフェイス ≒ C言語における関数のプロトタイプ宣言」だと思ってもらって差し支えない。
+Javaでインターフェイスを宣言するには <i>interface</i> キーワードを用いて以下のように記述する。
+
+```java
+public interface IHogeHoge {
+  void hoge();
+}
+```
+
+インターフェイスは継承のときと同じように、メソッドを引き継ぐことができるが、その呼び方は「継承」ではなく「実装」となる。
+呼び間違えないように気を付けること。
+以下にインターフェイスを実装する場合の例を示す。
+
+```java
+// FugaFugaクラスはIHogeHogeインターフェイスを実装している
+public class FugaFuga implements IHogeHoge{
+  @Override
+  void hoge(){
+    System.out.println("ほげ");
+  }
+}
+```
+
+また、一度に複数のインターフェイスを実装する場合は、カンマ区切りでimplementsする。
+
+```java
+public class Hoge implements Fuga, Piyo, Bar, Baz {
+  // 省略
+}
+```
+
 ## 演習課題
 
 ### 取り組む前に
@@ -68,14 +102,14 @@ UnmotivatedHumanのtogglePowerメソッドでは、"やる気出たー！"と表
 ### 課題6
 
 Exercise06クラスを作成し、mainメソッドを追加しなさい。</br>
-mainメソッドでIPowerToggleable型の変数を3つ宣言し、それぞれComputer、AirConditioner、UnmotivatedHumanをインスタンス化しなさい。
+mainメソッドでIPowerToggleable型の変数を3つ宣言し、それぞれComputer、AirConditioner、UnmotivatedHumanをインスタンス化しなさい。</br>
 インスタンス化したComputer、AirConditioner、UnmotivatedHumanのtogglePowerメソッドをそれぞれ呼び出しなさい。
 
 ### 課題7
 
 Exercise07クラスを作成し、mainメソッドを追加しなさい。</br>
-mainメソッドでIPowerToggleableを型引数にとるListを宣言しなさい。
-Computer、AirConditioner、UnmotivatedHumanをインスタンス化し、addメソッドを用いて上で宣言したListに追加しなさい。
+mainメソッドでIPowerToggleableを型引数にとるListを宣言しなさい。</br>
+Computer、AirConditioner、UnmotivatedHumanをインスタンス化し、addメソッドを用いて上で宣言したListに追加しなさい。</br>
 Listに追加後、for文を用いてそれぞれのtogglePowerメソッドを呼び出しなさい。
 
 #### 実行結果
@@ -84,4 +118,45 @@ Listに追加後、for文を用いてそれぞれのtogglePowerメソッドを�
 電源の状態が変化しました。
 北海道ではエアコンはレアです。
 やる気出たー！
+```
+
+## コラム
+
+### そもそも継承やインターフェイスは必要か
+
+必ずしも必要ではない。</br>
+現にオブジェクト指向ではない言語にはそういった機能は存在しない(代替となるような機能は存在する)。</br>
+それでも必要とされる理由には、「他人に実装を強制させられるから」といった理由や、「必ず特定のメソッドやフィールドを持っているということを保証できるから」という理由がある(その他理由はさまざま)。
+
+### 宣言と定義
+
+いくつかのプログラミング言語にも言えることだが、「Xを宣言しなさい」と「Xを定義しなさい」は別物である。</br>
+文字で説明すると分かりづらいため、以下にそれぞれの例を挙げる。
+
+```java
+public class Hoge {
+  // これは宣言
+  public int fuga;
+}
+```
+
+```java
+public class HogeHoge {
+  // これは定義
+  public int fuga = 0;
+}
+```
+
+「fugaという変数があります」というただの宣言と、「fugaという変数は0という値です」という定義をしているかという違いである。</br>
+学習サイトなどでも混同されがちなため、よく注意すること。
+
+### インターフェイスにフィールドを持たせる
+
+Javaにおけるinterfaceは、メソッドの宣言のみしか記述できないというわけではなく、定数(staticかつfinal指定された値)も定義することができる。
+
+```java
+public interafce IHoge {
+  static final long bar = 2019;
+  void fuga();
+}
 ```
