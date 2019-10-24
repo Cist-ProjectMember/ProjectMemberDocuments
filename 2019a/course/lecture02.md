@@ -70,7 +70,7 @@ ComputerのtogglePowerメソッドでは、"電源の状態が変化しました
 ```java
 public class Computer [] IPowerToggleable {
   @[]
-  void togglePower(){
+  public void togglePower(){
     [];
   }
 }
