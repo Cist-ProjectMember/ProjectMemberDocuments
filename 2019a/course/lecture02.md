@@ -46,7 +46,7 @@ public class Hoge implements Fuga, Piyo, Bar, Baz {
 ### 取り組む前に
 
 第1回講習にて作成したProjectMember2019aプロジェクトにlecture02パッケージを作成しなさい。</br>
-以下の課題では、作成したlecture01パッケージ内で作業を行うこと. 引数および戻り値は各自判断すること。
+以下の課題では、作成したlecture02パッケージ内で作業を行うこと. 引数および戻り値は各自判断すること。
 
 ### 課題1
 
