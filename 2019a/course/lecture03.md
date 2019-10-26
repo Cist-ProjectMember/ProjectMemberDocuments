@@ -18,15 +18,16 @@ IntelliJを使用する場合は専用のウィンドウからデータベース
 
 SQLを発行して以下のカラムを持つaccountテーブルを作成しなさい。
 
-|カラム名|データ型|列制約|  
-|---|---|---|
-|id|bigint|主キー|
-|name|varchar(64)|非NULL|
-|password|varchar(32)|非NULL|
+|カラム名|データ型|列制約|備考|
+|---|---|---|---|
+|id|bigint|主キー|-|
+|name|varchar(64)|非NULL|-|
+|password|varchar(32)|非NULL|-|
 
 ### 課題2
 
-SQLを発行してaccountテーブルに以下のデータを追加しなさい。
+SQLを発行してaccountテーブルに以下のデータを追加しなさい。</br>
+また、accountテーブルのデータを全て表示しなさい。
 
 |id|name|password|
 |---|---|---|
@@ -37,8 +38,33 @@ SQLを発行してaccountテーブルに以下のデータを追加しなさい�
 
 ### 課題3
 
-count関数を使用してaccountテーブルの行数を取得しなさい。
+SQLを発行して以下のカラムを持つaccount_gradeテーブルを作成しなさい。
+
+|カラム名|データ型|列制約|備考|
+|account_id|bigint|主キー|accountテーブルのidを参照しレコードが削除されたら同時に削除する|
+|grade|integer|非NULL|-|
 
 ### 課題4
 
+SQLを発行してaccount_gradeテーブルに以下のデータを追加しなさい。</br>
 
+|account_id|grade|
+|---|---|
+|1|1|
+|2|1|
+|3|3|
+|4|2|
+
+### 課題5
+
+gradeが2以上のデータを表示しなさい。
+ただし、account(id,name)とaccount_grade(grade)を表示すること。
+
+```text
+|id|name|grade|
+|---|---|---|
+|3|account3|3|
+|4|account4|2|
+```
+
+### 
