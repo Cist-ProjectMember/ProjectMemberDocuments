@@ -7,7 +7,6 @@
 * UNIQUE
 * PRIMARY KEY
 * FOREIGN KEY
-* CASCADE
 
 ## 概要
 
@@ -23,14 +22,28 @@ UNIQUE制約が付与されたカラムは一意でなければならない(同�
 
 #### PRIMARY KEY制約
 
-PRIMARY KEY制約が付与されたカラムは主キーであることを意味する。
+PRIMARY KEY制約が付与されたカラムは主キーであることを意味する。</br>
 H2DBではPRIMARY KEYを指定すると、そのカラムにはNOT NULLとUNIQUEが付与される。
 
 #### FOREIGN KEY制約
 
-FOREIGN KEY制約が付与されたカラムは他のテーブルのカラムを参照するようになる。
-参照先が変更されると参照元のデータも同時に変更されるようになる(削除も同様)。
-参照先が変更された場合にどのような処理がされるかを指定することも出来る。
+FOREIGN KEY制約が付与されたカラムは他のテーブルのカラムを参照するようになる。</br>
+参照先が変更されると参照元のデータも同時に変更されるようになる(削除も同様)。</br>
+参照先が変更された場合にどのような処理がされるかを指定することも出来る。</br>
+さらに、外部キーの参照先に無いレコードを追加しようとするとエラーが発生するようになる(参照整合性制約違反)。</br>
+
+以下に、FOREIGN KEY制約を使用する場合の例を示す。</br>
+FOREIGN KEYの引数部分に、外部キーにしたいキー(参照元)を指定する。</br>
+REFERENCESにはどのテーブルのどのキーを参照させるか(参照先)を指定する。
+
+```sql
+CREATE TABLE example(
+  another_table_id INTEGER PRIMARY KEY,
+  some_key INTEGER NOT NULL,
+  FOREIGN KEY (another_table_id)
+  REFERENCES another_table(id)
+);
+```
 
 ## 演習課題
 
