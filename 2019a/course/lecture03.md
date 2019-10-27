@@ -38,23 +38,23 @@ SQLを発行してaccountテーブルに以下のデータを追加しなさい�
 
 |id|name|password|
 |---|---|---|
-|1|account1|account1spass|
-|2|account2|account2spass|
-|3|account3|account3spass|
-|4|account4|account4spass|
+|1|account1|account1pass|
+|2|account2|account2pass|
+|3|account3|account3pass|
+|4|account4|account4pass|
 
 ### 課題3
 
-SQLを発行して以下のカラムを持つaccount_gradeテーブルを作成しなさい。
+SQLを発行して以下のカラムを持つgradeテーブルを作成しなさい。
 
 |カラム名|データ型|列制約|備考|
 |---|---|---|---|
-|account_id|bigint|主キー|accountテーブルのidを参照しレコードが削除されたら同時に削除する|
+|account_id|bigint|主キー|accountテーブルのidを参照する|
 |grade|integer|非NULL|-|
 
 ### 課題4
 
-SQLを発行してaccount_gradeテーブルに以下のデータを追加しなさい。</br>
+SQLを発行してgradeテーブルに以下のデータを追加しなさい。</br>
 
 |account_id|grade|
 |---|---|
@@ -66,7 +66,7 @@ SQLを発行してaccount_gradeテーブルに以下のデータを追加しな�
 ### 課題5
 
 gradeが2以上のデータを表示しなさい。
-ただし、account(id,name)とaccount_grade(grade)を表示すること。
+ただし、account(id,name)とgrade(grade)を表示すること。
 
 **表示例**
 
@@ -79,4 +79,18 @@ gradeが2以上のデータを表示しなさい。
 +--+--------+-----+
 ```
 
-### 
+### 課題6
+
+SQLを発行してgradeテーブルに以下のデータを追加しなさい。</br>
+また、追加できなかった場合はその理由を考えなさい。
+
+|account_id|grade|
+|---|---|
+|5|1|
+|6|3|
+
+### 課題7
+
+SQLを発行してaccountテーブルからidが1のレコードを削除しなさい。</br>
+また、SQLを発行してgradeテーブルからaccount_idが1のレコードが削除されていることを確認しなさい。
+
