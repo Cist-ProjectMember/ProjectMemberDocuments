@@ -11,8 +11,26 @@
 
 ## 概要
 
-[H2DBのデータ型](https://www.h2database.com/html/datatypes.html)
-[H2DBの集約関数](https://www.h2database.com/html/functions-aggregate.html)
+### 列制約
+
+#### NOT NULL制約
+
+NOT NULL制約が付与されたカラムは空欄にすることができない。
+
+#### UNIQUE制約
+
+UNIQUE制約が付与されたカラムは一意でなければならない(同じデータが入ることを禁止する)。
+
+#### PRIMARY KEY制約
+
+PRIMARY KEY制約が付与されたカラムは主キーであることを意味する。
+H2DBではPRIMARY KEYを指定すると、そのカラムにはNOT NULLとUNIQUEが付与される。
+
+#### FOREIGN KEY制約
+
+FOREIGN KEY制約が付与されたカラムは他のテーブルのカラムを参照するようになる。
+参照先が変更されると参照元のデータも同時に変更されるようになる(削除も同様)。
+参照先が変更された場合にどのような処理がされるかを指定することも出来る。
 
 ## 演習課題
 
