@@ -2,6 +2,13 @@
 
 ## キーワード
 
+* H2DB
+* NOT NULL
+* UNIQUE
+* PRIMARY KEY
+* FOREIGN KEY
+* CASCADE
+
 ## 概要
 
 [H2DBのデータ型](https://www.h2database.com/html/datatypes.html)
