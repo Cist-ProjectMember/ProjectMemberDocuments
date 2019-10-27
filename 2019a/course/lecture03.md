@@ -41,6 +41,7 @@ SQLを発行してaccountテーブルに以下のデータを追加しなさい�
 SQLを発行して以下のカラムを持つaccount_gradeテーブルを作成しなさい。
 
 |カラム名|データ型|列制約|備考|
+|---|---|---|---|
 |account_id|bigint|主キー|accountテーブルのidを参照しレコードが削除されたら同時に削除する|
 |grade|integer|非NULL|-|
 
@@ -59,6 +60,8 @@ SQLを発行してaccount_gradeテーブルに以下のデータを追加しな�
 
 gradeが2以上のデータを表示しなさい。
 ただし、account(id,name)とaccount_grade(grade)を表示すること。
+
+表示例
 
 ```text
 |id|name|grade|
