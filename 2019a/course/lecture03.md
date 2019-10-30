@@ -32,10 +32,25 @@ create table example(
 
 UNIQUE制約が付与されたカラムは一意でなければならない(同じデータが入ることを禁止する)。
 
+```sql
+create table example(
+  id varchar(16) UNIQUE,
+  password varchar(32) NOT NULL,
+);
+```
+
 #### PRIMARY KEY制約
 
 PRIMARY KEY制約が付与されたカラムは主キーであることを意味する。</br>
 H2DBではPRIMARY KEYを指定すると、そのカラムにはNOT NULLとUNIQUEが付与される。
+
+```sql
+create table example(
+  id varchar(16) PRIMARY KEY,
+  age integer NOT NULL,
+  amount bigint NOT NULL,
+);
+```
 
 #### FOREIGN KEY制約
 
