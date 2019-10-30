@@ -72,6 +72,24 @@ CREATE TABLE example(
 );
 ```
 
+また、参照先や参照元の値が変更された/削除されたときの動作も定義することができる。
+
+##### CASCADE
+
+FOREIGN KEYを定義する際に、参照先の値が変更された場合に参照元の値も変更させたい場合には以下のように記述する。
+
+```sql
+CREATE TABLE example(
+  another_table_id INTEGER PRIMARY KEY,
+  some_key INTEGER NOT NULL,
+  FOREIGN KEY (another_table_id)
+    REFERENCES another_table(id)
+      ON UPDATE CASCADE,
+);
+```
+
+この例では、another_tableのidが更新された場合に、参照元(この場合はexampleテーブルのanother_table_id)の値も連動して更新される。
+
 ## 演習課題
 
 ### 取り組む前に
