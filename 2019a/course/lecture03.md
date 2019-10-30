@@ -90,6 +90,18 @@ CREATE TABLE example(
 
 この例では、another_tableのidが更新された場合に、参照元(この場合はexampleテーブルのanother_table_id)の値も連動して更新される。
 
+```sql
+CREATE TABLE example(
+  another_table_id INTEGER PRIMARY KEY,
+  some_key INTEGER NOT NULL,
+  FOREIGN KEY (another_table_id)
+    REFERENCES another_table(id)
+      ON DELETE CASCADE,
+);
+```
+
+この例では、another_tableのレコードが削除された場合に、参照元(この場合はexampleテーブルのanother_table_id)の対応するレコードも連動して削除される。
+
 ## 演習課題
 
 ### 取り組む前に
