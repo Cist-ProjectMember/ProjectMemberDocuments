@@ -139,7 +139,7 @@ SQLを発行して以下のカラムを持つgradeテーブルを作成しなさ
 
 |カラム名|データ型|列制約|備考|
 |---|---|---|---|
-|account_id|bigint|主キー|accountテーブルのidを参照する|
+|account_id|bigint|主キー|accountテーブルのidを参照し、参照元が削除されたら対応するレコードも削除される|
 |grade|integer|非NULL|-|
 
 ### 課題4
