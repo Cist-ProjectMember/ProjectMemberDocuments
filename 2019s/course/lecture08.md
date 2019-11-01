@@ -58,17 +58,43 @@ SELECT * FROM account;
 CREATE文を用いることで新しくテーブルを作成することができる。</br>
 実際にはテーブルを作成する場合にはCREATEの後ろにTABLEをつける必要がある。
 
-実際にユーザの情報を管理するaccountテーブルを、SQLを用いて作成する場合の例を以下に示す。
+実際にユーザの情報を管理するaccountテーブルをSQLを用いて作成する場合の例を以下に示す。
 
 ```sql
 CREATE TABLE account(
-
+  id varchar(16) PRIMARY KEY,
+  first_name varchar(32),
+  last_name varchar(32),
 );
 ```
 
+上記のSQLのうち、idやfirst_name,last_nameは *キー* と呼ばれ、テーブルの列となる。
+
+さらにその後ろにはデータ型を記述する。</br>
+varcharは文字列型(可変長)であり、()で指定した文字数分の記憶領域を持つ。
+
+H2DBでどのようなデータ型をしているのかは、[H2DBのデータ型](http://www.h2database.com/html/datatypes.html)を参照のこと。
+
 #### INSERT
 
+テーブルに新しくレコードを追加するにはINSERT文を用いる。
+
+```sql
+INSERT INTO account(id,first_name,last_name)
+ VALUES(1, 'hikari', 'chitose');
+```
+
+このSQLを実行するとidが1、first_nameが"hikari"、last_nameが"chitose"のレコードがaccountテーブルに追加される。
+
 #### SELECT
+
+テーブルのデータを検索(表示)するにはSELECT文を用いる。
+
+```sql
+SELECT * FROM account;
+```
+
+INSERTを実行後にこのSQLを実行すると、追加したデータがコンソール上に表示される。
 
 ### 用語
 
