@@ -73,7 +73,7 @@ CREATE TABLE account(
 さらにその後ろにはデータ型を記述する。</br>
 varcharは文字列型(可変長)であり、()で指定した文字数分の記憶領域を持つ。
 
-H2DBでどのようなデータ型をしているのかは、[H2DBのデータ型](http://www.h2database.com/html/datatypes.html)を参照のこと。
+H2DBでどのようなデータ型を指定できるのかは、[H2DBのデータ型](http://www.h2database.com/html/datatypes.html)を参照のこと。
 
 #### INSERT
 
