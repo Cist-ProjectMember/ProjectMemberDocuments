@@ -63,13 +63,7 @@ SELECT * FROM account ORDER BY id ASC;
 ## 演習課題
 
 ### 課題1
-lectureに新たにstudent_listというテーブルを作成します。データは以下を参考にしてください。
-
-|カラム名|データ型|
-|---|---|
-|name|varchar(64)|
-|student_number|varchar(16)|
-|department|varchar(32)|
+第８回で作成したテーブルに以下のデータを追加してください。
 
 ここからデータをinsertしていきます。以下のデータをinsertしてください。
 
@@ -91,7 +85,7 @@ lectureに新たにstudent_listというテーブルを作成します。デー�
 課題1で作成したデータに間違いがあった。以下のデータを書き換えて（更新して）ください。  
 
 1. `RenSato`の学籍番号を`b2180003`から`b2180007`に変更してください。  
-2. `MizukiTakahashi`の名前を`MizukiHashimoto`にしてください。
+2. `MizukiTakahashi`のの学籍番号を`b2180005`から`b2170005`に変更してください。
 
 
 ### 課題3
@@ -99,8 +93,8 @@ lectureに新たにstudent_listというテーブルを作成します。デー�
 
 |名前|学籍番号|所属学科|
 |---|---|---|
-|SachikoKobayashi|b2180001|電子光工学科|
-|HayatoSuzuki|b2180004|応用化学生物学科|
+|SachikoKobayashi|b2180001|denshi|
+|HayatoSuzuki|b2180004|ouyou|
 
 
 ### 課題4
