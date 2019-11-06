@@ -63,7 +63,7 @@ SELECT * FROM account ORDER BY id ASC;
 ## 演習課題
 
 ### 課題1
-第８回で作成したテーブルに以下のデータを追加してください。
+第8回で作成したテーブルに以下のデータを追加してください。
 
 ここからデータをinsertしていきます。以下のデータをinsertしてください。
 
@@ -88,7 +88,7 @@ SELECT * FROM account ORDER BY id ASC;
 2. `MizukiTakahashi`のの学籍番号を`b2180005`から`b2170005`に変更してください。
 
 
-### 課題3
+### 課題4
 先ほど以下の学生が退学しました。その人のデータを削除してください。  
 
 |名前|学籍番号|所属学科|
@@ -97,7 +97,7 @@ SELECT * FROM account ORDER BY id ASC;
 |HayatoSuzuki|b2180004|ouyou|
 
 
-### 課題4
+### 課題5
 
 学生のデータのうち、名前を辞書順でソートしてください。  
 
