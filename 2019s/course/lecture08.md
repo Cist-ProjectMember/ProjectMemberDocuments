@@ -71,6 +71,7 @@ CREATE TABLE [テーブル名](
 実際にユーザの情報を管理するaccountテーブルをSQLを用いて作成する場合の例を以下に示す。
 
 ```sql
+# accountテーブル作成例
 CREATE TABLE account(
   id varchar(16) PRIMARY KEY,
   first_name varchar(32),
@@ -97,6 +98,7 @@ VALUES ([列1に入れる値, 列2に入れる値, ...]);
 以下にid,first_name,last_nameカラムを持つaccountテーブルにデータを追加する場合の例を示す。
 
 ```sql
+# accountテーブルにデータを追加する
 INSERT INTO account(id,first_name,last_name)
  VALUES(1, 'hikari', 'chitose');
 ```
@@ -106,6 +108,7 @@ INSERT INTO account(id,first_name,last_name)
 さらに、一つのINSERT文で複数のレコードを追加することも出来る。
 
 ```sql
+# accountテーブルに一括でデータを追加する
 INSERT INTO account(id,fist_name,last_name)
   VALUES(2, 'takuya', 'saotome'),
   (3, 'renji', 'kagami'),
@@ -117,6 +120,7 @@ INSERT INTO account(id,fist_name,last_name)
 テーブルのデータを検索(表示)するにはSELECT文を用いる。
 
 ```sql
+# accountテーブルのデータを検索(表示)する
 SELECT * FROM account;
 ```
 
