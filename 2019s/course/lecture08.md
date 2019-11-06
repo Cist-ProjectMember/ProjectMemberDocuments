@@ -141,7 +141,9 @@ INSERTを実行後にこのSQLを実行すると、追加したデータがコ�
 |student_number|varchar(16)|
 |department|varchar(32)|
 
-また、student_informationテーブルに下の指示に従い自分の情報を入れなさい。
+### 課題2
+
+student_informationテーブルに下の指示に従い自分の情報を入れなさい。
 
 |カラム名|内容|
 |---|---|
@@ -149,6 +151,7 @@ INSERTを実行後にこのSQLを実行すると、追加したデータがコ�
 |student_number|あなたの学籍番号(bxxxxxx0)|
 |department|あなたの所属学科|
 
-### 課題2
+### 課題3
 
 SQLを発行し、student_informationテーブルのデータを表示しなさい。
+
