@@ -63,7 +63,7 @@ SELECT * FROM account ORDER BY id ASC;
 ## 演習課題
 
 ### 課題1
-lectureに新たにstudent_informationというテーブルを作成します。データは以下を参考にしてください。
+lectureに新たにstudent_listというテーブルを作成します。データは以下を参考にしてください。
 
 |カラム名|データ型|
 |---|---|
@@ -77,19 +77,18 @@ lectureに新たにstudent_informationというテーブルを作成します。
 
 |名前|学籍番号|所属学科|  
 |---|---|---|  
-|SachikoKobayashi|b2180001|電子光工学科|
-|YutaYamamoto|b2180002|グローバルシステムデザイン学科|
-|RenSato|b2180003|応用化学生物学科|
-|HayatoSuzuki|b2180004|応用化学生物学科|
-|MizukiTakahashi|b2180005|電子光工学科|
-|SakuraNakamura|b2180006|グローバルシステムデザイン学科|
+|SachikoKobayashi|b2180001|denshi|
+|YutaYamamoto|b2180002|joho|
+|RenSato|b2180003|ouyou|
+|HayatoSuzuki|b2180004|ouyou|
+|MizukiTakahashi|b2180005|denshi|
+|SakuraNakamura|b2180006|joho|
 
 ### 課題2
 課題1で作成したデータに間違いがあった。以下のデータを書き換えて（更新して）ください。  
 
 1. `サトウレン`の学籍番号を`b2180003`から`b2180007`に変更してください。  
 2. `タカハシミズキ`の名前を`ハシモトミズキ`にしてください。
-3. `グローバルシステムデザイン学科`の名前が変わって`情報システム工学科`
 
 
 ### 課題3
