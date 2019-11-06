@@ -65,7 +65,6 @@ SELECT * FROM account ORDER BY id ASC;
 ### 課題1
 lectureに新たにstudent_informationというテーブルを作成します。データは以下を参考にしてください。
 
-
 |カラム名|データ型|
 |---|---|
 |name|varchar(64)|
