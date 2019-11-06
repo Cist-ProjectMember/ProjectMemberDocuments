@@ -90,11 +90,27 @@ H2DBでどのようなデータ型を指定できるのかは、[H2DBのデー�
 テーブルに新しくレコードを追加するにはINSERT文を用いる。
 
 ```sql
+INSERT INTO [テーブル名]([列1, 列2, ...])
+VALUES ([列1に入れる値, 列2に入れる値, ...]);
+```
+
+以下にid,first_name,last_nameカラムを持つaccountテーブルにデータを追加する場合の例を示す。
+
+```sql
 INSERT INTO account(id,first_name,last_name)
  VALUES(1, 'hikari', 'chitose');
 ```
 
 このSQLを実行するとidが1、first_nameが"hikari"、last_nameが"chitose"のレコードがaccountテーブルに追加される。
+
+さらに、一つのINSERT文で複数のレコードを追加することも出来る。
+
+```sql
+INSERT INTO account(id,fist_name,last_name)
+  VALUES(2, 'takuya', 'saotome'),
+  (3, 'renji', 'kagami'),
+  (4, 'shingo', 'shiga');
+```
 
 #### SELECT
 
@@ -104,7 +120,7 @@ INSERT INTO account(id,first_name,last_name)
 SELECT * FROM account;
 ```
 
-INSERTを実行後にこのSQLを実行すると、追加したデータがコンソール上に表示される。
+INSERTを実行後にこのSQLを実行すると、accountテーブル上のデータが全てコンソール上に表示される。
 
 ### 用語
 
@@ -155,3 +171,17 @@ student_informationテーブルに下の指示に従い自分の情報を入れ�
 
 SQLを発行し、student_informationテーブルのデータを表示しなさい。
 
+### 課題4
+
+SQLを発行し、student_informationテーブルに以下のデータを追加しなさい。
+
+|name|student_number|department|
+|---|---|---|
+|'saionji'|'b2170001'|'応用化学生物学科'|
+|'natsume'|'b2170002'|'電子光工学科'|
+|'kaname'|'b2170003'|'情報システム工学科'|
+
+### 課題5
+
+SQLを発行し、student_informationテーブルのデータを表示しなさい。</br>
+また、課題3と表示される内容が増えていることを確認しなさい。
