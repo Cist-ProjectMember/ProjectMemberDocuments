@@ -69,32 +69,32 @@ SELECT * FROM account ORDER BY id ASC;
 
 データ一覧  
 
-|名前|学籍番号|所属学科|  
+|name|student_number|department|  
 |---|---|---|  
-|SachikoKobayashi|b2180001|denshi|
-|YutaYamamoto|b2180002|joho|
-|RenSato|b2180003|ouyou|
-|HayatoSuzuki|b2180004|ouyou|
-|MizukiTakahashi|b2180005|denshi|
-|SakuraNakamura|b2180006|joho|
+|sachiko|b2180001|電子光工学科|
+|yuta|b2180002|情報システム工学科|
+|ren|b2180003|応用化学生物学科|
+|hayato|b2180004|応用化学生物学科|
+|mizuki|b2180005|電子光工学科|
+|sakura|b2180006|情報システム工学科|
 
 ### 課題2
-課題1のデータを全て表示してください。また、`Joho`の人だけを表示できるようにしてください。
+課題1のデータを全て表示してください。また、`情報システム工学科`の人だけを表示できるようにしてください。
 
 ### 課題3
 課題1で作成したデータに間違いがあった。以下のデータを書き換えて（更新して）ください。  
 
-1. `RenSato`の学籍番号を`b2180003`から`b2180007`に変更してください。  
-2. `MizukiTakahashi`のの学籍番号を`b2180005`から`b2170005`に変更してください。
+1. `ren`の学籍番号を`b2180003`から`b2180007`に変更してください。  
+2. `mizuki`のの学籍番号を`b2180005`から`b2170005`に変更してください。
 
 
 ### 課題4
 先ほど以下の学生が退学しました。その人のデータを削除してください。  
 
-|名前|学籍番号|所属学科|
+|name|student_number|department|
 |---|---|---|
-|SachikoKobayashi|b2180001|denshi|
-|HayatoSuzuki|b2180004|ouyou|
+|sachiko|b2180001|電子光工学科|
+|hayato|b2180004|応用化学生物学科|
 
 
 ### 課題5
