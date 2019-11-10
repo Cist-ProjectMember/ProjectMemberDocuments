@@ -39,6 +39,10 @@
 
 ### 課題に取り組む前に
 
-HomePage.htmlを開き、\<body>タグ内のすべての要素を削除する
+1. HomePage.htmlを開き、\<body>タグ内のすべての要素を削除する
+2. 同じくHomePage.html内の、"\<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css'/>"の行を削除する
+3. 同じくHomePage.html内の、"\<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet"/>"の行を削除する
+4. HomePage.javaを開き、"add(new Label("version", getApplication().getFrameworkSettings().getVersion()));"の行を削除する
 
 ### 課題1
+
