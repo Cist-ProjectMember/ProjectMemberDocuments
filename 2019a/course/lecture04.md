@@ -44,5 +44,13 @@
 3. 同じくHomePage.html内の、"\<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet"/>"の行を削除する
 4. HomePage.javaを開き、"add(new Label("version", getApplication().getFrameworkSettings().getVersion()));"の行を削除する
 
-### 課題1
+### 課題1(練習)
 
+HomePage.htmlとHomePage.javaを編集し、Labelを用いて自分の学籍番号を表示しなさい。
+
+1. HomePage.htmlのbodyタグ内に "<span wicket:id="studentNumber"></span>" を追加する
+2. HomePage.javaのコンストラクタ内に "add(new Label("studentNumber", "b218xxxx"));"を追加する("b218xxxx"は自分の学籍番号にする)
+
+編集後、Startクラスのmainメソッドを実行し "localhost:8080" で自分の学籍番号が表示されることを確認する。
+
+### 課題2(練習)
