@@ -4,6 +4,8 @@
 
 * Apache
 * Wicket
+* Maven
+* localhost
 
 ## 概要
 
