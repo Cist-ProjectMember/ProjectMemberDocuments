@@ -120,7 +120,7 @@ ListView<> accountListView = new ListView<>("accountListView", accountsModel){
 3. 同じくHomePage.html内の、`<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet"/>` を削除する
 4. HomePage.javaを開き、`add(new Label("version", getApplication().getFrameworkSettings().getVersion()));` を削除する
 
-### 課題1
+### 課題1(練習)
 
 HomePage.htmlとHomePage.javaを編集し、Labelを用いて自分の学籍番号を表示しなさい。
 
