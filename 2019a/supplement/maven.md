@@ -2,6 +2,9 @@
 
 ## Mavenとは
 
+MavenはApacheによりライセンスされている、Javaのプロジェクト全体を管理するためのツールである。<br/>
+
+
 ## Mavenの導入
 
 ### For Windows
