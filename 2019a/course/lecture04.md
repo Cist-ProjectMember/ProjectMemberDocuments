@@ -35,7 +35,7 @@
 
 1. IntelliJで"prmn-wicket"->"src"->"test"->"java"->"com.prmn"->"Start"を開く
 2. mainを実行する
-3. `\[main] INFO org.eclipse.jetty.server.Server - Started @2505ms`と表示されるのを確認する("2505ms"の部分は環境により変動する)
+3. `[main] INFO org.eclipse.jetty.server.Server - Started @2505ms`と表示されるのを確認する("2505ms"の部分は環境により変動する)
 4. ブラウザで `localhost:8080"` を検索する
 5. "Congratulations!"と表示されていれば成功
 
