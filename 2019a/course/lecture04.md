@@ -142,12 +142,14 @@ add(studentNumberLabel);
 HomePage.htmlとHomePage.javaを編集し、ボタンを押すことで現在時刻を表示できるようにしなさい。
 
 ヒント1. Buttonをインスタンス化する際、第2引数にModelを渡す<br/>
-ヒント2. IModel#setObject()で表示する文字列をセットし直す<br/>
-ヒント3. 現在時刻の取得にはLocalDateTime#now()を用いると良い
+ヒント2. IModel#setObject() で表示する文字列をセットし直す<br/>
+ヒント3. 現在時刻の取得には LocalDateTime#now() を用いると良い
 
 ### 課題3
 
 Linkで別のページに移動する
+
+HomePage.htmlとHomePage.javaを編集し、
 
 ### 課題4
 
