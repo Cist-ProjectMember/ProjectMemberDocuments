@@ -129,7 +129,8 @@ HomePage.htmlとHomePage.javaを編集し、Labelを用いて自分の学籍番�
 
 ```java
 String studentNumber = "b218xxxx";    // xxxxの部分は自分の学籍番号
-Label studentNumberLabel = new Label("studentNumber", studentNumber);
+IModel<String> studentNumberModel = Model.of(studentNumber);      // studentNumberのモデル
+Label studentNumberLabel = new Label("studentNumber", studentNumberModel);
 add(studentNumberLabel);
 ```
 
