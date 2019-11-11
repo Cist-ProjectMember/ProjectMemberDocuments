@@ -9,7 +9,9 @@
 
 ## 概要
 
-### プロジェクトの作成
+### 導入
+
+#### プロジェクトの作成
 
 1. Wicketの [QuickStartページ](https://wicket.apache.org/start/quickstart.html) を開く
 2. Group IDを `com.prmn` に書き換える
@@ -19,7 +21,7 @@
 6. 4でコピーしたコマンドをペーストして実行する
 7. 指定したディレクトリに "prmn-wicket"ディレクトリが生成されていれば完了
 
-### IntelliJでImport
+#### IntelliJでImport
 
 1. IntelliJの起動画面(Welcome to IntelliJ IDEA)を開く(既にプロジェクトを開いている場合には"File"->"Close Project")
 2. "Import Project"を選択し、作成したプロジェクトを指定する
@@ -29,7 +31,7 @@
 6. SDKを選択(今期のプロジェクトメンバーではAdoptOpenJDKのバージョン11を使用する)し、"next"を押す
 7. そのまま"Finish"を押す
 
-### 起動の確認
+#### 起動の確認
 
 1. IntelliJで"prmn-wicket"->"src"->"test"->"java"->"com.prmn"->"Start"を開く
 2. mainを実行する
