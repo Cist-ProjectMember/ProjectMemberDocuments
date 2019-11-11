@@ -37,6 +37,60 @@
 4. ブラウザで `localhost:8080"` を検索する
 5. "Congratulations!"と表示されていれば成功
 
+### コンポーネント
+
+Wicketにはページ上に表示するための部品(コンポーネントという)が用意されており、これを使用することでページ上にリンクやボタンなどを配置することができる。<br/>
+今回、よく使われるコンポーネントとして以下を紹介する。
+
+#### Label
+
+Labelは単純なラベル(表示するための文字列を表す)を生成する。<br/>
+用途としては、何かしらのアクションによって表示が切り替わるもの、例えば日時やログインユーザー名前などを表示する場合に使われる。
+
+使用例は以下の通りである。
+
+```java
+// wicket:id="exampleLabel"に対して"This is an example."という文字列を設定する
+Label label = new Label("This is an example.", "exampleLabel");
+add(label);
+```
+
+#### Button
+
+Buttonはボタンを生成する。<br/>
+具体的な動作は Button#onSubmit() を実装することで定義することができる。<br/>
+具体的な例として、ボタンが押された場合に標準出力に現在時刻を表示するコードは以下のようになる。
+
+```java
+// wicket:id="button"に対してボタンを生成する
+add(new Button("button"){
+  @Override
+  public void onSubmit(){
+    System.out.println(LocalDateTime.now().toString());
+  }
+});
+```
+
+#### Link
+
+Linkはリンクを生成する。<br/>
+基本的な動作はButtonと同じである。<br/>
+ただし、Buttonとは違い、押された場合の動作は Link#onClick() を実装することで定義することができる。<br/>
+
+```java
+// wicket:id="link"に対してリンクを生成する
+add(new Link("link"){
+  @Override
+  public void onClick(){
+    System.out.println("Link clicked.");
+  }
+});
+```
+
+#### ListView
+
+ListViewはコレクション(Listなど)の中身をリスト形式で表示する場合に用いられる。<br/>
+
 ## 演習課題
 
 ### 課題に取り組む前に
@@ -54,7 +108,9 @@ HomePage.htmlとHomePage.javaを編集し、Labelを用いて自分の学籍番�
 2. HomePage.javaのコンストラクタ内に以下のコードを追加する
 
 ```java
-
+String studentNumber = "b218xxxx";    // xxxxの部分は自分の学籍番号
+Label studentNumberLabel = new Label("studentNumber", studentNumber);
+add(studentNumberLabel);
 ```
 
 編集後、Startクラスのmainメソッドを実行し `localhost:8080` で自分の学籍番号が表示されることを確認する。<br/>
