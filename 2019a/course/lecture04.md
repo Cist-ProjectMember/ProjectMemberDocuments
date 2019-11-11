@@ -33,8 +33,8 @@
 
 1. IntelliJで"prmn-wicket"->"src"->"test"->"java"->"com.prmn"->"Start"を開く
 2. mainを実行する
-3. "\[main] INFO org.eclipse.jetty.server.Server - Started @2505ms"と表示されるのを確認する("2505ms"の部分は環境により変動する)
-4. ブラウザで"localhost:8080"を検索する
+3. `\[main] INFO org.eclipse.jetty.server.Server - Started @2505ms`と表示されるのを確認する("2505ms"の部分は環境により変動する)
+4. ブラウザで `localhost:8080"` を検索する
 5. "Congratulations!"と表示されていれば成功
 
 ## 演習課題
@@ -42,22 +42,23 @@
 ### 課題に取り組む前に
 
 1. HomePage.htmlを開き、\<body>タグ内のすべての要素を削除する
-2. 同じくHomePage.html内の、"\<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css'/>"の行を削除する
-3. 同じくHomePage.html内の、"\<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet"/>"の行を削除する
-4. HomePage.javaを開き、"add(new Label("version", getApplication().getFrameworkSettings().getVersion()));"の行を削除する
+2. 同じくHomePage.html内の、`\<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css'/>` を削除する
+3. 同じくHomePage.html内の、`\<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet"/>` を削除する
+4. HomePage.javaを開き、`add(new Label("version", getApplication().getFrameworkSettings().getVersion()));` を削除する
 
 ### 課題1
 
 HomePage.htmlとHomePage.javaを編集し、Labelを用いて自分の学籍番号を表示しなさい。
 
-1. HomePage.htmlのbodyタグ内に "<span wicket:id="studentNumber"></span>" を追加する
+1. HomePage.htmlのbodyタグ内に `<span wicket:id="studentNumber"></span>` を追加する
 2. HomePage.javaのコンストラクタ内に以下のコードを追加する
 
 ```java
 
 ```
 
-編集後、Startクラスのmainメソッドを実行し "localhost:8080" で自分の学籍番号が表示されることを確認する。
+編集後、Startクラスのmainメソッドを実行し `localhost:8080` で自分の学籍番号が表示されることを確認する。<br/>
+以下、特に指示しなくても `localhost:8080` で検索し動作確認を行うこと。
 
 ### 課題2
 
