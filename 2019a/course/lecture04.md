@@ -11,13 +11,13 @@
 
 ### プロジェクトの作成
 
-1. Wicketの[QuickStartページ](https://wicket.apache.org/start/quickstart.html)を開く
-2. Group IDを"com.prmn"に書き換える
-3. Artifact IDを"prmn-wicket"に書き換える
+1. Wicketの [QuickStartページ](https://wicket.apache.org/start/quickstart.html) を開く
+2. Group IDを `com.prmn` に書き換える
+3. Artifact IDを `prmn-wicket` に書き換える
 4. generated command line内のコードをコピーする
 5. プロジェクトを配置したいディレクトリを開く(大学PCなら"端末から開く"、自前のPCならCドライブ直下、Macはそれに準ずるディレクトリ)
 6. 4でコピーしたコマンドをペーストして実行する
-7. 指定したディレクトリに"prmn-wicket"ディレクトリが生成されていれば完了
+7. 指定したディレクトリに "prmn-wicket"ディレクトリが生成されていれば完了
 
 ### IntelliJでImport
 
@@ -42,8 +42,8 @@
 ### 課題に取り組む前に
 
 1. HomePage.htmlを開き、\<body>タグ内のすべての要素を削除する
-2. 同じくHomePage.html内の、`\<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css'/>` を削除する
-3. 同じくHomePage.html内の、`\<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet"/>` を削除する
+2. 同じくHomePage.html内の、`<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css'/>` を削除する
+3. 同じくHomePage.html内の、`<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet"/>` を削除する
 4. HomePage.javaを開き、`add(new Label("version", getApplication().getFrameworkSettings().getVersion()));` を削除する
 
 ### 課題1
