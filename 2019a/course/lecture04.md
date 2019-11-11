@@ -90,6 +90,24 @@ add(new Link("link"){
 #### ListView
 
 ListViewはコレクション(Listなど)の中身をリスト形式で表示する場合に用いられる。<br/>
+コレクションの内容をどのように処理するかは、ListView#populateItem() を実装することで定義できる。<br/>
+なお、ListView#populateItem()は抽象メソッドとなっており、かならず実装しなければならない。
+
+```java
+// Accountのリスト(要素の追加は省略する)
+List<Account> accounts = new ArrayList<Account>();
+
+// accountsのモデル化
+IModel<List<Account>> accountsModel = Model.of(accounts);
+
+ListView<> accountListView = new ListView<>("accountListView", accountsModel){
+  // populateItemは抽象メソッド
+  @Override
+  protected void populateItem(ListItem<Account> listItem){
+    add(new Label("accountId", listItem.getModelObject().getId()));
+  }
+};
+```
 
 ## 演習課題
 
@@ -119,6 +137,9 @@ add(studentNumberLabel);
 ### 課題2
 
 ButtonでLabelの内容を変更する
+
+ヒント1. Buttonをインスタンス化する際、第2引数にModelを渡す
+ヒント2. IModel#setObject()で表示する文字列をセットし直す
 
 ### 課題3
 
