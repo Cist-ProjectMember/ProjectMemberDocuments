@@ -1,8 +1,20 @@
-# mavenのインストール手順
+# Maven
 
-## maven install for windows
+## Mavenとは
 
-## maven install for mac
+## Mavenの導入
+
+### For Windows
+
+1. [Mavenのダウンロード](https://maven.apache.org/download.cgi)を開く
+2. サイト中部の、"Binary zip archive" の "apache-maven-3.6.2-bin.zip" からzipファイルをダウンロードする(`3.6.2`の部分はバージョン)
+3. DLしたzipファイルを展開してCドライブ直下(好みに合わせて場所を変える)に配置する
+4. システム環境変数"Path"に展開したフォルダへのPathを登録する(Cドライブ直下なら"C:/apache-maven-3.6.2/bin")
+5. コマンドプロンプトにて、`mvn -v`を入力して実行
+6. バージョン情報が表示されたら導入完了
+
+### For Mac
+
 macには`homebrew`という機能がある。`homebrew`は簡単にバージョン管理やインストールが行える優れものです。まずはこれをインストールします。  
 
 詳しい手順については [こちらから](https://github.com/Yoshiki-Yamada/JavaSettingsDocument/blob/master/home-brew-install.md) 
