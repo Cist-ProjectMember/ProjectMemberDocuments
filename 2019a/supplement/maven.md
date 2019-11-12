@@ -2,7 +2,7 @@
 
 ## Mavenとは
 
-MavenはApacheによりライセンスされている、Javaのプロジェクト全体を管理するためのツールである。<br/>
+[Maven](https://maven.apache.org/)はApacheによりライセンスされている、Javaのプロジェクト全体を管理するためのツールである。<br/>
 POM(Project Model Object)という考えに基づき、プロジェクトの全ての設定をXML形式のファイルであるpom.xmlに記述することでプロジェクトを管理することができる。<br/>
 
 ## Mavenの導入
