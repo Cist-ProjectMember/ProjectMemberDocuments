@@ -41,3 +41,5 @@ OS name: "mac os x", version: "10.15.1", arch: "x86_64", family: "mac"
 ## Maven Repository
 
 POMにより追加できるDependencyは、[Maven Repository](https://mvnrepository.com/)から探すことができる。<br/>
+各ArtifactおよびGroupをクリックすると、Artifactのバージョンを選択することができる。<br/>
+バージョンをクリックすると、そのままpom.xmlに貼り付け可能なコードが生成されるため、これをプロジェクトのpom.xmlに書き込むことでDependencyを追加する。
