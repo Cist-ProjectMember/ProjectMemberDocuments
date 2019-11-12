@@ -37,3 +37,7 @@ OS name: "mac os x", version: "10.15.1", arch: "x86_64", family: "mac"
 ```
 
 これでインストールは終了です。この他にもAPPやjavaなどもbrewでインストールできるので調べてやってみてください！
+
+## Maven Repository
+
+POMにより追加できるDependencyは、[Maven Repository](https://mvnrepository.com/)から探すことができる。<br/>
