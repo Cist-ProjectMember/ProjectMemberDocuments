@@ -154,3 +154,14 @@ HomePage.htmlとHomePage.javaを編集し、
 ### 課題4
 
 ListViewでコレクションの内容を表示する
+
+"com.prmn"の直下に"bean"パッケージを作成する。<br/>
+作成したbeanパッケージ内に、以下の要件を満たすクラスを作成する。
+
+1. クラス名はReport
+2. フィールドとして id(long), authorName(String), title(String), details(String), postedAt(Timestamp)を持つ
+3. フィールドは全てprivateでアクセサを持つ
+4. 
+
+"com.prmn"直下に"ViewReportDetailsPage.html"と"ViewReportDetailsPage.java"を作成する。
+
