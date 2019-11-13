@@ -8,6 +8,6 @@
 
 ### For Windows
 
-[image1](./image/install_aojdk_win1.png)
+![image1](./image/install_aojdk_win1.png)
 
 ### For Mac
