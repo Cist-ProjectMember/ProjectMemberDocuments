@@ -173,5 +173,5 @@ ListViewを用いてコレクションの内容を表示する。
 HomePage.htmlとHomePage.javaを編集し、Reportの内容をListViewを用いて表示できるようにしなさい。<br/>
 なお、ListViewに渡すListには、少なくとも2つ以上の要素を追加しておくこと(初期化する内容は問わない)。
 
-ヒント1. ListViewをインスタンス化する際に、第2引数に `IModel<List<Report>>` を渡す
+ヒント1. ListViewをインスタンス化する際に、第2引数に `IModel<List<Report>>` を渡す<br/>
 ヒント2. ListViewに何かを追加(この課題では表示)したい場合には、ListView#populateItem(ListItem listItem) のlistItemに対してadd()する
