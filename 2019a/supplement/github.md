@@ -1,4 +1,4 @@
-# GitHub勉強会資料
+# GitHub
 
 ## GitHubとは
 
