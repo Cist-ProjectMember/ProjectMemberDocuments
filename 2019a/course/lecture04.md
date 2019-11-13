@@ -81,7 +81,7 @@ Linkはリンクを生成する。<br/>
 
 ```java
 // wicket:id="link"に対してリンクを生成する
-add(new Link("link"){
+add(new Link<Void>("link"){
   @Override
   public void onClick(){
     System.out.println("Link clicked.");
@@ -118,7 +118,8 @@ ListView<> accountListView = new ListView<>("accountListView", accountsModel){
 1. HomePage.htmlを開き、\<body>タグ内のすべての要素を削除する
 2. 同じくHomePage.html内の、`<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css'/>` を削除する
 3. 同じくHomePage.html内の、`<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet"/>` を削除する
-4. HomePage.javaを開き、`add(new Label("version", getApplication().getFrameworkSettings().getVersion()));` を削除する
+4. \<head>タグを、`<html xmlns:wicket="http://wicket.apache.org">`に変更する
+5. HomePage.javaを開き、`add(new Label("version", getApplication().getFrameworkSettings().getVersion()));` を削除する
 
 ### 課題1(練習)
 
@@ -139,21 +140,17 @@ add(studentNumberLabel);
 
 ### 課題2
 
-HomePage.htmlとHomePage.javaを編集し、ボタンを押すことで現在時刻を表示できるようにしなさい。
+HomePage.htmlとHomePage.javaを編集し、リンクを押すことで現在時刻を表示できるようにしなさい。
 
-ヒント1. Buttonをインスタンス化する際、第2引数にModelを渡す<br/>
-ヒント2. IModel#setObject() で表示する文字列をセットし直す<br/>
-ヒント3. 現在時刻の取得には LocalDateTime#now() を用いると良い
+ただし、Linkは変数名を `updateCurrentTimeLink`、Labelは `currentTimeLabel`とし、wicket:idも同一のものを指定することとする。
+
+ヒント1. Linkをインスタンス化する際、型引数にはVoidを指定する<br/>
+ヒント2. IModel#setObject(T) で表示する文字列をセットし直す<br/>
+ヒント3. 現在時刻の取得には LocalDateTime#now() を用いると良い(さらにtoString()を使用して文字列に変換する)
 
 ### 課題3
 
-Linkで別のページに移動する
-
-HomePage.htmlとHomePage.javaを編集し、
-
-### 課題4
-
-ListViewでコレクションの内容を表示する
+ListViewを用いてコレクションの内容を表示する。
 
 "com.prmn"の直下に"bean"パッケージを作成する。<br/>
 作成したbeanパッケージ内に、以下の要件を満たすクラスを作成する。
@@ -161,7 +158,3 @@ ListViewでコレクションの内容を表示する
 1. クラス名はReport
 2. フィールドとして id(long), authorName(String), title(String), details(String), postedAt(Timestamp)を持つ
 3. フィールドは全てprivateでアクセサを持つ
-4. 
-
-"com.prmn"直下に"ViewReportDetailsPage.html"と"ViewReportDetailsPage.java"を作成する。
-
