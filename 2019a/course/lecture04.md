@@ -9,6 +9,13 @@
 
 ## 概要
 
+Apache Wicketは本学のシステム(ポータルやeラーニングシステム)などで使われているコンポーネント指向のフレームワークである。<br/>
+後に上級生との共同でのシステム開発に入った際にはこれから紹介する知識が必要となるため事前に学んでおくこと。<br/>
+
+WicketはJavaファイルとhtmlファイルが1対1のセットとなった構造をしており、htmlで `wicket:id` を指定することで、対応するJavaファイルにてコンポーネントをその `wicket:id` に追加することができる
+
+言い換えると、単純なボタンやリンク、フォームをhtmlに記述し、それらが実際に行う処理はJavaファイルで定義するということである。
+
 ### 導入
 
 #### プロジェクトの作成
@@ -16,17 +23,17 @@
 1. Wicketの [QuickStartページ](https://wicket.apache.org/start/quickstart.html) を開く
 2. Group IDを `com.prmn` に書き換える
 3. Artifact IDを `prmn-wicket` に書き換える
-4. generated command line内のコードをコピーする
+4. `generated command line` 内のコードをコピーする
 5. プロジェクトを配置したいディレクトリを開く(大学PCなら"端末から開く"、自前のPCならCドライブ直下、Macなら"ターミナル"を開いて、ホームディレクトリ)
 6. 4でコピーしたコマンドをペーストして実行する
-7. 指定したディレクトリに "prmn-wicket"ディレクトリが生成されていれば完了
+7. 指定したディレクトリに `prmn-wicket` ディレクトリが生成されていれば完了
 
 #### IntelliJでImport
 
 1. IntelliJの起動画面(Welcome to IntelliJ IDEA)を開く(既にプロジェクトを開いている場合には"File"->"Close Project")
-2. "Import Project"を選択し、作成したプロジェクトを指定する
-3. ラジオボタンで"Import project from external model"を選択し、Mavenを選択する
-4. "Import Maven projects automatically"にチェックを付けて"next"を押す
+2. `Import Project` を選択し、作成したプロジェクトを指定する
+3. ラジオボタンで `Import project from external model` を選択し、Mavenを選択する
+4. `Import Maven projects automatically` にチェックを付けて"next"を押す
 5. そのまま"next"を押す
 6. SDKを選択(今期のプロジェクトメンバーではAdoptOpenJDKのバージョン11を使用する)し、"next"を押す
 7. そのまま"Finish"を押す
