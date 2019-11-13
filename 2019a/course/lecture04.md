@@ -95,7 +95,7 @@ ListViewはコレクション(Listなど)の中身をリスト形式で表示す
 コレクションの内容をどのように処理するかは、ListView#populateItem() を実装することで定義できる。<br/>
 なお、ListView#populateItem()は抽象メソッドとなっており、かならず実装しなければならない。
 
-listItem中のインスタンスを取得する場合には、 `ListItem<>::getModelObject()` を用いる。
+listItem中のインスタンスを取得する場合には、 `ListItem<>::getModelObject` を用いる。
 
 ```java
 // Accountのリスト(要素の追加は省略する)
