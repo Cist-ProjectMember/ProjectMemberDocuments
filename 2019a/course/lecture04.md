@@ -53,7 +53,7 @@ Labelは単純なラベル(表示するための文字列を表す)を生成す�
 
 ```java
 // wicket:id="exampleLabel"に対して"This is an example."という文字列を設定する
-add(new Label("This is an example.", "exampleLabel"));
+add(new Label("exampleLabel", "This is an example."));
 ```
 
 #### Button
