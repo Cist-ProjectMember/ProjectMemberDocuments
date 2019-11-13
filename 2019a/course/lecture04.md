@@ -107,7 +107,7 @@ ListView<Account> accountListView = new ListView<>("accountListView", accountsMo
   // populateItemは抽象メソッド
   @Override
   protected void populateItem(ListItem<Account> listItem){
-    add(new Label("accountId", listItem.getModelObject().getId()));
+    listItem.add(new Label("accountId", listItem.getModelObject().getId()));
   }
 };
 ```
