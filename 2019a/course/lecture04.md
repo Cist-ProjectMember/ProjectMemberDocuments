@@ -103,7 +103,7 @@ List<Account> accounts = new ArrayList<Account>();
 // accountsのモデル化
 IModel<List<Account>> accountsModel = Model.ofList(accounts);
 
-ListView<List<Account>> accountListView = new ListView<>("accountListView", accountsModel){
+ListView<Account> accountListView = new ListView<>("accountListView", accountsModel){
   // populateItemは抽象メソッド
   @Override
   protected void populateItem(ListItem<Account> listItem){
