@@ -95,12 +95,14 @@ ListViewはコレクション(Listなど)の中身をリスト形式で表示す
 コレクションの内容をどのように処理するかは、ListView#populateItem() を実装することで定義できる。<br/>
 なお、ListView#populateItem()は抽象メソッドとなっており、かならず実装しなければならない。
 
+listItem中のインスタンスを取得する場合には、 `ListItem<>::getModelObject()` を用いる。
+
 ```java
 // Accountのリスト(要素の追加は省略する)
 List<Account> accounts = new ArrayList<Account>();
 
 // accountsのモデル化
-IModel<List<Account>> accountsModel = Model.of(accounts);
+IModel<List<Account>> accountsModel = Model.ofList(accounts);
 
 ListView<> accountListView = new ListView<>("accountListView", accountsModel){
   // populateItemは抽象メソッド
@@ -109,6 +111,14 @@ ListView<> accountListView = new ListView<>("accountListView", accountsModel){
     add(new Label("accountId", listItem.getModelObject().getId()));
   }
 };
+```
+
+```html
+<div>
+  <ul wicket:id="accountListView">
+    <li wicket:id="accountId"></li>
+  </ul>
+</div>
 ```
 
 ## 演習課題
@@ -158,3 +168,9 @@ ListViewを用いてコレクションの内容を表示する。
 1. クラス名はReport
 2. フィールドとして id(long), authorName(String), title(String), details(String), postedAt(Timestamp)を持つ
 3. フィールドは全てprivateでアクセサを持つ
+
+HomePage.htmlとHomePage.javaを編集し、Reportの内容をListViewを用いて表示できるようにしなさい。<br/>
+なお、ListViewに渡すListには、少なくとも2つ以上の要素を追加しておくこと(初期化する内容は問わない)。
+
+ヒント1. ListViewをインスタンス化する際に、第2引数に `IModel<List<Report>>` を渡す
+ヒント2. ListViewに何かを追加(この課題では表示)したい場合には、ListView#populateItem(ListItem listItem) のlistItemに対してadd()する
