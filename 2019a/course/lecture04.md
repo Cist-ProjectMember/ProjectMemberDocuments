@@ -169,6 +169,7 @@ ListViewを用いてコレクションの内容を表示する。
 1. クラス名はReport
 2. フィールドとして id(long), authorName(String), title(String), details(String), postedAt(Timestamp)を持つ
 3. フィールドは全てprivateでアクセサを持つ
+4. コンストラクタにてすべてのフィールドを初期化すること(ただし、postedAtのみLocalDateTime#now()を用いて初期化するものとする)
 
 HomePage.htmlとHomePage.javaを編集し、Reportの内容をListViewを用いて表示できるようにしなさい。<br/>
 なお、ListViewに渡すListには、少なくとも2つ以上の要素を追加しておくこと(初期化する内容は問わない)。
