@@ -145,7 +145,7 @@ Startクラスのmain()を実行し、`localhost:8080` でパスワードフィ�
 
 ### 課題5
 
-課題2で追加したButtonのonSubmit()の処理内容を変更して、`userNameTextField` と `userPasswordTextField` に自分の学籍番号が入力された場合のみ `自分の学籍番号が入力されました` と表示しなさい。
+課題2で追加したButtonのonSubmit()の処理内容を変更して、`userNameTextField` と `userPasswordTextField` に自分の学籍番号が入力された場合のみ標準出力に `自分の学籍番号が入力されました` と表示しなさい。
 
 Startクラスのmain()を実行し、`localhost:8080` で各フィールドに自分の学籍番号を入力した場合のみ `自分の学籍番号が入力されました` と表示されるのを確認しなさい。
 
