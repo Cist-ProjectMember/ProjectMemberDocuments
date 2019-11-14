@@ -7,6 +7,7 @@
 * TextField
 * PasswordTextField
 * setResponsePage
+* WebPage
 
 ## 概要
 
@@ -16,7 +17,17 @@
 WicketにおいてはFormクラスでフォームを作成できる。<br/>
 ただし、Formだけでは入力を受け付けることができないため、下に示すButtonやTextFieldなどと組み合わせて使用する。
 
+```java
+
+```
+
 #### Button
+
+フォームに付随するボタンを作成するにはButtonクラスを使用する。<br/>
+
+```java
+
+```
 
 #### TextField
 
@@ -55,12 +66,13 @@ Startクラスのmain()を実行し、`localhost:8080` で送信ボタンが表�
 
 課題1で作成したFormに文字列を入力する欄を追加しなさい。
 
-htmlではtypeを"text"に設定した `<input>` タグを使用しなさい。<br/>
-また、上の`<input>`に紐づけるwicket:idは `userNameTextField` とすること。<br/>
+htmlではtypeを"text"に設定した `<input>` タグを使用し、wicket:idは `userNameTextField` としなさい。<br/>
+`IModel<String>`型の`userNameModel`を作成し、TextFieldのコンストラクタに渡すことで入力された文字列を管理する
+また、TextField型の変数 `userNameTextField` にTextFieldをインスタンス化する。
 
 Startクラスのmain()を実行し、`localhost:8080` でテキストフィールドが表示されていることを確認しなさい。
 
-ヒント1. Formに紐づけるTextFieldに渡したModelから、実際に入力された値をString型で取り出せる
+ヒント1. TextFieldに渡したModelから、実際に入力された値をString型で取り出せる
 
 ### 課題4
 
