@@ -164,3 +164,6 @@ Startクラスのmain()を実行し、`localhost:8080` で各フィールドに�
 
 ヒント1. 追加したLinkの `onClick()` の処理を書き換えることで画面遷移を実現する
 
+### 課題7(発展)
+
+FortunePage.javaおよびFortunePage.htmlを編集して、HomePageに戻るリンクを作成しなさい。
