@@ -147,7 +147,7 @@ Startクラスのmain()を実行し、`localhost:8080` でパスワードフィ�
 
 Startクラスのmain()を実行し、`localhost:8080` で各フィールドに自分の学籍番号を入力した場合のみ `自分の学籍番号が入力されました` と表示されるのを確認しなさい。
 
-ヒント1. TextFieldに渡したModelから、実際に入力された値をString型で取り出せる
+ヒント1. TextFieldに渡したModelから、実際に入力された値をString型で取り出せる<br/>
 ヒント2. onSubmit()の中で、条件分岐を用いることで文字列比較しなさい<br/>
 ヒント3. 文字列比較は `==` ではなく、String#equals(String) を用いること
 
