@@ -17,8 +17,13 @@
 WicketにおいてはFormクラスでフォームを作成できる。<br/>
 ただし、Formだけでは入力を受け付けることができないため、下に示すButtonやTextFieldなどと組み合わせて使用する。
 
-```java
+```html
+<form wicket:id="reportForm"></form>
+```
 
+```java
+Form reportForm = new Form("reportForm");
+add(reportForm);
 ```
 
 #### Button
@@ -26,9 +31,16 @@ WicketにおいてはFormクラスでフォームを作成できる。<br/>
 フォームに付随するボタンを作成するにはButtonクラスを使用する。<br/>
 このButtonがクリックされると、自動的に Button#onSubmit()が呼び出されるため、これをOverrideすることで具体的な処理を定義できる。
 
+```html
+<form wicket:id="reportForm">
+  <!-- <form>の中に書くことに注意 -->
+  <input wicket:id="submitButton" type="submit"/>
+</form>
+```
+
 ```java
-// reportFormに対してボタンを追加する
-reportForm.add(new Button("reportFormButton"){
+// reportFormに対してButtonを追加する
+reportForm.add(new Button("submitButton"){
   @Override
   public void onSubmit(){
     super.onSubmit();
@@ -42,11 +54,20 @@ reportForm.add(new Button("reportFormButton"){
 フォームに付随するテキストフィールド(自由に文字を入力できる欄)を作成するにはTextFieldクラスを使用する。<br/>
 TextFieldに入力された値は、セットされたModelから取得できる。
 
+```html
+<form wicket:id="reportForm">
+  <!-- <form>の中に書くことに注意 -->
+  <input wicket:id="reportTitle" type="text"/>
+</form>
+```
+
 ```java
 // reportFormにTextFieldを追加する
 IModel<String> reportTitleModel = Model.of("");
 reportForm.add(new TextField("reportTitle", reportTitleModel));
 ```
+
+TextFieldに入力された値を取り出す場合の例を以下に示す。
 
 ```java
 // 入力された文字列を標準出力に表示する
@@ -59,7 +80,16 @@ System.out.println(reportTitleModel.getObject());
 
 ### 画面遷移
 
-setResponsePage()
+Linkが押された場合に別のページに遷移させたい場合、`setResponsePage()` を用いることで画面遷移を実現できる。
+
+```java
+Link<> link = new Link<>("link"){
+  @Override
+  public void onClick(){
+    setResponsePage()
+  }
+}
+```
 
 ## 演習課題
 
@@ -100,7 +130,7 @@ Startクラスのmain()を実行し、`localhost:8080` でテキストフィー�
 
 ### 課題4
 
-課題1で作成したFormに文字列を入力する欄を追加しなさい。
+課題1で作成したFormにパスワードを入力する欄を追加しなさい。
 
 htmlではtypeを"password"に設定した `<input>` タグを使用し、wicket:idは `userPasswordTextField` としなさい。<br/>
 `IModel<String>`型の`userPasswordModel`を作成する。<br/>
