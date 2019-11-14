@@ -67,8 +67,8 @@ Startクラスのmain()を実行し、`localhost:8080` で送信ボタンが表�
 課題1で作成したFormに文字列を入力する欄を追加しなさい。
 
 htmlではtypeを"text"に設定した `<input>` タグを使用し、wicket:idは `userNameTextField` としなさい。<br/>
-`IModel<String>`型の`userNameModel`を作成し、TextFieldのコンストラクタに渡すことで入力された文字列を管理する
-また、TextField型の変数 `userNameTextField` にTextFieldをインスタンス化する。
+`IModel<String>`型の`userNameModel`を作成する。<br/>
+また、`TextField`型の`userNameTextField` にTextFieldをインスタンス化する(コンストラクタに上で作成した`userNameModel`を渡す)。
 
 Startクラスのmain()を実行し、`localhost:8080` でテキストフィールドが表示されていることを確認しなさい。
 
@@ -78,8 +78,9 @@ Startクラスのmain()を実行し、`localhost:8080` でテキストフィー�
 
 課題1で作成したFormに文字列を入力する欄を追加しなさい。
 
-htmlではtypeを"password"に設定した `<input>` タグを使用しなさい。<br/>
-また、上の`<input>`に紐づけるwicket:idは `userPasswordTextField` とすること。<br/>
+htmlではtypeを"password"に設定した `<input>` タグを使用し、wicket:idは `userPasswordTextField` としなさい。<br/>
+`IModel<String>`型の`userPasswordModel`を作成する。<br/>
+また、`TextField`型の`userPasswordTextField` にTextFieldをインスタンス化する(コンストラクタに上で作成した`userPasswordModel`を渡す)。
 
 Startクラスのmain()を実行し、`localhost:8080` でパスワードフィールドが表示されていることを確認しなさい。
 
