@@ -64,7 +64,7 @@ TextFieldに入力された値は、セットされたModelから取得できる
 ```java
 // reportFormにTextFieldを追加する
 IModel<String> reportTitleModel = Model.of("");
-reportForm.add(new TextField("reportTitle", reportTitleModel));
+reportForm.add(new TextField("reportTitle", reportTitleModel));   // reportFormに対してaddすることに注意!
 ```
 
 TextFieldに入力された値を取り出す場合の例を以下に示す。
@@ -80,15 +80,20 @@ System.out.println(reportTitleModel.getObject());
 
 ### 画面遷移
 
-Linkが押された場合に別のページに遷移させたい場合、`setResponsePage()` を用いることで画面遷移を実現できる。
+Linkが押された場合に別のページに遷移させたい場合、`setResponsePage()` を用いることで画面遷移を実現できる。<br/>
+setResponsePageの引数には、WebPageを継承したクラス自体か、もしくはそれをインスタンス化したものを渡す。
 
 ```java
-Link<> link = new Link<>("link"){
+// AnotherPageに遷移するLinkを追加する(型引数はVoid)
+Link<Void> link = new Link<Void>("link"){
   @Override
   public void onClick(){
-    setResponsePage()
+    setResponsePage(AnotherPage.class);
+    // あるいは、
+    // setResponsePage(new AnotherPage());
   }
 }
+add(link);
 ```
 
 ## 演習課題
