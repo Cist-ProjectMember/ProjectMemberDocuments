@@ -24,14 +24,38 @@ WicketにおいてはFormクラスでフォームを作成できる。<br/>
 #### Button
 
 フォームに付随するボタンを作成するにはButtonクラスを使用する。<br/>
+このButtonがクリックされると、自動的に Button#onSubmit()が呼び出されるため、これをOverrideすることで具体的な処理を定義できる。
 
 ```java
-
+// reportFormに対してボタンを追加する
+reportForm.add(new Button("reportFormButton"){
+  @Override
+  public void onSubmit(){
+    super.onSubmit();
+    // 具体的な処理を記述
+  }
+});
 ```
 
 #### TextField
 
+フォームに付随するテキストフィールド(自由に文字を入力できる欄)を作成するにはTextFieldクラスを使用する。<br/>
+TextFieldに入力された値は、セットされたModelから取得できる。
+
+```java
+// reportFormにTextFieldを追加する
+IModel<String> reportTitleModel = Model.of("");
+reportForm.add(new TextField("reportTitle", reportTitleModel));
+```
+
+```java
+// 入力された文字列を標準出力に表示する
+System.out.println(reportTitleModel.getObject());
+```
+
 #### PasswordTextField
+
+基本的にはTextFieldと同じだが、入力された文字列が●で表示されるという違いがある。
 
 ### 画面遷移
 
