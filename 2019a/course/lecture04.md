@@ -167,7 +167,7 @@ ListView<Account> accountListView = new ListView<>("accountListView", accountsMo
 1. HomePage.htmlを開き、\<body>タグ内のすべての要素を削除する
 2. 同じくHomePage.html内の、`<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css'/>` を削除する
 3. 同じくHomePage.html内の、`<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet"/>` を削除する
-4. \<head>タグを、`<html xmlns:wicket="http://wicket.apache.org">`に変更する
+4. \<html>タグを、`<html xmlns:wicket="http://wicket.apache.org">`に変更する
 5. HomePage.javaを開き、`add(new Label("version", getApplication().getFrameworkSettings().getVersion()));` を削除する
 6. main()を実行してブラウザでlocalhost:8080を開き、何も書かれていないページが表示されていれば完了
 
