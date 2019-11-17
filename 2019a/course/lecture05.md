@@ -92,7 +92,7 @@ Link<Void> link = new Link<Void>("link"){
     // あるいは、
     // setResponsePage(new AnotherPage());
   }
-}
+};
 add(link);
 ```
 
