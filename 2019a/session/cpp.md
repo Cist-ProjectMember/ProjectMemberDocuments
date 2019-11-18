@@ -4,9 +4,15 @@
 
 ## namespace
 
+名前空間のこと。JavaでいうところのPackage。<br/>
+複数人で開発を行うとき、同じクラス名の衝突を避けるためにある。
+
 ## STL
 
 STL(Standart Template Library)
+
+* std::vector\<T>
+* std::map\<K,V>
 
 ### std::vector\<T>
 
