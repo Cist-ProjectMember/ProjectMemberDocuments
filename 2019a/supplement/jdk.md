@@ -2,6 +2,8 @@
 
 ## JDKとは
 
+Javaソースファイルをコンパイル/実行するために必要なツール。
+
 ## JDKのインストール
 
 プロジェクトメンバーの活動ではJDKとして[AdoptOpenJDK](https://adoptopenjdk.net/index.html)のバージョン11を用いる。
