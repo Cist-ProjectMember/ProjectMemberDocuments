@@ -15,5 +15,7 @@
 
 3. インストーラに従いインストールする(ただし、`Set JAVA_HOME variable`を選択状態にすること)
 
+![image2](./image/install_aojdk2.png)
+
 ### For Mac
 [jdk install link](https://github.com/Yoshiki-Yamada/JavaSettingsDocument/blob/master/,jdk_12_install.md)
