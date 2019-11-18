@@ -137,7 +137,7 @@ Startクラスのmain()を実行し、`localhost:8080` でテキストフィー�
 
 htmlではtypeを"password"に設定した `<input>` タグを使用し、wicket:idは `userPasswordTextField` としなさい。<br/>
 `IModel<String>`型の`userPasswordModel`を作成する。<br/>
-また、`TextField`型の`userPasswordTextField` にTextFieldをインスタンス化する(コンストラクタに上で作成した`userPasswordModel`を渡す)。
+また、`PasswordTextField`型の`userPasswordTextField` にTextFieldをインスタンス化する(コンストラクタに上で作成した`userPasswordModel`を渡す)。
 
 Startクラスのmain()を実行し、`localhost:8080` でパスワードフィールドが表示されていることを確認しなさい。
 
