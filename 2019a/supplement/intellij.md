@@ -33,4 +33,5 @@
 
 ### For Mac
 
-1. homebrewから`brew cask install intellij-idea`を入力して実行
+Homebrewを使ってinstallする場合はターミナルから`brew cask install intellij-idea`を入力して実行する。  
+Homebrewを使わない場合はwindowsと同じ手順で出来ます。
