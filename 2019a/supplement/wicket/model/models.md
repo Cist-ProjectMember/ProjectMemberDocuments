@@ -1,4 +1,4 @@
 # Model
 
-* IModel<T>
-* 
+* [Model\<T>](./)
+* [LambdaModel\<T>](./)
