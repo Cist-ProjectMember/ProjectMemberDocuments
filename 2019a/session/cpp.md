@@ -30,7 +30,7 @@ int &rnumber = number;    // 参照
 
 ## STL
 
-STL(Standart Template Library)とは、C++で標準で用意されている、テンプレートを用いて様々な型に対応したコンテナのことである。
+STL(Standard Template Library)とは、C++で標準で用意されている、テンプレートを用いて様々な型に対応したコンテナのことである。
 
 * std::vector\<T>
 * std::map\<K,V>
