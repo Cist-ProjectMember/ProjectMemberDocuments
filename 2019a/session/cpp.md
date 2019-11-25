@@ -18,6 +18,14 @@ C++で提供されるクラスライブラリは全てstd名前空間に属す�
 ただし、ここで注意しなければならないのは、`using namespace`によって、そのブロックが名前空間に汚染されるという事である。<br/>
 入門書/入門サイトなどでは、コードブロック外(グローバル名前空間と呼ぶ)で`using namespace`が宣言されており、このソースファイルをincludeすると、`using namespace`をしなくてもその名前空間に属するクラスを使用することができるようになってしまう。
 
+## ポインタと参照
+
+```cpp
+int number = 100;
+int *pnumber = &number;   // ポインタ
+int &rnumber = number;    // 参照
+```
+
 ## template
 
 ## STL
