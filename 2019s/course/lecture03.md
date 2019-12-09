@@ -1,6 +1,7 @@
 # アクセス修飾子とカプセル化
 
 ## はじめに
+
 課題については資料の説明部分は大幅な変更がかからないため講習時間より先に見て学習していただいて構いません。</br>
 ただし、課題については直前に変更がかかる場合があるため、自己責任でお願いします。</br>
 変数・関数・クラスなどで、指定のないものに関しては、各自適当な名前付けを行ってください。</br>
@@ -8,6 +9,7 @@
 
 
 ## アクセス範囲/アクセス修飾子
+
 全てのクラス、フィールド、メソッドにはアクセス範囲が定められており、各クラス、フィールド、メソッドの宣言の前に以下のようなキーワード(アクセス修飾子と呼ぶ)を記述することでアクセス範囲を指定することが出来る。
 
 |修飾子                  |公開範囲                                  |
@@ -17,9 +19,9 @@
 |(なし/package private)  |同一クラス/同一パッケージのみ参照可能          |
 |private                |同一クラスのみ参照可能                       |
 
-理解し辛い学生は、とりあえず全てのフィールド/メソッドをprivateとして定義し、必要に応じてprotectedやpublicにすると良い
+理解し辛い学生は、とりあえず全てのフィールド/メソッドをprivateとして定義し、必要に応じてprotectedやpublicにすると良い。
 
-```
+```java
 public class Television {
 		private boolean power;	// Televisionクラスの中でのみアクセス可能
 		private double volume;
@@ -27,7 +29,9 @@ public class Television {
 		public Television(){		// 全てのクラスからアクセス可能
 			this.power = false;	this.volume = 0.0;
     }	
-		public void turnPower(){  this.power = !this.power;		}
+		public void turnPower(){
+			this.power = !this.power;
+		}
 }
 ```
 
@@ -38,11 +42,13 @@ public class Television {
 そこで、外部からアクセスする必要があるフィールドにのみ、setter(セッター)、getter(ゲッター)というメソッドをpublicで定義する。</br>
 セッターとゲッターをまとめてアクセサと呼ぶ。</br>
 アクセサはメソッド名の命名に規則があり、それぞれ
-```
+
+```java
 // int型のnumberはフィールドとして既に定義されているものとする
 public void setNumber(int number){  this.number = number;  }
 public int getNumber(){  return number;  }
 ```
+
 と記述する。
 
 
@@ -54,7 +60,8 @@ public int getNumber(){  return number;  }
 
 現実的な例:
 	テレビのチャンネルは直接ではなく、テレビに付属するチャンネル変更ボタンやリモコンのチャンネル変更ボタンにより変更してほしい。</br>
-```
+
+```java
 television.channel = 2019;		// カプセル化されていないとこんなことも出来てしまう
 
 // アクセサによりフィールドの値の取りうる範囲を制限
@@ -79,8 +86,11 @@ public void setChannel(int channel){
 * Carインスタンスのrun()を呼び、燃料が1消費されていることを確認しなさい。</br>
 lecture02の課題2-1では、mainメソッド内に`car.fuel += 20;`と入力できたが、今回の課題で用いたCarインスタンスではコンパイルエラーとなるのは何故か。</br>
 また、Carクラスのrun()でfuelに直接アクセスしてもエラーが起きないのは何故か。
+
 #### 実行結果
-```
+
+
+```java
 給油しました。
 	残量:20
 給油しました。
@@ -88,6 +98,7 @@ lecture02の課題2-1では、mainメソッド内に`car.fuel += 20;`と入力�
 	燃料を1消費して走りました。
 	残量:39
 ```
+
 
 ### 課題2
 
@@ -102,8 +113,11 @@ lecture02の課題2-1では、mainメソッド内に`car.fuel += 20;`と入力�
 * whileを用いて、どちらかのFighterが倒れるまで攻撃を繰り返す。
 * ダメージが発生するごとに残りHPを表示する。
 * ifを用いて勝敗を表示する。
+
 #### 実行結果
-```
+
+
+```java
 Fighter1はFighter2に100ダメージを与えた。
 Fighter2の 残りHP: 80
 Fighter2はFighter1に150ダメージを与えた。
@@ -113,6 +127,7 @@ Fighter2の 残りHP: -20
 Fighter2は倒れた。
 Fighter1は勝利した。
 ```
+
 
 ### 課題3
 
@@ -132,7 +147,8 @@ Fighter1は勝利した。
 * 適当なアカウントの口座への操作を記述し、意図通りプログラムが動くかを確認せよ。
 
 #### 実行結果
-```
+
+```java
 川越さんのアカウントを作成しました
 初期残高は 1000 円、口座番号は 123456 です
 前川さんのアカウントを作成しました
