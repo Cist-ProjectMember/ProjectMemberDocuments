@@ -23,3 +23,14 @@
 #### For Windows 10 Professional
 
 ### For Mac
+
+1. ターミナルにて、`brew install docker`コマンドを実行する
+2. ターミナルにて、`brew cask install docker`コマンドを実行する
+
+## Dockerのインストール確認コマンド
+
+defaultが起動している状態で以下のコマンドを実行する
+
+```sh
+docker -v
+```
