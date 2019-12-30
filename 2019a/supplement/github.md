@@ -27,6 +27,8 @@ macはデフォルトでgitが入っているはずです。試しにターミ�
 
 ### githubの登録
 
+[Sign up](https://github.com/join?source=header-home)
+
 ## gitのよく使うコマンド
 
 ### status
