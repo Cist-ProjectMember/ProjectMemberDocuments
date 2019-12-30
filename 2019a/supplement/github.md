@@ -19,6 +19,8 @@
 
 ## git講習の環境導入
 ### git install for windows
+
+[Gitのインストール](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2019a/supplement/git.md)
  
 ### git install for mac
 macはデフォルトでgitが入っているはずです。試しにターミナルで`git --version`と叩いてみましょう。もし見つからない人がいれば教えてください。 
