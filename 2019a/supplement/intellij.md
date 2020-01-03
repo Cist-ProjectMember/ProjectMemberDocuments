@@ -1,5 +1,9 @@
 # IntelliJ IDEA
 
+## 目次
+
+[IntelliJ IDEAとは](IntelliJ_IDEAとは)
+
 ## IntelliJ IDEAとは
 
 [IntelliJ IDEA](https://www.jetbrains.com/idea/)はJetBrains社のIDEであり、主にJavaを用いた開発に用いられる。<br/>
