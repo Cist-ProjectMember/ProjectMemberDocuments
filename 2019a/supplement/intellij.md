@@ -2,7 +2,7 @@
 
 ## 目次
 
-[IntelliJ IDEAとは](IntelliJ_IDEAとは)
+[IntelliJ IDEAとは](#IntelliJ-IDEAとは)
 
 ## IntelliJ IDEAとは
 
