@@ -2,7 +2,10 @@
 
 ## 目次
 
-[IntelliJ IDEAとは](#IntelliJ-IDEAとは)
+* [IntelliJ IDEAとは](#IntelliJ-IDEAとは)
+* [ライセンス取得](#ライセンス取得)
+* [インストール手順](#インストール手順)
+* [ショートカットコマンド](#ショートカットコマンド)
 
 ## IntelliJ IDEAとは
 
@@ -39,3 +42,35 @@
 
 Homebrewを使ってinstallする場合はターミナルから`brew cask install intellij-idea`を入力して実行する。  
 Homebrewを使わない場合はwindowsと同じ手順で出来ます。
+
+## ショートカットコマンド
+
+### コード整形
+
+* For Windows
+
+`Ctrl + Alt + l`
+
+* For Mac
+
+`Command + Alt + l`
+
+### リネーム
+
+* For Windows
+
+`Shift + F6`
+
+* For Mac
+
+`?`
+
+### 引数の候補表示切替
+
+* For Windows
+
+`Ctrl + P`
+
+* For Mac
+
+`Command + P`
