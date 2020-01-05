@@ -53,7 +53,7 @@ Homebrewを使わない場合はwindowsと同じ手順で出来ます。
 
 * For Mac
 
-`Command + Alt + l`
+`Command + Option + l`
 
 ### リネーム
 
@@ -63,7 +63,7 @@ Homebrewを使わない場合はwindowsと同じ手順で出来ます。
 
 * For Mac
 
-`?`
+`Shift + F6`
 
 ### 引数の候補表示切替
 
