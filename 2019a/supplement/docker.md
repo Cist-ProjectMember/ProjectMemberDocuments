@@ -22,6 +22,12 @@
 
 #### For Windows 10 Professional
 
+1. [Install Docker Desktop on Windows](https://docs.docker.com/docker-for-windows/install/)を開く
+2. `Download from Docker Hub`を開く
+3. `Get Docker`を押して`Docker Desktop Installer`をダウンロードする
+4. (インストール)してパソコンを再起動する
+5. 起動時にタスクトレイにクジラ型のアイコンが表示されればインストール完了
+
 ### For Mac
 
 1. ターミナルにて、`brew install docker`コマンドを実行する
