@@ -21,3 +21,7 @@ Javaソースファイルをコンパイル/実行するために必要なツー
 
 ### For Mac
 [jdk install link](https://github.com/Yoshiki-Yamada/JavaSettingsDocument/blob/master/,jdk_12_install.md)
+
+## メモ
+
+ダウンロードリンクに `LTS` を書いてあるバージョンは長期サポート(Long Term Support)となっており、LTSでないバージョンと比べてサポート期間が長いため、基本的にはLTS版のJDKをインストールすることをおすすめする
