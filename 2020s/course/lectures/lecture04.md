@@ -75,7 +75,7 @@ public void setChannel(int channel){
 
 ### 課題1
 
-以下のクラスを作成せよ。可視性は省略されているから自分で判断せよ。　　
+以下のクラスを作成せよ。可視性は省略されているから自分で判断せよ。  
 ![](http://www.plantuml.com/plantuml/png/LSwn3e903CRnlK_H4H86vvjWCRgPy0G5AZGSFNDN63I-knVHHCUclt_orSaeshfuIBFeZI8js7jAgJ6Bqgt6vpveAtV60xmVU9HnCeuFmDF5YHfWiiWwshHVIWkxDjSw0dnriTlgprQ_jWGaC-hdufeJZkvJbcuBCW1AQhniN9Ik2y4pAJoXPXtozXS0)
 * 作成したクラスをカプセル化し、必要に応じてアクセサを新たに追加せよ。
 * attack()では引数で受け取ったFighterのHPを自分のstrength分減らし、与えたダメージ量と、ダメージを与えたということを表示する。
