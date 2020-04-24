@@ -56,9 +56,7 @@ public int getChannel() {
 テレビのチャンネルは直接ではなく、テレビに付属するチャンネル変更ボタンやリモコンのチャンネル変更ボタンにより変更してほしい。  
 
 ```java
-// 略
-
-var television = new Television();
+Television television = new Television();
 
 // カプセル化されていないとこんなことも出来てしまう
 television.channel = 2020;
