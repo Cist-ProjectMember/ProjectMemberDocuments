@@ -15,15 +15,18 @@
 
 ```java
 public class Television {
-		private boolean power;	// Televisionクラスの中でのみアクセス可能
-		private double volume;
+	private boolean power; // Televisionクラスの中でのみアクセス可能
+	private double volume;
+	private int channel;
 
-		public Television(){		// 全てのクラスからアクセス可能
-			this.power = false;	this.volume = 0.0;
-    }	
-		public void turnPower(){
-			this.power = !this.power;
-		}
+	public Television() { // 全てのクラスからアクセス可能
+		this.power = false;
+		this.volume = 0.0;
+		this.channel = 0;
+	}	
+	public void turnPower() {
+		this.power = !this.power;
+	}
 }
 ```
 
@@ -33,9 +36,13 @@ public class Television {
 どのクラスにおいても、全てのフィールドは基本的にprivateもしくはprotected修飾子が付加されているため、外部からアクセスすることが出来ない。そこで、外部からアクセスする必要があるフィールドにのみ、setter(セッター)、getter(ゲッター)というメソッドをpublicで定義する。セッターとゲッターをまとめてアクセサと呼ぶ。アクセサはメソッド名の命名に規則があり、それぞれ  
 
 ```java
-// int型のnumberはフィールドとして既に定義されているものとする
-public void setNumber(int number){  this.number = number;  }
-public int getNumber(){  return number;  }
+public void setChannel(int channel) {
+	this.channel = channel;
+}
+
+public int getChannel() {
+	return channel;
+}
 ```
 
 と記述する。  
@@ -49,12 +56,17 @@ public int getNumber(){  return number;  }
 テレビのチャンネルは直接ではなく、テレビに付属するチャンネル変更ボタンやリモコンのチャンネル変更ボタンにより変更してほしい。  
 
 ```java
-television.channel = 2019;		// カプセル化されていないとこんなことも出来てしまう
+// 略
+
+var television = new Television();
+
+// カプセル化されていないとこんなことも出来てしまう
+television.channel = 2020;
 
 // アクセサによりフィールドの値の取りうる範囲を制限
 public void setChannel(int channel){
-	this.channel = channel;
 	if(channel < 0 || channel > 12) this.channel = 0;
+	else this.channel = channel;
 }
 ```
 
