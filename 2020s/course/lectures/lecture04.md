@@ -66,7 +66,7 @@ public void setChannel(int channel){
 ### 課題1
 
 以下のクラスを作成せよ。  
-![](http://www.plantuml.com/plantuml/png/LSkn2i8m4CRn_PxYnXOwE6Tg5z5Dw1DSswCzcbmakHHKV7V1AkZuyVt-RJPALeA7l8fUAL70qLFEdLcIeHYVnwYzt1aFy3xmAFDYd1w0fuiJDS1iYNMsPLzAWLrlING6-EfgjysVRNvj3KXcDAuLAuUR-uIrsw9CW98xBnjNjHjYz4mAJsXPfnBy2m00)
+![](http://www.plantuml.com/plantuml/png/LSwn3e903CRnlK_H4H86vvjWCRgPy0G5AZGSFNDN63I-knVHHCUclt_orSaeshfuIBFeZI8js7jAgJ6Bqgt6vpveAtV60xmVU9HnCeuFmDF5YHfWiiWwshHVIWkxDjSw0dnriTlgprQ_jWGaC-hdufeJZkvJbcuBCW1AQhniN9Ik2y4pAJoXPXtozXS0)
 * 作成したクラスをカプセル化し、必要に応じてアクセサを新たに追加せよ。
 * attack()では引数で受け取ったFighterのHPを自分のstrength分減らし、与えたダメージ量と、ダメージを与えたということを表示する。
 * isAlive()では自分のHPを比較し、生きているかををbooleanで返す。
