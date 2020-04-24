@@ -69,7 +69,7 @@ public void setChannel(int channel){
 |+|public|
 |-|private|
 |#|protected|
-|~|(なし)|
+|~|修飾子なし|
 
 ## 演習課題
 
