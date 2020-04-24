@@ -62,7 +62,7 @@ public void setChannel(int channel){
 ## クラス図について
 
 クラス図は基本的に以下のように構成される。  
-![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5L8paaiBdOiAIdAJ2ejIVLCpiyBpgnALJ3W0aieF6vQ_xXvvUEcdKydz5PpAJpjN_zYsRHd3SiLWFoddRqALWfFvtKZYp-RtFjaxnoDftkcFfkwuN7ZEhWwk0XGWoPKNosNGsfU2j110000)
+![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5L8paaiBdOiAIdAJ2ejIVLCpiyBpgnALJ3W0aieF6vQ_xXvvUEcdKydz5PpAJpjN_zYsRHd3SiLWFoddRqALWfFvtKZYp-RtFjaxnoWh8B6qprJdqtTyBXn7LmjN0IeIHEgjvRB8JKl1UWe0000)
 
 |可視性|意味|
 |:--|:--|
