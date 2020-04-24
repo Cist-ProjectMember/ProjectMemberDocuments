@@ -55,16 +55,17 @@ public int getChannel() {
 
 現実的な例 :  
 テレビのチャンネルは直接ではなく、テレビに付属するチャンネル変更ボタンやリモコンのチャンネル変更ボタンにより変更してほしい。  
+カプセル化されていないと以下のようなことができてしまう。
 
 ```java
 Television television = new Television();
 
-// カプセル化されていないとこんなことも出来てしまう
 television.channel = 2020;
 ```
 
+このようなことを防ぐために、正しくカプセル化を行い、アクセサによりフィールドの値の取りうる範囲を制限する
+
 ```java
-// アクセサによりフィールドの値の取りうる範囲を制限
 public void setChannel(int channel){
 	if(channel < 0 || channel > 12) this.channel = 0;
 	else this.channel = channel;
