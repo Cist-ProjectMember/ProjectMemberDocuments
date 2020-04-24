@@ -19,6 +19,7 @@
 * Project locationに ”prmn2019s” フォルダへのパスを入れる
 * Finishを押す
 
+![intellij画像](image/lecture01_1.png)
 
 ### パッケージの作成
 
