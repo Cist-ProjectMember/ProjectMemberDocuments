@@ -112,14 +112,14 @@ television.setChannel(2020);
 #### 実行結果
 
 ```
-Fighter1はFighter2に 100 ダメージを与えた。
-Fighter2の残り HP : 80
-Fighter2はFighter1に 150 ダメージを与えた。
-Fighter1の残り HP : 60
-Fighter1はFighter2に 100 ダメージを与えた。
-Fighter2の残り HP : -20
-Fighter2は倒れた。
-Fighter1は勝利した。
+Fighter1 は Fighter2 に 100 ダメージを与えた。
+Fighter2 の残り HP : 80
+Fighter2 は Fighter1 に 150 ダメージを与えた。
+Fighter1 の残り HP : 60
+Fighter1 は Fighter2 に 100 ダメージを与えた。
+Fighter2 の残り HP : -20
+Fighter2 は倒れた。
+Fighter1 は勝利した。
 ```
 
 [戻る](../README.md)
