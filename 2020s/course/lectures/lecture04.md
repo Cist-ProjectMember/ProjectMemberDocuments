@@ -24,6 +24,7 @@ public class Television {
 		this.volume = 0.0;
 		this.channel = 0;
 	}	
+	
 	public void turnPower() {
 		this.power = !this.power;
 	}
@@ -60,7 +61,9 @@ Television television = new Television();
 
 // カプセル化されていないとこんなことも出来てしまう
 television.channel = 2020;
+```
 
+```java
 // アクセサによりフィールドの値の取りうる範囲を制限
 public void setChannel(int channel){
 	if(channel < 0 || channel > 12) this.channel = 0;
