@@ -65,7 +65,7 @@ class Human extends Creature, Mammalian {    }
 @Override
 ```
 
-“@” から始まる特別な記述はアノテーションと言い、プログラムに対してメタデータを付加することが出来る。  
+"@" から始まる特別な記述はアノテーションと言い、プログラムに対してメタデータを付加することが出来る。  
 
 ```java
 public class Animal {
