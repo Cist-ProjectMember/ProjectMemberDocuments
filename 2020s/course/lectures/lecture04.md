@@ -89,7 +89,7 @@ public void setChannel(int channel){
 
 #### 実行結果
 
-```java
+```
 Fighter1はFighter2に100ダメージを与えた。
 Fighter2の 残りHP: 80
 Fighter2はFighter1に150ダメージを与えた。
