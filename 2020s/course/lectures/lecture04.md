@@ -125,7 +125,7 @@ Fighter1 は勝利した。
 ### 課題2
 
 以下のクラスを作成せよ。可視性は省略されているから自分で判断せよ。  
-![]()
+![](http://www.plantuml.com/plantuml/png/RL1DIpCn4BxFhnZsj7rvjrGlGX1f3nu4FTMRYCncXsqm7oMPjTNI_sxMJR453qcOF1_FmooJK9J1MKZlncyfaaDjAQMLI3Jj8FoWWr-RByO5_02uUduw09BMOV2IrAD9ShkQfZiOqNe66BdF_nmBK7johDRPqlV_qG-kvLZ6JEPzvgOJTQRQ42oJ1-nu6vAHsWNFdyg6p5OVmNI0EoERBjBk0XflE4BfMVnorxDmk0m7RCcIrpnfyS-wqwicuUmtu7xFKPl4Ds_NEUIGXCJe8peolgROfsBmybfAP-6P19je-eqquyOW7wokAWnDWzLYFlzNdQh0adqtEFiD)
 
 #### 実行結果
 
