@@ -134,7 +134,7 @@ Fighter1 は勝利した。
 * 作成したクラスをカプセル化し、必要に応じてアクセサを新たに追加せよ。
 * 可視性は省略されているから自分で判断せよ。 
 * mainの中でATMをインスタンス化する。
-* AccountのコンストラクタでRandomクラスを用いて5桁の数字を生成し、numberを初期化せよ(数字は０から始まる可能性もある　例:00321)。
+* AccountのコンストラクタでRandomクラスを用いて5桁の数字を生成し、numberを初期化する。(数字は０から始まる可能性もある　例:00321)
 * ATMのコンストラクタでaccountsを初期化する。
 * registerAccount()はScannerを用いてユーザーが入力したnameを用いてアカウントを登録する。
 * exitsAccount()は引数のnameとnumberからaccountsに存在するかどうかをbooleanで返す。
