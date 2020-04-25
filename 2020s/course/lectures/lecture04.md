@@ -129,17 +129,18 @@ Fighter1 は勝利した。
 
 以下のクラスを作成せよ。 
 
-![](http://www.plantuml.com/plantuml/png/VL5DImCn4BtFhnZsr4gtL2_28j8zU13qL6yYCfiTji5DKZApjbhwtytQrQvGF2IGl8-ybrcAKjJEjI1lrcyeaaFJaaYf6ctLAT-Ru5Vsat41tm2MJuzxG38cT5wbUB2YD-NnT0izEfa2HcxIFSS1c7XoNAoIfM-cnNkmDI3l4aFE46ReErTn_ELN8RHC7h3cJH2Ro6DyXYvu_YZQSFBUMbtNaRR_CViT3Z2q6dAaPgCay3S9O4KjUSD7BPuhTtAyst4qLlZwzIgvxaL9hJcW8-id51iP5CylG-Wa74amZxPPQzv_AAI5sMM68SynMypd5zdFsx1aNwVnVG40)
+![](http://www.plantuml.com/plantuml/png/VL31IWCn4BtdAuOzxOfRgXTX4MaF7WGzrPk8p6Q7xU1cKf9PMotzTxSsmHx4GmBllNalRxA8Ya57DvZuphB1W0xiW34kLGEtezA3zRBYBuAv-H5W-VoqDu3M-b4qDeySzNPvGdVcg9QLWK3zn5D8Gbar7vux0xIRw9XPGKVDIWDBVmaokfP2WbNJUZyGYe6EDZwobbbFuyuBVJQ3bpvdRrdNNS3jVvF7snnCMYNrcDOvQs9oamnR750idRpmH_VgD_5-Hy5of9ktwobr7nMLxG4SifGO-fWSBw-fz6Gyiq0Tk5zhVVn5CnqehWhmTGt5V3QxAFBRPa7IZMxu1W00)
 
 * 作成したクラスをカプセル化し、必要に応じてアクセサを新たに追加せよ。
 * 可視性は省略されているから自分で判断せよ。 
 * mainの中でATMをインスタンス化する。
 * AccountのコンストラクタでRandomクラスを用いて5桁の数字を生成し、numberを初期化せよ(数字は０から始まる可能性もある　例:00321)。
 * ATMのコンストラクタでaccountsを初期化する。
-* registerAccount()はアカウントを登録する。
+* registerAccount()はScannerを用いてユーザーが入力したnameを用いてアカウントを登録する。
 * exitsAccount()は引数のnameとnumberからaccountsに存在するかどうかをbooleanで返す。
 * deposit()とwithdraw()は引数のnumberがaccountsに存在するとき、引数のmoneyを利用して入金と引出を行う。
 * withdraw()は残高が足りないときは行えないようにする。
+* それぞれ何か行うたびに、何をしたかわかるように標準出力で表示するようにせよ。
 
 #### 実行結果
 
