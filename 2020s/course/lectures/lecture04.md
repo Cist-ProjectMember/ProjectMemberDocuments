@@ -97,9 +97,12 @@ television.setChannel(2020);
 
 ### 課題1
 
-以下のクラスを作成せよ。可視性は省略されているから自分で判断せよ。  
+以下のクラスを作成せよ。  
+
 ![](http://www.plantuml.com/plantuml/png/LSwn3e903CRnlK_H4H86vvjWCRgPy0G5AZGSFNDN63I-knVHHCUclt_orSaeshfuIBFeZI8js7jAgJ6Bqgt6vpveAtV60xmVU9HnCeuFmDF5YHfWiiWwshHVIWkxDjSw0dnriTlgprQ_jWGaC-hdufeJZkvJbcuBCW1AQhniN9Ik2y4pAJoXPXtozXS0)
+
 * 作成したクラスをカプセル化し、必要に応じてアクセサを新たに追加せよ。
+* 可視性は省略されているから自分で判断せよ。 
 * attack()では引数で受け取ったFighterのHPを自分のstrength分減らし、与えたダメージ量と、ダメージを与えたということを表示する。
 * isAlive()では自分のHPを比較し、生きているかををbooleanで返す。
 * HP, strength, nameは引数付きコンストラクタにて初期化せよ。
@@ -124,8 +127,19 @@ Fighter1 は勝利した。
 
 ### 課題2
 
-以下のクラスを作成せよ。可視性は省略されているから自分で判断せよ。  
-![](http://www.plantuml.com/plantuml/png/RL1DIpCn4BxFhnZsj7rvjrGlGX1f3nu4FTMRYCncXsqm7oMPjTNI_sxMJR453qcOF1_FmooJK9J1MKZlncyfaaDjAQMLI3Jj8FoWWr-RByO5_02uUduw09BMOV2IrAD9ShkQfZiOqNe66BdF_nmBK7johDRPqlV_qG-kvLZ6JEPzvgOJTQRQ42oJ1-nu6vAHsWNFdyg6p5OVmNI0EoERBjBk0XflE4BfMVnorxDmk0m7RCcIrpnfyS-wqwicuUmtu7xFKPl4Ds_NEUIGXCJe8peolgROfsBmybfAP-6P19je-eqquyOW7wokAWnDWzLYFlzNdQh0adqtEFiD)
+以下のクラスを作成せよ。 
+
+![](http://www.plantuml.com/plantuml/png/VL5DImCn4BtFhnZsr4gtL2_28j8zU13qL6yYCfiTji5DKZApjbhwtytQrQvGF2IGl8-ybrcAKjJEjI1lrcyeaaFJaaYf6ctLAT-Ru5Vsat41tm2MJuzxG38cT5wbUB2YD-NnT0izEfa2HcxIFSS1c7XoNAoIfM-cnNkmDI3l4aFE46ReErTn_ELN8RHC7h3cJH2Ro6DyXYvu_YZQSFBUMbtNaRR_CViT3Z2q6dAaPgCay3S9O4KjUSD7BPuhTtAyst4qLlZwzIgvxaL9hJcW8-id51iP5CylG-Wa74amZxPPQzv_AAI5sMM68SynMypd5zdFsx1aNwVnVG40)
+
+* 作成したクラスをカプセル化し、必要に応じてアクセサを新たに追加せよ。
+* 可視性は省略されているから自分で判断せよ。 
+* mainの中でATMをインスタンス化する。
+* AccountのコンストラクタでRandomクラスを用いて5桁の数字を生成し、numberを初期化せよ(数字は０から始まる可能性もある　例:00321)。
+* ATMのコンストラクタでaccountsを初期化する。
+* registerAccount()はアカウントを登録する。
+* exitsAccount()は引数のnameとnumberからaccountsに存在するかどうかをbooleanで返す。
+* deposit()とwithdraw()は引数のnumberがaccountsに存在するとき、引数のmoneyを利用して入金と引出を行う。
+* withdraw()は残高が足りないときは行えないようにする。
 
 #### 実行結果
 
