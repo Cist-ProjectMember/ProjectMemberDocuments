@@ -21,14 +21,14 @@ Javaでは対応するパッケージを import することでそのパッケ�
 
 ## クラスライブラリの種類
 
-Javaにはクラスライブラリとして様々なクラスが標準で用意されている。</br>
-例としては、</br>
+Javaにはクラスライブラリとして様々なクラスが標準で用意されている。  
+例としては、  
 * `java.util.ArrayList`
     * 可変長な配列(長さが理論上無限な配列)ArrayListを提供する
 * `java.util.Scanner`
     * 標準入力からの入力を受け付けるScannerを提供する(scanf()のようなもの)
 * `java.util.Random`
-    * 乱数を生成するRandomを提供する(rand()のようなもの)</br>
+    * 乱数を生成するRandomを提供する(rand()のようなもの)  
 クラスライブラリの詳細は[こちら](https://docs.oracle.com/javase/jp/11/docs/api/index.html)(Java SE 11)から確認可能
 
 
@@ -46,88 +46,13 @@ public class Main {
 }
 ```
 
-
-## Java.util.ArrayListクラス
-
-ArrayListクラスは、サイズが理論上無制限の配列を提供する。</br>
-インスタンス化する際に、どういった型のArrayListを用意するのかを型引数という形で宣言しなければならない。</br>
-型引数は <> の中に記述する。</br>
-以下、Student型およびDog型のArrayListをインスタンス化する場合の例を示す。</br>
-
-```java
-ArrayList<Student> students = new ArrayList<>();
-ArrayList<Dog> dogs = new ArrayList<>();
-```
-
-上の <> の中に書かれている型が型引数である。</br>
-= の前後で型引数を同じにしなければならない。</br>
-
-
-## java.util.ArrayListクラスの持つメソッド
-
-ArrayListクラスはインスタンス化することで以下のメソッドが使用可能になる。</br>
-ただし、ここではよく使うメソッドのみを挙げる。
-
-```java
-void add(E e)			//E型のeを末尾に追加する(例: Car型のcar、Tire型のtire )
-E get(int index)		//index番目の要素を返す(例: arrayList.get(15) )
-int size()				//要素数を返す(例: for(int i=0; i<arrayList.size(); i++){ /*  */ } )
-boolean isEmpty()	//要素数が0ならtrue、そうでなければfalseを返す
-					(例: if(arrayList.isEmpty()){  /* 処理 */  }  )
-```
-
-
-## java.util.ArrayListクラスの使用例
-
-以下、Animal型を継承するDogおよびCatを、Animal型を型引数とするArrayListに追加しbark()を呼び出す例を示す。
-
-```java
-ArrayList<Animal> animals = new ArrayList<>();
-animals.add(new Dog(“わんわん”));			// Dogを末尾(0番目)に追加
-animals.add(new Cat(“にゃーにゃー”));		// Catを末尾(1番目)に追加
-for(int i = 0; i < animals.size(); i++){
-	animals.get(i).bark();					// animalsの i 番目
-}
-```
-
-
-## 型引数にプリミティブ型をとるArrayList(発展)
-
-ArrayListの型引数に、int型やlong型、double型などのプリミティブ型を渡そうとすると、エラーが出る。</br>
-つまり、
-`ArrayList<int> numbers = new ArrayList<>();	// ダメ！`
-と記述が出来ないということである。</br>
-ここで用いるのが、各プリミティブ型のラッパークラスであり、プリミティブ型をその名の通りラッピングするクラスのことである。</br>
-例えば、int型ならIntegerクラス、double型ならDoubleクラスなど、プリミティブ型それぞれに対応するラッパークラスが用意されている。</br>
-
-以上のことから、int型の値をListとして保持しておきたい場合、以下のように記述する。</br>
-`ArrayList<Integer> numbers = new ArrayList<>();`</br>
-ただし、実際にはnumbersにはInteger型のインスタンスが入っているため、Integerクラスのインスタンスの持つint型の値を表示するためには、Integerクラスの持つメソッド、</br>
-`int intValue() `
-を用いる。
-
-## より詳しく知りたい場合
-
-ArrayListの型引数にプリミティブ型の値を渡せないのは、ArrayListの定義が,
-
-`ArrayList<E>`
-
-でありそもそもEという型はクラスでなければならないためである。</br>
-加えて、ArrayList<E>というクラスは、List<>というインターフェースを実装しているため(厳密には違う)、
-	
-`List<E> list = new ArrayList<>();`
-という書き方が一般によく用いられる。
-
-さらに詳しく知りたい場合は[こちら](https://docs.oracle.com/javase/jp/8/docs/api/java/lang/Integer.html)からドキュメントを参照すること。
-
-
 ## java.util.Scannerクラス
 
-Scannerクラスは標準入力からの入力を受け付ける。</br>
-コンストラクタにはどこからの入力を受け付けるのかを記述する。</br>
+Scannerクラスは標準入力からの入力を受け付ける。  
+コンストラクタにはどこからの入力を受け付けるのかを記述する。  
 コンソールからの入力を受け付ける場合の例:
 `Scanner scanner = new Scanner(System.in);`  
-また、Scannerは以下のメソッドを持つ(よく使うもののみ抜粋する)</br>
+また、Scannerは以下のメソッドを持つ(よく使うもののみ抜粋する)  
 
 ```java
 String nextLine()		// 入力された1行分の文字列を読み取って返す
@@ -149,13 +74,106 @@ double nextDouble()	// 入力された64bit浮動小数点値を返す
 ```
 
 
+## java.util.ArrayListクラス
+
+ArrayListクラスは、サイズが理論上無制限の配列を提供する。  
+複数の値やインスタンスをとりまとめて管理することができる。
+インスタンス化する際に、どういった型のArrayListを用意するのかを型引数という形で宣言しなければならない。  
+型引数は <> の中に記述する。  
+以下、Student型およびDog型のArrayListをインスタンス化する場合の例を示す。  
+
+```java
+ArrayList<Student> students = new ArrayList<Student>();
+
+//JavaSE7からは以下のように右辺の型引数を省略可能になった。
+ArrayList<Student> students = new ArrayList<>();
+ArrayList<Dog> dogs = new ArrayList<>();
+```
+
+上の <> の中に書かれている型が型引数である。  
+= の前後で型引数を同じにしなければならない。 
+
+## java.util.ArrayListクラスの持つメソッド
+
+ArrayListクラスはインスタンス化することで以下のメソッドが使用可能になる。  
+ただし、ここではよく使うメソッドのみを挙げる。
+
+```java
+void add(E e)			//E型のeを末尾に追加する(例: Car型のcar、Tire型のtire )
+E get(int index)		//index番目の要素を返す(例: arrayList.get(15) )
+int size()				//要素数を返す(例: for(int i=0; i<arrayList.size(); i++){ /*  */ } )
+boolean isEmpty()	//要素数が0ならtrue、そうでなければfalseを返す
+					(例: if(arrayList.isEmpty()){  /* 処理 */  }  )
+remove(int index｜Object o)		//指定の要素を削除  
+```
+
+
+## java.util.ArrayListクラスの使用例
+
+以下、Studentクラスのコンストラクタを、Student型を型引数とするArrayListに追加しgetName()を呼び出す例を示す。
+
+```java
+ArrayList<Student> students = new ArrayList<>();
+students.add(new Student(“佐藤”,21));		// 佐藤を末尾(0番目)に追加
+students.add(new Student(“鈴木”,20));		// 鈴木を末尾(1番目)に追加
+//studentsの要素数分繰り返えしを行う
+for(int i = 0; i < students.size(); i++){
+	students.get(i).getName();		// studentsのi番目に格納されている要素を参照し、getName()を呼び出す
+}
+```
+
+## 拡張for文
+
+Java SE 5.0以降の機能  
+for(int i...の書き方よりも記述を簡略化することができる。  
+ArrayListなどの要素を、一つずつ変数に取り出して繰り返し処理をするためのfor文。
+
+以下、先程の例のfor文を拡張for文を用いて表す。
+
+```java
+for(Student student : students){
+	student.getName();		// studentsの要素を一つずつstudentに取り出し、処理を行う
+}
+```
+
+## 型引数にプリミティブ型をとるArrayList(発展)
+
+ArrayListの型引数に、int型やlong型、double型などのプリミティブ型を渡そうとすると、エラーが出る。  
+つまり、
+`ArrayList<int> numbers = new ArrayList<>();	// ダメ！`
+と記述が出来ないということである。  
+ここで用いるのが、各プリミティブ型のラッパークラスであり、プリミティブ型をその名の通りラッピングするクラスのことである。  
+例えば、int型ならIntegerクラス、double型ならDoubleクラスなど、プリミティブ型それぞれに対応するラッパークラスが用意されている。  
+
+以上のことから、int型の値をListとして保持しておきたい場合、以下のように記述する。  
+`ArrayList<Integer> numbers = new ArrayList<>();`  
+ただし、実際にはnumbersにはInteger型のインスタンスが入っているため、Integerクラスのインスタンスの持つint型の値を表示するためには、Integerクラスの持つメソッド、  
+`int intValue() `
+を用いる。
+
+## より詳しく知りたい場合
+
+ArrayListの型引数にプリミティブ型の値を渡せないのは、ArrayListの定義が,
+
+`ArrayList<E>`
+
+でありそもそもEという型はクラスでなければならないためである。  
+加えて、ArrayList<E>というクラスは、List<>というインターフェースを実装しているため(厳密には違う)、
+	
+`List<E> list = new ArrayList<>();`
+という書き方が一般によく用いられる。
+
+さらに詳しく知りたい場合は[こちら](https://docs.oracle.com/javase/jp/8/docs/api/java/lang/Integer.html)からドキュメントを参照すること。
+
+
+
 ## 演習課題
 
 ### 課題1
 
-Exercise5_1クラスを作成し、その中にmain()メソッドを作成すること。</br>
+Exercise3_1クラスを作成し、その中にmain()メソッドを作成すること。  
 
-#### Exercise5_1クラス
+#### Exercise3_1クラス
 
 * main()
   * Scannerを用いて標準入力から任意の文字列を1行分取得し、それを標準出力に表示せよ
@@ -172,15 +190,16 @@ Exercise5_1クラスを作成し、その中にmain()メソッドを作成する
 
 ### 課題2
 
-Exercise5_2クラスを作成し、その中にmain()メソッドを作成すること。</br>
-標準入力からの入力を受け付け、任意の行数分、任意の文字列を受け取るプログラムを作成しなさい。</br>
+Exercise3_2クラスを作成し、その中にmain()メソッドを作成すること。  
+標準入力からの入力を受け付け、任意の行数分、任意の文字列を受け取るプログラムを作成しなさい。  
 
-#### Exercise5_2クラス
+#### Exercise3_2クラス
 
 * main()
   * Scannerをインスタンス化し、初めに何行分の文字列を入力させるかを入力させる
   * 指定された行数分入力を受け付け、それらの文字列をArrayListに追加しなさい
   * また、入力終了後、入力したすべての文字列を表示しなさい
+  * ただし、表示は拡張for文を用いて行うものとする
 
 __注意__
 
@@ -203,10 +222,10 @@ __注意__
 
 ### 課題3
 
-Exercise5_3クラスを作成し、その中にmain()メソッドを作成すること。</br>
-標準入力からの入力を2回分受け付けて、それを32bit整数値に変換した値を変数に代入し、それらの和を表示させなさい(実行結果を参照)</br>
+Exercise3_3クラスを作成し、その中にmain()メソッドを作成すること。  
+標準入力からの入力を2回分受け付けて、それを32bit整数値に変換した値を変数に代入し、それらの和を表示させなさい(実行結果を参照)  
 
-#### Exercise5_3クラス
+#### Exercise3_3クラス
 
 * main()
   * Scannerクラスを用いて標準入力から2回文字列を受け取り、その値を32bit整数に変換したのち、その和を表示させる
@@ -224,20 +243,30 @@ Exercise5_3クラスを作成し、その中にmain()メソッドを作成する
 35 + 42 = 77
 ```
 
-
 ### 課題4
 
-課題5-3で作成したプログラムにおいて、整数以外の値(例: 23.8やhogehogeなど)を入力したときに、どのような結果が得られるか、b3の前で実演しなさい。</br>
-また、そのような結果になったのはなぜかを、__例外__ という言葉を用いて説明しなさい。</br>
-さらに、そのような結果になるのを回避するにはどういった処理が必要かを説明しなさい。</br>
+VegetableクラスとExercise3_4クラスを作成し、Exercise3_4クラスの中にmain()メソッドを作成すること。
 
-## 課題が終わった学生
+#### Vegetable
+* フィールド
+  * 野菜の名前を格納するString型のnameと値段を格納するint型のvalueを持っており、いずれの変数もクラス内だけで扱えるようにすること。  
+* コンストラクタ
+  * コンストラクタの引数はString型のnameとint型のvalueとなるようにすること。
+　* コンストラクタで引数のString型のnameとint型のvalueをフィールドのnameとvalueにセットできるようにすること。
+* getName()
+  * getName()メソッドを作成すること。
+  * このメソッドはクラス外にも公開でも扱えるようにすること。
+  * フィールドの野菜の名前を返すことができるようにすること。
+* getValue()
+  * getValue()メソッドを作成する。
+  * このメソッドはクラス外にも公開でも扱えるようにすること。
+  * フィールドの野菜の値段を返すことができるようにすること。
 
-今回の課題は、今までのものと比べれば比較的簡単だったと思います。</br>
-Javaを習得するということはクラスライブラリの使い方を習得することだと言っても過言ではありません。</br>
-それほどクラスライブラリは重要なものなのです。</br>
+#### Exercise3_4
 
-
-次回は課題の中でも軽く触れたように、例外および例外処理について学習します。</br>
-以降のデータベース講習でも例外および例外処理はどこにでも出てくるため、この時点で例外とは何なのか、雰囲気だけでも掴んでおいてください。</br>
-
+* main()
+  * 型引数がVegetable型のArrayListを作成する。
+  * 作成したArrayListの中に、Vegetableクラスのインスタンスを加えていくこと。
+  * インスタンス化する際にVegetableクラスのコンストラクタに(にんじん,157)、(たまねぎ,47)、(じゃがいも、124)の3セットを渡すこと。
+  * 作成したArrayList内の野菜の名前を繰り返し処理を用いてすべて表示させること。
+  * 同様に、リスト内の野菜の値段の合計を繰り返し処理を用いて計算し、表示させること。
