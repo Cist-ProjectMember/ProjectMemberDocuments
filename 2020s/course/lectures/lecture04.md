@@ -84,7 +84,7 @@ television.setChannel(2020);
 ## クラス図について
 
 クラス図は基本的に以下のように構成される。  
-![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5L8paaiBdOiAIdAJ2ejIVLCpiyBpgnALJ3W0aieF6vQ_xXvvUEcdKydz5PpAJpjN_zYsRHd3SiLWFoddRqALWfFvtKZYp-RtFjaxnoWh8B6qprJdqtTyBXn7LmjN0IeIHEgjvRB8JKl1UWe0000)
+![](http://www.plantuml.com/plantuml/png/LSkn2i8m4CRn_PxYnXOwE6Tg5z5Dw1DSswCzcbmakHHKV7V1AkZuyVt-RJPALeA7l8fUAL70qLFEdLcIeHYVnwYzt1aFy3xmAFDYd1w0fuiJDS1iYNMsPLzAWLrlING6-EfgjysVRNvj3KXcDAuLAuUR-uIrsw9CW98xBnjNjHjYz4mAJsXPfnBy2m00)
 
 |可視性|意味|
 |:--|:--|
