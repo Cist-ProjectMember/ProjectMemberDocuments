@@ -99,7 +99,7 @@ television.setChannel(2020);
 
 以下のクラスを作成せよ。  
 
-![](http://www.plantuml.com/plantuml/png/LSwn3e903CRnlK_H4H86vvjWCRgPy0G5AZGSFNDN63I-knVHHCUclt_orSaeshfuIBFeZI8js7jAgJ6Bqgt6vpveAtV60xmVU9HnCeuFmDF5YHfWiiWwshHVIWkxDjSw0dnriTlgprQ_jWGaC-hdufeJZkvJbcuBCW1AQhniN9Ik2y4pAJoXPXtozXS0)
+![](http://www.plantuml.com/plantuml/png/LSwn3e903CRnlK_H4H86vvjWCRgPy0G5AZGSFNDN63I-knVHHCUclt_orSaeshfuIBFeZI8js7jAgJ6Bqgt6vpveAtV60xmVU9HnCeuFmDF5YHfWiiWwshHVIWkxDjSw0dnriTlgprQ_jWGaC-hdufeJZkvJbcuBCW1AQhniN9Ik2y4pAS0JQjOXZty1)
 
 * 作成したクラスをカプセル化し、必要に応じてアクセサを新たに追加せよ。
 * 可視性は省略されているから自分で判断せよ。 
