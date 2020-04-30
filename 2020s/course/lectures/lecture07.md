@@ -20,7 +20,7 @@
 * Bill(紙幣)クラスを作成しなさい。
 * Coinクラス、BillクラスはMoneyクラスを継承する。
 * Walletクラスを作成しなさい。
-* Walletクラス内に存在するArrayListの中に金額リストに記されたお金を入れ、ArrayList内の合計金額を計算し、表示させなさい。  
+* Walletクラス内に存在するArrayListの中に金額リストのお金を入れ、ArrayList内の合計金額を計算し、表示させなさい。  
 
 金額リスト:
 
