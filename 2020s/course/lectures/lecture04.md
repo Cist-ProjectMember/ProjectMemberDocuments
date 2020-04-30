@@ -122,7 +122,6 @@ Fighter1 の残り HP : 60
 Fighter1 は Fighter2 に 100 ダメージを与えた。
 Fighter2 の残り HP : -20
 Fighter2 は倒れた。
-Fighter1 は勝利した。
 ```
 
 ### 課題2
