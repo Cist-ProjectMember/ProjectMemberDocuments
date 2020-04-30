@@ -167,73 +167,6 @@ public SmartPhone(long phoneNumber){
 ```
 
 
-## superクラスとサブクラスの関係
-
-以降、上のタイトルがついているスライドでは以下のクラス(Animal, Dog)が定義されているものとする。
-
-```java
-class Animal {
-	protected String barkSound;  // protectedはサブクラスからのアクセス可
-	
-	public Animal(String barkSound){
-		this.barkSound = barkSound;
-	}
-	public void bark(){
-		/* 処理なし */
-	}
-}
-```
-
-```java
-class Dog extends Animal {
-	public Dog(String barkSound){
-		super(barkSound);
-	}
-
-	@Override
-	public void bark(){
-		System.out.println(“犬の鳴き声: ” + super.barkSound);
-	}
-}
-```
-
-DogがAnimalを継承している時、A is B(Dog is Animal)の関係が成り立つ。  
-そのため、Animal型の変数にDog型のインスタンスへの参照を代入することも出来る。
-
-```java
-	Animal animal = new Dog(“わんわん！”);	
-	animal.bark();	// Animalであれば必ずbark()メソッドを持っている
-```
-
-さらに、Animalを継承したCat、Birdクラス・・・ などを作ることで、すべてのクラスをAnimal型として扱うことが出来る。
-これより、以下のような記述も可能である。
-
-```java
-Animal animal = new Dog(“わんわん！”);
-animal.bark();	// 犬の鳴き声: わんわん！
-animal = new Cat(“にゃーにゃー”);
-animal.bark();	// 猫の鳴き声: にゃーにゃー
-animal = new Bird(“ちゅんちゅん”);
-animal.bark();	// 鳥の鳴き声: ちゅんちゅん
-```
-
-さらに、配列を用いることで以下のような記述も可能である。
-
-```java
-Animal[] animals = { 
-	new Dog(“わんわん！”), 
-	new Cat(“にゃーにゃー”), 
-	new Bird(“ちゅんちゅん”)  
-};
-```
-
-```java
-for(Animal animal : animals) {
-	animal.bark();		// Animalを継承していればbark()を持っている
-}
-```
-
-
 ## 抽象クラス
 
 Javaではnewによるインスタンス化が出来ないクラスを定義することが出来る。</br>
@@ -273,147 +206,54 @@ public class SubClass extends AbstractClass {
 
 ### 課題1
 
-以下のクラス図で示されるクラスを作成しなさい。  
-/*image*/
+Exercise5_1クラスを作成し、mainメソッドを作成せよ。  
+Insectクラスを作成せよ。  
+moveメソッドを作成せよ。  
+moveメソッドでは"歩いたよ"とコンソールに出力せよ。  
 
-#### Computerクラス
-
-* boot()
-  * 自身を構成するパーツが正常に組み込まれているかを確認する
-  * また、組み込まれている/組み込まれていないおよび、各パーツの性能を標準出力に表示する
-
-#### Storageクラス
-
-このクラスは抽象クラスとして作成しなさい。  
-* Storage()
-  * 引数と同名のフィールドを、引数の値で初期化する
-* getProperty()
-  * 自身の性能を表す文字列を返す(抽象メソッド)
-
-#### Exercise4_1クラス
-
-* main()
-  * Computerを1つインスタンス化し、直後にboot()する
-  * HDDをインスタンス化し(capacity=500000000000, rpm=7200)、上でインスタンス化したComputerにsetStorage()を用いてセットする
-  * Computerをboot()する
-  * SSDをインスタンス化し(capacity=250000000000)、ComputerにsetStorage()を用いてセットする
-  * boot()する
-
-#### 実行結果
-
-
-```java
-コンピュータを起動しています...		// boot()
-ストレージの接続を確認しています...	接続されていません.
-正常に起動できませんでした.
-コンピュータを起動しています...		// boot()
-ストレージの接続を確認しています...	接続されています.
-type:HDD	capacity:500000000000Bytes	rpm:7200
-正常に起動できました.
-コンピュータを起動しています...		// boot()
-ストレージの接続を確認しています...	接続されています.
-type:SSD capacity:250000000000Bytes
-正常に起動できました.
-```
-
+mainメソッドにてInsectクラスをインスタンス化し、moveメソッドを呼び出せ。  
 
 ### 課題2
 
-#### Computerクラス
-* storage変数
-  * storagesに名前を変える
-  * ArrayList<Storage>を用いることで2つ以上のストレージを搭載できるように変更
-  * ArrayList<E>がどういったものなのかは自分で調べること
-* setStorage()
-  * 引数のStorageを自身のstoragesに追加する
-* boot()
-  * Storageが何個搭載されているのかを表示
-#### Exercise4_2クラス
-* main()
-  * ComputerとHDD(capacity=500000000000, rpm=7200)とSSD(capacity=250000000000)をインスタンス化する
-  * boot()する
-  * 上でインスタンス化したComputerにHDDとSSDを搭載させる
-  * boot()する
-#### ヒント
+Exercise5_2クラスを作成し、mainメソッドを作成せよ。  
+Butterfly(チョウチョウ)クラスを作成しなさい。  
+ButterflyはInsectを継承する.</br>
+Butterflyのmoveメソッドでは"飛んだよ"とコンソールに出力せよ。  
 
-```java
-ArrayList<E>
-```
-
-可変長配列の一種であり、要素の最大数が理論上無限な配列。  
-配列と同じような操作が可能  
-`List<E> list = new ArrayList<E>();`と記述してインスタンス化(Eは任意の型)  
-void add(E)メソッドにより配列の末尾に要素を追加できる。  
-boolean isEmpty()メソッドにより配列がカラなのかどうかを判定する。  
-int size()メソッドにより配列の.lengthのように要素数を取得できる。  
-  
-
-#### 実行結果
-
-```
-コンピュータを起動しています...		// boot()
-ストレージの接続を確認しています...	接続されていません.
-正常に起動できませんでした.
-コンピュータを起動しています...		// boot()
-ストレージの接続を確認しています...	接続されています.
-[0]type:HDD capacity:500000000000Bytes rpm:7200
-[1]type:SSD capacity:250000000000Bytes
-正常に起動できました.
-```
+mainメソッドにてButterflyクラスをインスタンス化し、moveメソッドを呼び出せ。  
 
 ### 課題3
 
-#### Storageクラス
+Exercise5_3クラスを作成し、mainメソッドを作成せよ。  
+mainメソッドにてButterflyクラスのインスタンスを、Insect型の変数に代入せよ。  
+また、インスタンス化したButterflyのmoveメソッドを呼び出せ。  
 
-新たに以下の機能を追加する。  
-* +write()
-  * 引数として受け取った文字列をdataに格納する
-  * 格納出来る文字数はcapacityの値までであり、書き込めなかった場合はfalseを返す
-* +canWrite()
-  * 引数として受け取った文字列を書き込むことが出来るかを返す
-* +read()
-  * dataの値を返す
+### 課題4
 
-#### Computerクラス
+Exercise5_4クラスを作成し、mainメソッドを作成せよ。  
 
-新たに以下の機能を追加する。
-* +writeToStorage()
-  * 引数として受け取った文字列をStorageに書き込む
-  * Storageが複数ある場合は、受け取った文字列を全て書き込むことが出来るStorageに書き込む
-* +showData()
-  * Storagesの各dataをread()を用いて表示する
-  * dataに何も格納されていない場合はread()がnullを返すため、何かしら文字が格納されているdataのみ内容を表示する
+Locust(バッタ)クラスを作成しなさい。  
+LocustはInsectを継承する。  
+Locustのmoveメソッドでは"跳んだよ"とコンソールに出力せよ。  
 
-#### Exercise4_3クラス
+mainメソッドにてLocustクラスをインスタンス化し、moveメソッドを呼び出せ。  
 
-* main()
-  * ComputerとHDD(capacity=15, rpm=5400)とSSD(capacity=30)をインスタンス化し、ComputerにHDDとSSDを搭載させる
-  * boot()する
-  * 上でインスタンス化したComputerに、 “This is an exercise.” という文字列を保存させる
-  * ComputerのStorageに保存されているデータを表示する
+### 課題5
 
-#### 実行結果
+Exercise5_5クラスを作成し、mainメソッドを作成せよ.</br>
 
+mainメソッドにてLocustクラスのインスタンスを、Insect型の変数に代入せよ.</br>
+また、インスタンス化したLocustのmoveメソッドを呼び出せ.
 
-```java
-コンピュータを起動しています...		// boot()
-ストレージの接続を確認しています...	接続されています.
-[0]type:HDD capacity:15Bytes rpm:5400
-[1]type:SSD capacity:30Bytes
-正常に起動できました.
-[1] のストレージに “This is an Exercise.” と書き込みました.
-[1] “This is an Exercise.”
-```
+### 課題6
 
+Exercise5_6クラスを作成し、mainメソッドを作成せよ。  
 
-## 終わった学生
+SwallowtailButterfly(アゲハチョウ)クラスを作成しなさい。  
+SwallowtailButterflyはButterflyを継承する。  
+SwallowtailButterflyのmoveメソッドでは"綺麗に飛んだよ"とコンソールに出力せよ。  
 
-今回の課題に全て取り組んだ学生のクラス図は下のようになっていると思います。  
-クラス設計が下手な人の元で作業すると、クラス間を繋ぐ線がグチャグチャになり、クラス同士の関係を把握し辛くなります。  
-みなさんも一度自分で作ったプロジェクトのクラス図を作ってみてはいかがでしょうか？  
-/*image*/</br>
-[クラス図作成用URL](http://plantuml.com/ja/)  
-次回はインターフェイスについて取り扱います。  
-今回の課題内容を全て把握/理解することが出来ていればインターフェイスも難なく乗り越えられるものと思われます。 
+mainメソッドにてSwallowtailButterflyクラスのインスタンスを、Insect型の変数に代入せよ。  
+また、インスタンス化したSwallowtailButterflyのmoveメソッドを呼び出せ。  
 
 [目次へ](../README.md)
