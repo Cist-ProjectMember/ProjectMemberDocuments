@@ -58,8 +58,8 @@ Television television = new Television(); //テレビインスタンスもしく
 new 演算子によりメモリ上に領域を確保することができる。  
 また、変数名を変えてnewすることで同じ機能を持つ異なるインスタンスを生成することが出来る。  
 ```java
-Television colortelevision = new Television();
-Television monochrometelevision = new Television(); // colortelevisionとmonochrometelevisionはTelevisionクラスから生成された別々のインスタンス
+Television ColorTelevision = new Television();
+Television MonochromeTelevision = new Television(); // ColorTelevisionとMonochromeTelevisionはTelevisionクラスから生成された別々のインスタンス
 ```
 以降の例文では、Televisionクラスは既に定義されているものとする。  
 
