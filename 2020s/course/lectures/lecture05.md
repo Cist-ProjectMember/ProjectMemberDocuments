@@ -114,7 +114,7 @@ public class Player {
 今回の例の場合では、Playerのattackメソッドに3行程度消費しているため、モンスターの種類が100種類いるのであれば3行\*100種類の300行減らしたことになる。
 実際には何でもかんでも継承を用いればすべてが解決するというわけではないため、場合によって使い分けることが必要である。どういった場合には継承を用いるべきなのかを判断できるようになれば、Java以外のその他のオブジェクト指向言語でもその知識が生かせるだろう。 
 
-矢印の先が向いているクラスがスーパークラスである
+矢印の先が向いているクラスがスーパークラスである。  
 ![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuKhEIImkLl3DpoikIIs2ye9pCdDJeModn18eAoGp7Qx29pC_ZuiBgal1faPN5w89HGYa5qK0OWIA4CGaXzIy5A1Z0000)
 
 ## オーバーライド
