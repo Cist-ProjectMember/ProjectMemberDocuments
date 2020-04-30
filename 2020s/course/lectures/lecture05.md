@@ -239,10 +239,10 @@ mainメソッドにてLocustクラスをインスタンス化し、moveメソッ
 
 ### 課題5
 
-Exercise5_5クラスを作成し、mainメソッドを作成せよ.</br>
+Exercise5_5クラスを作成し、mainメソッドを作成せよ。  
 
-mainメソッドにてLocustクラスのインスタンスを、Insect型の変数に代入せよ.</br>
-また、インスタンス化したLocustのmoveメソッドを呼び出せ.
+mainメソッドにてLocustクラスのインスタンスを、Insect型の変数に代入せよ。  
+また、インスタンス化したLocustのmoveメソッドを呼び出せ。  
 
 ### 課題6
 
@@ -254,5 +254,12 @@ SwallowtailButterflyのmoveメソッドでは"綺麗に飛んだよ"とコンソ
 
 mainメソッドにてSwallowtailButterflyクラスのインスタンスを、Insect型の変数に代入せよ。  
 また、インスタンス化したSwallowtailButterflyのmoveメソッドを呼び出せ。  
+
+### 課題7
+
+Exercise5_7クラスを作成し、mainメソッドを作成せよ.  
+
+mainメソッドにてInsect,Butterfly,Locust,SwallowButterflyクラスのインスタンスをListに格納せよ。
+また、格納した４つのインスタンスからmoveメソッドを呼び出せ。
 
 [目次へ](../README.md)
