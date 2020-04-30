@@ -3,8 +3,7 @@
 ## はじめに
 
 今回の内容「継承」は、Javaの基礎を学習する上での最大の壁です。  
-講習時間にスライドを1から見るのでは課題に取り組む時間が足りませんので、事前に資料を読み、読んでも分からない点はインターネットを活用してください。  
-重要なキーワードは次のスライドに記載していますので、それをもとにしてください。  
+読んでも分からない点はインターネットを活用してください。  
 
 ## 継承の概念
 
@@ -29,31 +28,95 @@ class SubClass extends SuperClass {
 と記述する。  
 この時、SuperClassはスーパークラスといい、それを継承したSubClassはサブクラスという。  
 
-```java
-// 家電クラス(スーパークラス)
-class Appliance {    }
-// テレビクラス(家電クラスのサブクラス)
-class Television extends Appliance {    }
-// オーブンクラス(家電クラスのサブクラス)
-class Oven extends Appliance {    } 
-```
-
-スーパークラスを継承したサブクラスでは、スーパークラスで定義されたpublicやprotectedなメソッド、フィールドにアクセスすることが出来る。  
-protected修飾子の付いたメソッド/フィールドは、同一クラスや同一パッケージ、サブクラスからのみアクセス可能である。  
-アクセス修飾子ごとのアクセス可能範囲については #3の資料を見ること。  
-__注意__
-サブクラスが一度に継承できるスーパークラスは1つまでとなっている。  
+ここではRPGを題材として継承を考えてみたい。
+プレイヤーキャラクターはattackメソッドを用いてスライムに対して通常攻撃をすることができる。
 
 ```java
-// ダメな例
-/* 人間は生物(Creature)であり哺乳類(Mammalian)だが、一度に継承できるのは1クラスのみ */
-class Human extends Creature, Mammalian {    }
+public class Player {
+    // スライムへの攻撃メソッド
+    public void attack(Slime slime){
+        slime.setHitPoint(slime.getHitPoint() - 10);
+    }
+}
 ```
+
+また、コウモリに対しても通常攻撃することができる。
+
+```java
+public class Player {
+    // スライムへの攻撃メソッド
+    public void attack(Slime slime){
+        slime.setHitPoint(slime.getHitPoint() - 10);
+    }
+    
+    // コウモリへの攻撃メソッド
+    public void attack(Bat bat){
+        bat.setHitPoint(bat.getHitPoint() - 10);
+    }
+}
+```
+
+ここで、引数の型が異なる同名のメソッドを定義しているが、これを **メソッドのオーバーロード** と呼ぶ。
+
+さらに、トラやライオンに対しても通常攻撃できるとすると以下のようになる。
+
+```java
+public class Player {
+    // スライムへの攻撃メソッド
+    public void attack(Slime slime){
+        slime.setHitPoint(slime.getHitPoint() - 10);
+    }
+    
+    // コウモリへの攻撃メソッド
+    public void attack(Bat bat){
+        bat.setHitPoint(bat.getHitPoint() - 10);
+    }
+    
+    // トラへの攻撃メソッド
+    public void attack(Tiger tiger){
+        tiger.setHitPoint(tiger.getHitPoint() - 10);
+    }
+    
+    // ライオンへの攻撃メソッド
+    public void attack(Lion lion){
+        lion.setHitPoint(lion.getHitPoint() - 10);
+    }
+}
+```
+
+続いて、ダンジョンに潜むスケルトンや魔術師、最終階に待ち受ける魔王を...
+そろそろ気づいたかと思われるが、この設計ではモンスターが増えるたびにPlayerクラスの持つattackメソッドが数十、数百と増えることになる。
+ただ、それぞれのattackメソッドの処理を見てみると、どれも変数名は違えど体力をへらすという処理は同じである。
+ここで用いるのが継承である。
+
+継承を使うと、上の膨大なモンスター達は以下のようにまとめることができる。
+
+```java
+// モンスタークラス
+public class Monster {
+    // フィールドやアクセサは省略する
+}
+
+// スライムクラス
+public class Slime extends Monster {
+    // フィールドやアクセサは省略する
+}
+
+// プレイヤークラス
+public class Player {
+    public void attack(Monster monster){
+        monster.setHitPoint(monster.getHitPoint() - 10);
+    }
+}
+```
+
+同じようなフィールド、メソッドを持つと分かっているクラスが設計段階で存在するのであれば、事前に抽象的なクラスとしてクラスを定義しておけば、これを継承したクラスを逐一作成することでコード量を削減することに繋がり、加えてバグの発生確率も減らすことができる。
+今回の例の場合では、Playerのattackメソッドに3行程度消費しているため、モンスターの種類が100種類いるのであれば3行\*100種類の300行減らしたことになる。
+実際には何でもかんでも継承を用いればすべてが解決するというわけではないため、場合によって使い分けることが必要である。どういった場合には継承を用いるべきなのかを判断できるようになれば、Java以外のその他のオブジェクト指向言語でもその知識が生かせるだろう。 
 
 前スライドの解決策(例):
 矢印の先が向いているクラスがスーパークラスである
 /*image*/
-
 
 ## オーバーライド
 
@@ -69,14 +132,15 @@ class Human extends Creature, Mammalian {    }
 
 ```java
 public class Animal {
-		public void bark(){	  }
+	public void bark(){	  }
+}
+
+public class Dog extends Animal {
+	// @Overrideをメソッドの定義の前に書き、bark()をOverrideする
+	@Override
+	public void bark(){
+		System.out.println(“わんわん！”);
 	}
-	public class Dog extends Animal {
-		// @Overrideをメソッドの定義の前に書き、bark()をOverrideする
-		@Override
-		public void bark(){
-			System.out.println(“わんわん！”);
-		}
 }
 ```
 
@@ -87,9 +151,9 @@ public class Animal {
 
 ```java
 public class SmartPhone extends CellPhone {
-		public void showPhoneNumber(){
-			System.out.println(super.phoneNumber);
-    }	// CellPhoneで定義されているphoneNumber
+	public void showPhoneNumber(){
+		System.out.println(super.phoneNumber);
+	}	// CellPhoneで定義されているphoneNumber
 }
 ```
 
@@ -110,25 +174,26 @@ public SmartPhone(long phoneNumber){
 ```java
 class Animal {
 	protected String barkSound;  // protectedはサブクラスからのアクセス可
+	
 	public Animal(String barkSound){
 		this.barkSound = barkSound;
-  }
-  public void bark(){
-	  /* 処理なし */
-  }
+	}
+	public void bark(){
+		/* 処理なし */
+	}
 }
 ```
-
 
 ```java
 class Dog extends Animal {
 	public Dog(String barkSound){
 		super(barkSound);
-}
-@Override
-public void bark(){
-	System.out.println(“犬の鳴き声: ” + super.barkSound);
-}
+	}
+
+	@Override
+	public void bark(){
+		System.out.println(“犬の鳴き声: ” + super.barkSound);
+	}
 }
 ```
 
@@ -163,9 +228,9 @@ Animal[] animals = {
 ```
 
 ```java
-	for(Animal animal : animals) {
-		animal.bark();		// Animalを継承していればbark()を持っている
-	}
+for(Animal animal : animals) {
+	animal.bark();		// Animalを継承していればbark()を持っている
+}
 ```
 
 
@@ -175,12 +240,13 @@ Javaではnewによるインスタンス化が出来ないクラスを定義す�
 このクラスを抽象クラスといい、classの前に abstract修飾子 を付けることで定義することが出来る。
 
 ```java
-	abstract class AbstractAnimal {
-		public AbstractAnimal(){		}
+abstract class AbstractAnimal {
+	public AbstractAnimal(){	}
 }
 ```
 
 `AbstractAnimal abstractAnimal = new AbstractAnimal();`とするとエラーが出る。
+
 
 ## 抽象メソッド
 
@@ -193,6 +259,7 @@ C言語のプロトタイプ宣言と同じような記述が可能である。
 public 	abstract class AbstractClass {
 		public abstract void execute();		// {} は必要ない
 }
+
 public class SubClass extends AbstractClass {
 	@Override
 	public void execute(){
