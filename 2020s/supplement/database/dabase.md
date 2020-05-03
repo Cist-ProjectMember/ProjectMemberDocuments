@@ -64,7 +64,7 @@ varcharは文字列型(可変長)であり、()で指定した文字数分の記
 INSERT INTO [テーブル名]([列1,列2, …])
 VALUES ([列1に入れる値,列2に入れる値, …]);
 ```
-以下にid,first_name,last_name,weight,height,rankカラムを持つaccountテーブルにデータを追加する場合の例を示す。
+以下にid、first_name、last_name、weight、height、rankカラムを持つaccountテーブルにデータを追加する場合の例を示す。
 ```
 # accountテーブルにデータを追加する
 INSERT INTO account(id,first_name,last_name,weight,height,rank)
