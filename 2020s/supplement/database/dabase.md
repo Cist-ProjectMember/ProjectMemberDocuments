@@ -68,7 +68,7 @@ VALUES ([列1に入れる値,列2に入れる値, …]);
 ```
 # accountテーブルにデータを追加する
 INSERT INTO account(id,first_name,last_name,weight,height,rank)
- 		VALUES(1, 'tanjiro', 'kamado',61,165,hei);
+ 		VALUES(1, 'tanjiro', 'kamado',61,165,'hei');
 ```
 このSQLを実行するとidが1、first_nameが"hikari"、last_nameが"chitose"、weightが61、heightが165、rankがheiのタプルがaccountテーブルに追加される。文字列をデータとする場合は、「’」(シングルクォート)で囲う。<br>
 <br>
@@ -77,8 +77,32 @@ INSERT INTO account(id,first_name,last_name,weight,height,rank)
 # accountテーブルに一括でデータを追加する
 INSERT INTO account(id,fist_name,last_name,weight,height,rank)
   			VALUES(2, 'nezuko', 'kamado’,45,153,null),
-  			(3, 'shinobu', 'kotyo',37,151,hashira),
-  			(4, 'giyu', 'tomioka',69,176,hashira);
+  			(3, 'shinobu', 'kotyo',37,151,'hashira'),
+  			(4, 'giyu', 'tomioka',69,176,'hashira');
 ```
 
-##
+## SELECT
+テーブルからデータを抽出する時には、SELECT文を用いる。
+```
+	SELECT [カラム名]
+	FROM [テーブル名];
+```
+SELECT文を実行すると、実行結果がExcelのようなマトリックス表で表示される。<br>
+カラム名に\[*](アスタリスク)を使用すると、全てのカラムが表示される。
+```
+	#accountテーブルからデータを表示する
+		SELECT *
+		FROM account;
+```
+SELECT文から派生して、複数のテーブルを結合、列と列を結合演算子を使用して計算列の値をExcelの関数と同じように使用(例えば、何桁目から何桁目の文字を取得など)、どのような条件でデータを絞りこむのか、どの順番にデータを並べるか、が可能となる。<br>
+
+### ORDER BY
+テーブルからSELECTでデータを取得する時、ORDER BY句を使うと、指定された列を基準に並べ替えることができる。
+```
+	SELECT *
+	FROM account
+	ORDER BY height;
+```
+ORDER BY 〇〇 ASC/DESCを書くこともでき、ASCが昇順、DESCが降順となる。
+省略した場合は昇順となる。
+
