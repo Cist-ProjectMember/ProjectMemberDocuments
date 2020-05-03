@@ -5,10 +5,10 @@ RDBMSでは、表の行（横）を「タプル(レコード)」、表の列（�
 <img width="500" alt="illust1" src="https://github.com/emm93892/ProjectMemberDocuments/blob/master/2020s/supplement/database/%E5%9B%B31.png">
 
 # SQLとは？
-SQL(Structured Query Language：構造化問合せ言語)とは、RDBMSを操作するための言語だ。データベース自体にはExcelのように検索機能や他のシートを参照したりする機能はない。データを利用するには都度プログラムが必要であり、そのプログラム言語こそがSQLである。<br>
+SQL(Structured Query Language：構造化問合せ言語)とは、RDBMSを操作するための言語だ。<br>データベース自体にはExcelのように検索機能や他のシートを参照したりする機能はない。<br>データを利用するには都度プログラムが必要であり、そのプログラム言語こそがSQLである。<br>
 
 ## SQLの基本構文
-SQLの軸となるのが「キーワード」だ。キーワードとは、SQLにあらかじめ用意された命令のための語句である。このキーワードに、テーブルの名前や列の名前といったデータなどを組み合わせたものを単位として、それらを複数組み合わせることでSQL文が完成する。 キーワードと列名等の組み合わせを「句」と呼ぶ。このSQL文の書き方にはいくつかルールが存在する。<br>
+SQLの軸となるのが「キーワード」だ。キーワードとは、SQLにあらかじめ用意された命令のための語句である。<br>このキーワードに、テーブルの名前や列の名前といったデータなどを組み合わせたものを単位として、それらを複数組み合わせることでSQL文が完成する。<br> キーワードと列名等の組み合わせを「句」と呼ぶ。このSQL文の書き方にはいくつかルールが存在する。<br>
 <img width="500" alt="illust2" src="https://github.com/emm93892/ProjectMemberDocuments/blob/master/2020s/supplement/database/%E5%9B%B32.png">
 1.	語句の間は半角スペースで区切る。<br>
     文法上はいくついれても問題ない。Tabで代用できる。全角スペースはエラーになる。<br>
@@ -54,8 +54,8 @@ CREATE TABLE account(
  );
 ```
 
-上記のSQLのうち、idやfirst_name,last_nameは キー と呼ばれ、テーブルの列となる。
-さらにその後ろにはデータ型を記述する。
+上記のSQLのうち、idやfirst_name,last_nameは キー と呼ばれ、テーブルの列となる。<br>
+さらにその後ろにはデータ型を記述する。<br>
 varcharは文字列型(可変長)であり、()で指定した文字数分の記憶領域を持つ。
 
 ## INSERT 
