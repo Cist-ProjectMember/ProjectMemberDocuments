@@ -106,3 +106,23 @@ SELECT文から派生して、複数のテーブルを結合、列と列を結�
 ORDER BY 〇〇 ASC/DESCを書くこともでき、ASCが昇順、DESCが降順となる。
 省略した場合は昇順となる。
 
+## 演習1
+#### 1.表1のテーブル構造情報を基に、student_grade_informationを作成し、表2のデータを入れなさい。その後、テーブルのデータを表示しなさい。<br>
+
+***表1 テーブル構造情報***
+| カラム名 | データ種別 |
+----------|------------
+| id | integer |
+| student_name | varchar(8) |
+| math_score | integer |
+| english_score | integer |
+
+***表2 入力情報***
+| id | student_name | math | english |
+---|---|---|---
+| 1 | A | 60 | 60 |
+| 2 | B | 80 | 80 |
+| 3 | C | 0 | 0 |
+
+<br>
+#### 2.数学を基準に降順でソートしなさい。
