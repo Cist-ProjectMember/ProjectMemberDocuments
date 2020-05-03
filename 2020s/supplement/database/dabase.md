@@ -19,7 +19,7 @@ SQLの軸となるのが「キーワード」だ。キーワードとは、SQL�
 
 ## データ型
 データベースに入れるデータにはC言語の変数のように、型が存在する。ここでは、その代表的なデータ型を紹介する。
-<img width="500" alt="illust3" src="https://github.com/emm93892/ProjectMemberDocuments/blob/master/2020s/supplement/database/%E5%9B%B33.png"><br>
+<img width="300" alt="illust3" src="https://github.com/emm93892/ProjectMemberDocuments/blob/master/2020s/supplement/database/%E5%9B%B33.png"><br>
 固定長とは、入るデータの長さが決まっているという意味だ。<br>
 CHAR型とは固定長の文字列を扱うデータ型であり、例えば、CHAR(10)と書かれていたら、10バイトの文字を格納するという意味になる。
 もし、格納する文字列が10バイトではなく8バイトの場合、文字列の右側に2バイト分の空白が追加され、10バイトになった後に格納される。<br>
