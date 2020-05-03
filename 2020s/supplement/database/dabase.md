@@ -30,3 +30,55 @@ VARCHAR型とは可変長の文字列を扱うデータ型である。
 VARCHAR型では、格納するデータの文字列が足りていなくても、右側に空白を追加するといった調整はない。VARCHAR(10)と書かれていたら、10バイトまでなら、8バイトでも3バイトでもよく、そのままで格納することが可能という意味になる。<br>
 VARCHAR型は氏名や書籍名といった、格納するデータの桁数が変動するものに対して使われる。<br>
 
+# キーワード
+## CREATE 
+CREATE文は、テーブルのみならず、さまざまなデータベース上のオブジェクトを作成するために使われる。カラムにはデータ型(リンク)と列制約(リンク)が存在する。列制約は省略することが出来る。
+```
+CREATE TABLE [テーブル名](
+		[カラム名1] [データ型] [列制約],
+		[カラム名2] [データ型] [列制約],
+		…
+	);
+```
+実際にユーザの情報を管理するaccountテーブルをSQLを用いて作成する場合の例を以下に示す。
+
+```
+# accountテーブル作成例
+CREATE TABLE account(
+     id varchar(16) PRIMARY KEY,
+     first_name varchar(32),
+     last_name varchar(32)
+     weight varchar(4),
+     height varchar(4)
+     rank varchar(16)
+ );
+```
+
+上記のSQLのうち、idやfirst_name,last_nameは キー と呼ばれ、テーブルの列となる。
+さらにその後ろにはデータ型を記述する。
+varcharは文字列型(可変長)であり、()で指定した文字数分の記憶領域を持つ。
+
+## INSERT 
+テーブルに新しくレコードを追加するにはINSERT文を用いる。
+```
+INSERT INTO [テーブル名]([列1,列2, …])
+VALUES ([列1に入れる値,列2に入れる値, …]);
+```
+以下にid,first_name,last_name,weight,height,rankカラムを持つaccountテーブルにデータを追加する場合の例を示す。
+```
+# accountテーブルにデータを追加する
+INSERT INTO account(id,first_name,last_name,weight,height,rank)
+ 		VALUES(1, 'tanjiro', 'kamado',61,165,hei);
+```
+このSQLを実行するとidが1、first_nameが"hikari"、last_nameが"chitose"、weightが61、heightが165、rankがheiのタプルがaccountテーブルに追加される。文字列をデータとする場合は、「’」(シングルクォート)で囲う。<br>
+<br>
+さらに、一つのINSERT文で複数のタプルを追加することも出来る。
+```
+# accountテーブルに一括でデータを追加する
+INSERT INTO account(id,fist_name,last_name,weight,height,rank)
+  			VALUES(2, 'nezuko', 'kamado’,45,153,null),
+  			(3, 'shinobu', 'kotyo',37,151,hashira),
+  			(4, 'giyu', 'tomioka',69,176,hashira);
+```
+
+##
