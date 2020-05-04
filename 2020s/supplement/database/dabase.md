@@ -125,3 +125,118 @@ ORDER BY 〇〇 ASC/DESCを書くこともでき、ASCが昇順、DESCが降順�
 | 3 | C | 0 | 0 |
 
 ####  2.mathを基準に降順でソートしなさい。
+
+
+## WHERE
+SELECT文や後述するUPDATE文やDELETE文で、条件を指定する時に用いる。
+```
+#SELECT文での例
+SELECT [カラム名]
+FROM [テーブル名];
+WHERE (条件);
+```
+条件には、=、>、<、!=、などの基本的な比較演算子の他に、論理演算子が使用できる。
+<img width="300" alt="illust4" src="https://github.com/emm93892/ProjectMemberDocuments/blob/master/2020s/supplement/database/%E5%9B%B37.png"><br>
+
+### BETWEEN
+BETWEEN演算子はSQLで唯一の三項演算子である。これは、ある値(上の表ではＡ)が特定の範囲(B<=A<=C)であるかどうかを判定する時に用いられる。
+表の式は、A>=B AND A>= C と同値である。
+```
+#accountテーブルのheightが150から160の値のタプルのデータを表示する
+SELECT *
+FROM account
+WHERE height BETWEEN 150 AND 160;
+```
+
+### NOT
+NOT演算子では、与えられた条件以外を指定する。
+「～以外の」という条件を使いたい場合、NOTを使用すると効率的である。
+```
+#accountテーブルのlast_nameが’kamado’以外の値のタプルのデータを表示する	
+SELECT *
+FROM account
+WHERE NOT last_name = ‘kamado’;
+```
+
+### IS NULL
+IS NULL演算子は、値がNULLかどうかを判定し、boolean型で値を返す演算子である。
+比較演算子は、NULLが存在する場合、NULLを返すと定められているので値を得ることはできない。
+```
+#accountテーブルのrankがNULLのタプルのデータを表示する
+SELECT *
+FROM account
+WHERE rank IS NULL;
+```
+逆に、IS NOT NULLと指定すれば、NULLではない値のデータを表示することが出来る。
+
+## UPDATE
+タプルの値を更新する時は、UPDATE文を用いる。
+```
+UPDATE [テーブル名]
+SET [列名1] = “値1” , [列名2] =”値2”
+WHERE (条件);
+```
+SET句には更新する列名と値を記述する。
+Where句の条件に一致した行を更新する。Where句が無い場合、全てのタプルを更新する。
+```
+#accountテーブルのデータを更新する
+UPDATE account
+SET first_name = “inosuke” , last_name =”hashibira”
+WHERE id = 1;
+```
+
+## DELETE
+タプルの値を削除する時には、DELETE文を用いる。
+```
+DELETE FROM [テーブル名]
+WHERE (条件);
+```
+UPDATE文と同様に、WHERE句が無い場合は全てのタプルを削除する。
+DELETE文では、WHERE句の条件に合致するタプル全てが削除される。
+```
+#accountテーブルの値を削除する
+DELETE FROM account
+WHERE id = 2;
+```
+
+## DROP
+テーブルを削除するときに、DROP文を用いる。
+```
+DROP TABLE [テーブル名];
+```
+```
+#accountテーブルを削除する
+DROP TABLE account;
+```
+
+
+## 演習2
+#### 1.表3のテーブル構造情報をもとにsales_historyを作成し、表4の情報を入れなさい。その後、テーブルのデータを表示しなさい。
+
+***表3 データ構造***
+|カラム名|データ種別|
+---|---
+|id|integer|
+|product_name|varchar(16)|
+|price|integer|
+|date|date|
+
+***表4　入力情報***
+|id|product_name|price|data|
+---|---|---|---
+|1|マスク|500|2020-04-01|
+|2|マスク|500|2020-04-01|
+|3|トイレットペーパー|200|2020-04-02|
+|4|トイレットペーパー|200|2020-04-02|
+|5|消毒液|300|2020-04-03|
+|6|消毒液|300|2020-04-03|
+|7|マスク|500|2020-04-04|
+|8|空気除菌剤|5000|2020-04-04|
+|9|タンポポ茶|10000|2020-04-05|
+|10|タンポポ茶|10000|2020-04-05|
+
+#### 2.マスクが売れた日の日付を表示しなさい。
+#### 3.2020-04-04から2020-04-05のデータをすべて表示しなさい。
+#### 4.空気除菌剤のpriceを100に更新しなさい。
+#### 5.タンポポ茶を販売したデータをすべて削除しなさい。
+
