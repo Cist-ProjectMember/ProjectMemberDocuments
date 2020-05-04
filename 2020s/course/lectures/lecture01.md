@@ -77,7 +77,7 @@ System.out.println("We are Project Member.");
 演算記号 `+`, `-`, `*`, `/`, `%` を用いることで四則演算ができる
 
 例:</br>
-```
+```java
 int sum = 5 + 3;	//sumには8が入る
 int sub = 5 - 3;	//subには2が入る
 int mul = 5 * 3;	//mulには15が入る
@@ -100,7 +100,7 @@ System.out.println("The temperature is " + temp + " degrees");	//"The temparetur
 
 処理を分岐させたい場合には `if`, `else if`, `else` を用いる
 
-```
+```java
 if(条件式1) {
 	/* 条件式1が真の時実行 */
 }
@@ -150,7 +150,7 @@ for(int i = 0; i < 10; i++){
 
 ## 繰り返し文 while
 繰り返し処理をする回数が定かでない場合にwhile文を用いる  
-```
+```java
 while(条件式) {
 	/* 条件式が真の間繰り返される */
 }
@@ -222,20 +222,6 @@ breakをかけない場合はしたのcaseの処理をbreakされるもしくは
 ```
 
 修飾子については後の講義で解説するため、それまでは修飾子には何も記述しなくて構わない
-
-例：
-```java
-public class Main {
-	public static void main(String[] args) {
-		print("Project Member");
-  	}
-	
-	void print(String str) {
-		System.out.println(str);
-	}
-}
-```
-
 
 ## 演習課題
 
