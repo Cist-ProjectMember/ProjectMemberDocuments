@@ -136,7 +136,7 @@ FROM [テーブル名];
 WHERE (条件);
 ```
 条件には、=、>、<、!=、などの基本的な比較演算子の他に、論理演算子が使用できる。
-<img width="300" alt="illust4" src="https://github.com/emm93892/ProjectMemberDocuments/blob/master/2020s/supplement/database/%E5%9B%B37.png"><br>
+<img width="500" alt="illust4" src="https://github.com/emm93892/ProjectMemberDocuments/blob/master/2020s/supplement/database/%E5%9B%B37.png"><br>
 
 ### BETWEEN
 BETWEEN演算子はSQLで唯一の三項演算子である。これは、ある値(上の表ではＡ)が特定の範囲(B<=A<=C)であるかどうかを判定する時に用いられる。
@@ -240,3 +240,102 @@ DROP TABLE account;
 #### 4.空気除菌剤のpriceを100に更新しなさい。
 #### 5.タンポポ茶を販売したデータをすべて削除しなさい。
 
+
+## 列制約
+SQLの表定義ではデータ値に制約を持たせることで、登録されるデータが常に正しい状態を保つことができる。<br>制約には「列制約」と「テーブル制約」という 2つの基本制約がある。両者の違いは、列制約が列のみに適用されるのに対し、テーブル制約が列のグループに適用されるということである。
+<img width="500" alt="illust5" src="https://github.com/emm93892/ProjectMemberDocuments/blob/master/2020s/supplement/database/%E5%9B%B34.png"><br>
+
+### PRIMARY KEY
+主キーとも呼ばれる。テーブルの各行(タプル)を一意に識別するための 1つ以上の列(カラム)のグループのことである。一つのテーブルに一つ存在することが出来る。
+### UNIQUE KEY
+一意性制約とも呼ばれる。列にUNIQUE列制約を設定すると、既に他の行に存在する値の設定を拒否することができる。ただし、NULLの重複は可能である。
+### CHECK
+この制約を利用することで、テーブルに入力されるデータを受理するにあたって、満たさなければならない条件を定義できる。
+### DEFAULT
+テーブルへのINSERT文に列の値が指定されなかった時に、そのテーブルの値に自動的に挿入される値を決めることができる。
+### NOT NULL
+この制約が設定された列へのINSERT文に値が指定されなかった時に、エラーを返す。
+### FOREIGN KEY
+テーブル間でデータの整合性を保つために、関連付けを行う参照整合性制約がある。<br>
+親テーブルに従属する子テーブルに定義されている参照列を外部キー(FOREIGN KEY)という。<br>
+主キーを PK と省略して言うように、よく外部キーのことを FK とも言われる。<br>
+
+子テーブルの関連データに対するオプションとして、on delete cascade や on delete set null がある。
+オプションの使い方を間違えると消失リスクもある。
+
+#### ON DELETE CASCADE
+親テーブルの行が削除される場合、参照している子テーブルの該当行も削除される。
+```
+FOREIGN KEY [子テーブルのカラム名] REFERENCES [親テーブルのテーブル名] [親テーブルのカラム名] ON DELETE CASCADE
+```
+#### ON DELETE SET NULL
+親テーブルの行が削除される場合、参照している子テーブルの該当行は null に更新される。
+```
+FOREIGN KEY [子テーブルのカラム名] REFERENCES [親テーブルのテーブル名] [親テーブルのカラム名] ON DELETE SET NULL 
+```
+## 内部結合
+内部結合とは、2つのテーブルでそれぞれ結合の対象となるカラムを指定し、それぞれのカラムに同じ値が格納されているデータを結合して取得するものである。
+次の図を見てほしい。<br>
+<img width="600" alt="illust6" src="https://github.com/emm93892/ProjectMemberDocuments/blob/master/2020s/supplement/database/%E5%9B%B38.png">
+
+userテーブルとfacultyテーブルを内部結合する。結合の対象となるカラムは、userテーブルの「faculty_ID」と、facultyテーブルの「ID」だ。この2つのカラムの値が同じデータ同士を結合し取得する。<br>
+SELECT 文と INNER JOIN 句を組み合わせることで2つのテーブルを内部結合させてデータを取得することができる。
+```
+SELECT [取得するカラム] FROM [テーブル名1]
+INNER JOIN [テーブル名2] ON (条件);
+```
+取得するカラムは、どちらのテーブルにあるどのカラムなのかが分かるように「テーブル名.カラム名」の形式で指定する。条件のところでは結合の対象となるカラムについて「テーブル名1.カラム名1 = テーブル名2.カラム名2」の形式で指定する。<br>
+
+上の表を用いた例文が以下の通りだ。<br>
+```
+SELECT * FROM user
+INNER JOIN faculty ON user.faculty_ID = faculty.ID;
+```
+このとき、取得したデータにはIDカラムが2つ含まれている。このように複数のテーブルに同じ名前のカラムがある場合にこのカラムをを指定して取得したい場合には次のように「テーブル名.カラム名」の形で指定する。<br>
+どちらかのテーブルにしか含まれておらずテーブル名を省略してもどちらのテーブルのカラムか分かる場合には「テーブル名.」の部分を省略して「カラム名」だけでも可能だ。今回は、userテーブルの「faculty_ID」がそれに当たる。<br>
+```
+SELECT user.id , user.name , faculty_ID , faculty.name FROM user
+INNER JOIN faculty ON user.faculty_ID = faculty.ID;
+```
+上のコードの実行結果が以下の通りだ。 <br>
+<img width="500" alt="illust7" src="https://github.com/emm93892/ProjectMemberDocuments/blob/master/2020s/supplement/database/%E5%9B%B39.png">
+
+
+## 演習3
+#### 1.表5のテーブル構造情報をもとにstudent_informationを作成し、表6の情報を入れなさい。その後、テーブルのデータを表示しなさい。
+
+***表5　テーブル構造***
+|カラム名|データ型|列制約|備考|
+--|--|--|--
+|student_number|integer|主キー|   |
+|name|varchar(8)|非NULL|   |
+
+***表6　入力情報***
+|student_number|name|
+--|--
+|1|a|
+|2|b|
+|3|c|
+|4|d|
+|5|e|
+
+#### 2.表7のテーブル構造情報をもとにchoice_electivesを作成し、表8の情報を入れなさい。なお、student_informationのstudent_numberを親カラムとし、choice_electivesのstudent_numberを子カラムとしたforeign key制約も設定しなさい。参照制約動作は親カラムが更新、削除されたら追従する。
+
+***表7 テーブル構造***
+|カラム名|データ型|列制約|備考|
+--|--|--|--
+|student_number|integer|主キー|親テーブル=stundet_infromation、親カラム=student_number、子テーブル=chioce_electives、子カラム=student_number、親カラムが更新、削除されたら子カラムも追従させる。|
+|electives_1|varchar(8)|非NULL|   |
+|electives_2|varchar(8)|非NULL|   |
+
+***表8　入力情報***
+|student_number|electives_1|electives_2|
+--|--|--
+|1|数学|英語|
+|2|英語|数学|
+|3|英語|数学|
+|4|物理|化学|
+|5|生物|化学|
+
+#### 3.electives_1が英語のデータを表示しなさい。なお、student_information(student_number,name)、choice_electives(electives_1,electives_2)を表示させること。
+#### 4.student_informationからidが5のタプルを削除しなさい。その後、choice_electivesから、idが5のタプルが消えていることを確認しなさい。
