@@ -222,7 +222,7 @@ public class Main {
 		print("Project Member");
   	}
 	
-	void print(String str) {
+	static void print(String str) {
 		System.out.println(str);
 	}
 }
