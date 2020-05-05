@@ -33,7 +33,7 @@ VARCHAR型は氏名や書籍名といった、格納するデータの桁数が�
 # キーワード
 ## CREATE 
 CREATE文は、テーブルのみならず、さまざまなデータベース上のオブジェクトを作成するために使われる。カラムにはデータ型(リンク)と列制約(リンク)が存在する。列制約は省略することが出来る。
-```
+```sql
 CREATE TABLE [テーブル名](
 		[カラム名1] [データ型] [列制約],
 		[カラム名2] [データ型] [列制約],
@@ -42,7 +42,7 @@ CREATE TABLE [テーブル名](
 ```
 実際にユーザの情報を管理するaccountテーブルをSQLを用いて作成する場合の例を以下に示す。
 
-```
+```sql
 # accountテーブル作成例
 CREATE TABLE account(
      id varchar(16) PRIMARY KEY,
@@ -60,12 +60,12 @@ varcharは文字列型(可変長)であり、()で指定した文字数分の記
 
 ## INSERT 
 テーブルに新しくレコードを追加するにはINSERT文を用いる。
-```
+```sql
 INSERT INTO [テーブル名]([列1,列2, …])
 VALUES ([列1に入れる値,列2に入れる値, …]);
 ```
 以下にid、first_name、last_name、weight、height、rankカラムを持つaccountテーブルにデータを追加する場合の例を示す。
-```
+```sql
 # accountテーブルにデータを追加する
 INSERT INTO account(id,first_name,last_name,weight,height,rank)
  		VALUES(1, 'tanjiro', 'kamado',61,165,'hei');
@@ -73,7 +73,7 @@ INSERT INTO account(id,first_name,last_name,weight,height,rank)
 このSQLを実行するとidが1、first_nameが"hikari"、last_nameが"chitose"、weightが61、heightが165、rankがheiのタプルがaccountテーブルに追加される。文字列をデータとする場合は、「’」(シングルクォート)で囲う。<br>
 <br>
 さらに、一つのINSERT文で複数のタプルを追加することも出来る。
-```
+```sql
 # accountテーブルに一括でデータを追加する
 INSERT INTO account(id,fist_name,last_name,weight,height,rank)
   			VALUES(2, 'nezuko', 'kamado’,45,153,null),
@@ -83,13 +83,13 @@ INSERT INTO account(id,fist_name,last_name,weight,height,rank)
 
 ## SELECT
 テーブルからデータを抽出する時には、SELECT文を用いる。
-```
+```sql
 SELECT [カラム名]
 FROM [テーブル名];
 ```
 SELECT文を実行すると、実行結果がExcelのようなマトリックス表で表示される。<br>
 カラム名に\[*](アスタリスク)を使用すると、全てのカラムが表示される。
-```
+```sql
 #accountテーブルからデータを表示する
 SELECT *
 FROM account;
@@ -98,7 +98,7 @@ SELECT文から派生して、複数のテーブルを結合、列と列を結�
 
 ### ORDER BY
 テーブルからSELECTでデータを取得する時、ORDER BY句を使うと、指定された列を基準に並べ替えることができる。
-```
+```sql
 SELECT *
 FROM account
 ORDER BY height;
@@ -129,7 +129,7 @@ ORDER BY 〇〇 ASC/DESCを書くこともでき、ASCが昇順、DESCが降順�
 
 ## WHERE
 SELECT文や後述するUPDATE文やDELETE文で、条件を指定する時に用いる。
-```
+```sql
 #SELECT文での例
 SELECT [カラム名]
 FROM [テーブル名];
@@ -141,7 +141,7 @@ WHERE (条件);
 ### BETWEEN
 BETWEEN演算子はSQLで唯一の三項演算子である。これは、ある値(上の表ではＡ)が特定の範囲(B<=A<=C)であるかどうかを判定する時に用いられる。
 表の式は、A>=B AND A>= C と同値である。
-```
+```sql
 #accountテーブルのheightが150から160の値のタプルのデータを表示する
 SELECT *
 FROM account
@@ -151,7 +151,7 @@ WHERE height BETWEEN 150 AND 160;
 ### NOT
 NOT演算子では、与えられた条件以外を指定する。
 「～以外の」という条件を使いたい場合、NOTを使用すると効率的である。
-```
+```sql
 #accountテーブルのlast_nameが’kamado’以外の値のタプルのデータを表示する	
 SELECT *
 FROM account
@@ -161,7 +161,7 @@ WHERE NOT last_name = ‘kamado’;
 ### IS NULL
 IS NULL演算子は、値がNULLかどうかを判定し、boolean型で値を返す演算子である。
 比較演算子は、NULLが存在する場合、NULLを返すと定められているので値を得ることはできない。
-```
+```sql
 #accountテーブルのrankがNULLのタプルのデータを表示する
 SELECT *
 FROM account
@@ -171,14 +171,14 @@ WHERE rank IS NULL;
 
 ## UPDATE
 タプルの値を更新する時は、UPDATE文を用いる。
-```
+```sql
 UPDATE [テーブル名]
 SET [列名1] = “値1” , [列名2] =”値2”
 WHERE (条件);
 ```
 SET句には更新する列名と値を記述する。
 Where句の条件に一致した行を更新する。Where句が無い場合、全てのタプルを更新する。
-```
+```sql
 #accountテーブルのデータを更新する
 UPDATE account
 SET first_name = “inosuke” , last_name =”hashibira”
@@ -187,13 +187,13 @@ WHERE id = 1;
 
 ## DELETE
 タプルの値を削除する時には、DELETE文を用いる。
-```
+```sql
 DELETE FROM [テーブル名]
 WHERE (条件);
 ```
 UPDATE文と同様に、WHERE句が無い場合は全てのタプルを削除する。
 DELETE文では、WHERE句の条件に合致するタプル全てが削除される。
-```
+```sql
 #accountテーブルの値を削除する
 DELETE FROM account
 WHERE id = 2;
@@ -201,10 +201,10 @@ WHERE id = 2;
 
 ## DROP
 テーブルを削除するときに、DROP文を用いる。
-```
+```sql
 DROP TABLE [テーブル名];
 ```
-```
+```sql
 #accountテーブルを削除する
 DROP TABLE account;
 ```
@@ -265,12 +265,12 @@ SQLの表定義ではデータ値に制約を持たせることで、登録さ�
 
 #### ON DELETE CASCADE
 親テーブルの行が削除される場合、参照している子テーブルの該当行も削除される。
-```
+```sql
 FOREIGN KEY [子テーブルのカラム名] REFERENCES [親テーブルのテーブル名] [親テーブルのカラム名] ON DELETE CASCADE
 ```
 #### ON DELETE SET NULL
 親テーブルの行が削除される場合、参照している子テーブルの該当行は null に更新される。
-```
+```sql
 FOREIGN KEY [子テーブルのカラム名] REFERENCES [親テーブルのテーブル名] [親テーブルのカラム名] ON DELETE SET NULL 
 ```
 ## 内部結合
@@ -280,20 +280,20 @@ FOREIGN KEY [子テーブルのカラム名] REFERENCES [親テーブルのテ�
 
 userテーブルとfacultyテーブルを内部結合する。結合の対象となるカラムは、userテーブルの「faculty_ID」と、facultyテーブルの「ID」だ。この2つのカラムの値が同じデータ同士を結合し取得する。<br>
 SELECT 文と INNER JOIN 句を組み合わせることで2つのテーブルを内部結合させてデータを取得することができる。
-```
+```sql
 SELECT [取得するカラム] FROM [テーブル名1]
 INNER JOIN [テーブル名2] ON (条件);
 ```
 取得するカラムは、どちらのテーブルにあるどのカラムなのかが分かるように「テーブル名.カラム名」の形式で指定する。条件のところでは結合の対象となるカラムについて「テーブル名1.カラム名1 = テーブル名2.カラム名2」の形式で指定する。<br>
 
 上の表を用いた例文が以下の通りだ。<br>
-```
+```sql
 SELECT * FROM user
 INNER JOIN faculty ON user.faculty_ID = faculty.ID;
 ```
 このとき、取得したデータにはIDカラムが2つ含まれている。このように複数のテーブルに同じ名前のカラムがある場合にこのカラムをを指定して取得したい場合には次のように「テーブル名.カラム名」の形で指定する。<br>
 どちらかのテーブルにしか含まれておらずテーブル名を省略してもどちらのテーブルのカラムか分かる場合には「テーブル名.」の部分を省略して「カラム名」だけでも可能だ。今回は、userテーブルの「faculty_ID」がそれに当たる。<br>
-```
+```sql
 SELECT user.id , user.name , faculty_ID , faculty.name FROM user
 INNER JOIN faculty ON user.faculty_ID = faculty.ID;
 ```
