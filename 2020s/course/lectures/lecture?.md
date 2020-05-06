@@ -23,7 +23,17 @@ var scanner = new Scanner(System.in);
 これだけでは実際あまり良さがわからないんだが?という感じかもしれないが、  
 ローカル変数の記述を始める際にとりあえず`var`から始めればいいと考えれば楽だと思う。(個人的意見)
 
+拡張for文の利用でも`var`は使うことができる。
+
+```java
+for(var num : array){
+  System.out.println(num);
+}
+```
+
 ### 注意点
+
+#### ArrayList<E>での注意点
 
 ローカル変数の記述を始める際にとりあえず書けばいいと説明してすぐ掌返しみたいで申し訳ないが、  
 何でもかんでも`var`から始めればいいというものではない。  
@@ -43,4 +53,31 @@ var vegetableList = new ArrayList<>();
 var vegebleList = new ArrayList<Vegetable>();
 ```
 
-さらにこれは大規模な開発を行うときに
+#### その他の注意点
+
+普段、int型の変数を宣言するとき、`int num = 123;`と記述しているが、`Integer num = 123;`  
+と記述することもできる。これは`List<Integer>`を宣言したときにわかるが、あまりint型とInteger型では  
+変化がないように思える。しかし大きな違いとしてInteger型では変数の中身が`null`である可能性がある。  
+
+
+```java
+//int型にnullは代入できない。
+int num = null;
+
+//Integer型にはnullは代入できる。
+Integer num = null;
+```
+
+この上で注意すべき点は`var`を用いて、
+
+```java
+var num = getNum();
+```
+
+という記述をしたとする。一見なんの問題もないように思えるが、`getNum()`メソッドの戻り値の型が、int型かInteger型なのか判断する事ができない。  
+実際戻り値がIntegerである場合は`null`である可能性があるのでtry-catchを用いてNullPointerExceptionのチェックを行う必要があるため、見た目で戻り値の型が判断できない場合はできる限り`var`の利用は控えて、しっかりと型の指定をしよう。このように思わぬ点でエラーが発生してしまう可能性があるために、大規模な開発では話し合っておくべき必要があると思う。(個人的意見)
+
+## Lambda式
+
+### Lambda(ラムダ)式とは
+
