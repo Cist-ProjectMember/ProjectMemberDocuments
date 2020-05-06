@@ -45,7 +45,7 @@ lecture03 > Exercise3_3.java でVegetableクラスのArrayList<Vegetable>を作�
 var vegetableList = new ArrayList<>();
 ```
 
-このようになると思う。しかしお分かりいただけだろうか、どこにも`Vegetable`クラスの記述がないじゃないか。  
+このようになると思う。しかしお分かりいただけただろうか、どこにも`Vegetable`クラスの記述がないじゃないか。  
 これが何を意味するか。この記法でArrayListを作成した場合、型は`ArrayList<Object>`となってしまう。  
 これを回避するには、右辺のインスタンス化するときに省略している部分をしっかり書いてあげるだけでよい。
 
