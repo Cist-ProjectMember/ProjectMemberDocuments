@@ -249,7 +249,7 @@ VegetableクラスとExercise3_4クラスを作成し、Exercise3_4クラスの�
   * 野菜の名前を格納するString型のnameと値段を格納するint型のvalueを持つようにすること。    
 * コンストラクタ
   * コンストラクタの引数はString型のnameとint型のvalueとなるようにすること。
-　* コンストラクタで引数のString型のnameとint型のvalueをフィールドのnameとvalueにセットできるようにすること。
+  * コンストラクタで引数のString型のnameとint型のvalueをフィールドのnameとvalueにセットできるようにすること。
 * print()
   * 引数及び戻り値無しのprint()メソッドを作成すること。
   * このメソッドでは標準出力で、野菜の名前と値段を「～は～円」といったように表示すること。  
