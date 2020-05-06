@@ -26,8 +26,8 @@ var scanner = new Scanner(System.in);
 拡張for文の利用でも`var`は使うことができる。
 
 ```java
-for(var num : array){
-  System.out.println(num);
+for (var num : array){
+    System.out.println(num);
 }
 ```
 
@@ -80,6 +80,50 @@ var num = getNum();
 ## 匿名クラス
 
 ### 匿名クラスとは
+
+匿名クラス(別名:無名クラス)はとあるメソッドの中で一回しか使わない場合などに使われることがあるJavaにおける特殊なクラスのひとつである。。  
+イメージがつきにくいと思うが、つまり「その場で使い捨てる」クラスを作りたい場合のためにあると考えればいいと思う。(個人的意見)
+
+### 利用例
+
+実際、匿名クラスなんてどんなときに使うの?って思うかもしれません。実際使う場面は限られてきます。  
+思いつく簡単な場合を考えてみます。  
+
+とあるButtonクラスがあったり、メソッドでonClick()を持っていたとします。
+
+```java
+public class Button {
+    public void onClick() {
+        System.out.println("ボタンが押された。");
+    }
+}
+```
+
+さらにこのボタンをバスの降車ボタンとして利用する場面があるとします。その場合はこのButtonクラスを継承して、
+
+```java
+public class StopButton extends Button {
+    @Override
+    public void onClick() {
+        System.out.println("次止まります。");
+    }
+}
+```
+
+と記述することができるが、このボタンの種類がどんどん増えていく場合に、それ相応にクラスが増えていくことになる。  
+これはどれがどのボタンか判断することも困難になりかねない。  
+匿名クラスの宣言はこのように行う。 
+
+```java
+Button stopButton = new Button() {
+    @Override
+    public void onClick() {
+        System.out.println("次止まります。");
+    }
+}
+```
+
+実際に、この匿名クラスを用いることでその場の一回きりのクラスとして宣言することで解消することができる。
 
 ## Lambda式
 
