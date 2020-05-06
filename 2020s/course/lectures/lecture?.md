@@ -7,7 +7,7 @@ Java 10以降には、ローカル変数の型推論という言語機能が新�
 
 ### 利用例
 
-今までScannnerをインスタンス化する時には
+今までScannerをインスタンス化する時には
 
 ```java
 Scanner scanner = new Scanner(System.in);
