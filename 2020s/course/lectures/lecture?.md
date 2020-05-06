@@ -68,7 +68,7 @@ int num = null;
 Integer num = null;
 ```
 
-この上で注意すべき点は`var`を用いて、
+上記のint型とInteger型の差で注意すべき点は`var`を用いて、
 
 ```java
 var num = getNum();
