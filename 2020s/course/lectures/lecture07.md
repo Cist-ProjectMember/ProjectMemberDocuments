@@ -41,8 +41,8 @@
 |razorLeaf(はっぱカッター)|Grass(草)|12|-|
 |ember(ひのこ)|Fire(炎)|10|-|
 |waterGun(みずてっぽう)|Water(水)|10|-|
-|withdraw(からにこもる)|Water(水)|-|block+3|
 |synthesis(こうごうせい)|Grass(草)|-|recover half of HP|
+|withdraw(からにこもる)|Water(水)|-|block+3|
 |groml(なきごえ)|Normal(ノーマル)|-|attack-3|
 |scaryFace(こわいかお)|Normal(ノーマル)|-|speed-6|
 |leer(にらみつける)|Normal(ノーマル)|-|block-3|
