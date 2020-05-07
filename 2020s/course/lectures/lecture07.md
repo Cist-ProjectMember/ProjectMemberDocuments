@@ -32,6 +32,9 @@
 * 
 
 |Turtle(草)|Crocodile(水)|Cat(炎)|
+|ember(ひのこ)|waterGun(みずてっぽう)|absorb(すいとる)|
+
+|Turtle(草)|Crocodile(水)|Cat(炎)|
 |:-------|:------:|
 |ember(ひのこ)|waterGun(みずてっぽう)|absorb(すいとる)|
 |groml(なきごえ)|screech(いやなおと)|withdraw(からにこもる)|
