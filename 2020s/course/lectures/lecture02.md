@@ -240,7 +240,7 @@ Carに給油をするGasStationクラスを作成しなさい。
 * refuel()では給油したことが分かる文言を表示する
 
 main()ではCarとGasStationをインスタンス化し、GasStationで給油をする前と後でCarのrun()を呼び出しなさい。  
-    main()メソッドは、Excercise2_2クラスに作成すること。
+    main()メソッドは、Exercise2_2クラスに作成すること。
     
 #### 実行結果
 
@@ -261,7 +261,7 @@ Carにタイヤとエンジンを組み込みなさい。
   * Engineクラスは戻り値/引数無しのstart()を持ち、自身のrpmの値と”エンジンを始動させました”と表示する
 * Carクラスに戻り値/引数無しのstartEngine()を追加し、自身のengineのstart()を呼び出す
 
-ここまで到達した学生は Excercise2-3クラスのmain()で、
+ここまで到達した学生は Exercise2-3クラスのmain()で、
 * Tire型の配列tires(最大要素数4,要素数4)をインスタンス化(sizeは全て65)
 * Engine型のengineをインスタンス化(rpmは4,000)
 * これらをCarのコンストラクタに渡してCar型のcarをインスタンス化
