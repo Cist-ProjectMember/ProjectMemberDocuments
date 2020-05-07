@@ -33,8 +33,6 @@
 
 技リスト
 
-|Turtle(草)|Crocodile(水)|Cat(炎)|
-|:-------:|:------:|:------:|
 |HP:30|HP:30|HP:30|
 |attack:10|attack:10|attack:10|
 |block:8|block:8|block:8|
