@@ -34,7 +34,7 @@
 技リスト
 
 |tackle(たいあたり)|Normal(ノーマル)|10|
-|:-------:|:------:|:------:|
+|scratch(ひっかく)|Normal(ノーマル)|10|
 |HP:30|HP:30|HP:30|
 |attack:10|attack:10|attack:10|
 |block:8|block:8|block:8|
