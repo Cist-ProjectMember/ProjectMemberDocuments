@@ -14,7 +14,10 @@
 
 ### 課題1
 
-* Exercise7_1クラスを作成し、mainメソッドを作成しなさい。
+以下のクラスを作成しなさい。
 
 ![](http://www.plantuml.com/plantuml/png/XT7DIiD040Vmi_CKEIQGWkVWeTM3UX0AzGKccw5PkXzbTcB0ZtTtT-rMhGGF2NzcihzXikiWo39P0-6WtH4PRQKCXh0HOTrFGe_Akvr-fUeQuCcx8CJLpVjgLLqzJoo6Beftx9KVzDyw2W1akYgTDt1egTl5IMuFM2QMmgXbwxMJBZwfY-gGOs_yAOKZqP1JcLR_4DjBiNtOfe_RpTbgRulLdgq6KjTGRR_8xaGttOlN0toKBU96SOFuhXiWsyVPPI_xwy2UlJKBlM-i_BP4bXpX6ONuVd9BG51CfCR_-7nLoSuXmTW7p_t2kLdBE33EY-oQt31Pyma0)
+
+* Exercise7_1クラスを作成し、mainメソッドを作成しなさい。
+* 
 
