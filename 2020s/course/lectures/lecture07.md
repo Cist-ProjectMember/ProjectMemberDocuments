@@ -33,7 +33,7 @@
 
 |Turtle(草)|Crocodile(水)|Cat(炎)|
 |:-------|:------:|:------:|
-|HP:30|HP:30|HP:30|
+|HP:30,attack:10|HP:30,attack:10|HP:30,attack:10|
 |absorb(すいとる)|waterGun(みずてっぽう)|ember(ひのこ)|
 |withdraw(からにこもる)|screech(いやなおと)|groml(なきごえ)|
 |tackle(たいあたり)|tackle(たいあたり)|tackle(たいあたり)|
