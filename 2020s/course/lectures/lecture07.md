@@ -33,19 +33,20 @@
 
 技リスト  
 
-|name|attribute|power|
-|:-------:|:------:|:------:|
-|tackle(たいあたり)|Normal(ノーマル)|10|
-|scratch(ひっかく)|Normal(ノーマル)|10|
-|bite(かみつく)|Dark(悪)|15|
-|razorLeaf(はっぱカッター)|Grass(草)|12|
-|ember(ひのこ)|Fire(炎)|10|
-|waterGun(みずてっぽう)|Water(水)|10|
-|groml(なきごえ)|Normal(ノーマル)|-|
-|scaryFace(こわいかお)|Normal(ノーマル)|-|
-|leer(にらみつける)|Normal(ノーマル)|-|
-|withdraw(からにこもる)|Water(水)|-|
-|Protect(まもる)|Normal(ノーマル)|-|
+|name|attribute|power|effect|
+|:-------:|:------:|:------:|:------:|
+|tackle(たいあたり)|Normal(ノーマル)|10|-|
+|scratch(ひっかく)|Normal(ノーマル)|10|-|
+|bite(かみつく)|Dark(悪)|15|-|
+|razorLeaf(はっぱカッター)|Grass(草)|12|-|
+|ember(ひのこ)|Fire(炎)|10|-|
+|waterGun(みずてっぽう)|Water(水)|10|-|
+|withdraw(からにこもる)|Water(水)|-|block+3|
+|synthesis(こうごうせい)|Grass(草)|-|recover half of HP|
+|groml(なきごえ)|Normal(ノーマル)|-|attack-3|
+|scaryFace(こわいかお)|Normal(ノーマル)|-|speed-6|
+|leer(にらみつける)|Normal(ノーマル)|-|block-3|
+
 
 
 
