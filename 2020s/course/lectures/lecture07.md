@@ -19,5 +19,22 @@
 ![](http://www.plantuml.com/plantuml/png/XT7DIiD040Vmi_CKEIQGWkVWeTM3UX0AzGKccw5PkXzbTcB0ZtTtT-rMhGGF2NzcihzXikiWo39P0-6WtH4PRQKCXh0HOTrFGe_Akvr-fUeQuCcx8CJLpVjgLLqzJoo6Beftx9KVzDyw2W1akYgTDt1egTl5IMuFM2QMmgXbwxMJBZwfY-gGOs_yAOKZqP1JcLR_4DjBiNtOfe_RpTbgRulLdgq6KjTGRR_8xaGttOlN0toKBU96SOFuhXiWsyVPPI_xwy2UlJKBlM-i_BP4bXpX6ONuVd9BG51CfCR_-7nLoSuXmTW7p_t2kLdBE33EY-oQt31Pyma0)
 
 * Exercise7_1クラスを作成し、mainメソッドを作成しなさい。
+* 作成したクラスをカプセル化し、必要に応じてアクセサを新たに追加しなさい。
+* 可視性は省略されているから自分で判断しなさい。
+* attribute(属性)は、それぞれCat(炎)、Crocodile(水)、Turtle(草)としなさい。
+* tackle()では引数で受け取ったMonsterのHPを自分のattack分減らし、与えたダメージ量と、ダメージを与えたということを表示する。
 * 
+* 
+* 
+* 
+* 
+* 
+* 
+
+|Cat(炎属性)|Crocodile(水)|Turtle(草)|
+|:-------|:------:|:------:|
+|
+|
+|
+|
 
