@@ -40,17 +40,5 @@
 |absorb(すいとる)|waterGun(みずてっぽう)|ember(ひのこ)|
 |withdraw(からにこもる)|screech(いやなおと)|groml(なきごえ)|
 |tackle(たいあたり)|tackle(たいあたり)|tackle(たいあたり)|
-|50円玉|4|1|
-|100円玉|0|2|
-|500円玉|3|1|
-|1000円札|2|2|
-|5000円札|1|2|
-|10000円札|0|1|
 
-|Turtle(草)|Crocodile(水)|Cat(炎)|
-|:-------|:------:|
-|ember(ひのこ)|waterGun(みずてっぽう)|absorb(すいとる)|
-|groml(なきごえ)|screech(いやなおと)|withdraw(からにこもる)|
-|tackle(たいあたり)|tackle(たいあたり)|tackle(たいあたり)|
-|
 
