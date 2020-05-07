@@ -37,13 +37,15 @@
 |:-------:|:------:|:------:|
 |tackle(たいあたり)|Normal(ノーマル)|10|
 |scratch(ひっかく)|Normal(ノーマル)|10|
-|HP:30|HP:30|HP:30|
-|attack:10|attack:10|attack:10|
-|block:8|block:8|block:8|
-|speed:4|speed:4|speed:4|
-|absorb(すいとる)|waterGun(みずてっぽう)|ember(ひのこ)|
-|withdraw(からにこもる)|screech(いやなおと)|groml(なきごえ)|
-|tackle(たいあたり)|tackle(たいあたり)|tackle(たいあたり)|
+|bite(かみつく)|Dark(悪)|15|
+|razorLeaf(はっぱカッター)|Grass(草)|12|
+|ember(ひのこ)|Fire(炎)|10|
+|waterGun(みずてっぽう)|Water(水)|10|
+|groml(なきごえ)|Normal(ノーマル)|-|
+|scaryFace(こわいかお)|Normal(ノーマル)|-|
+|leer(にらみつける)|Normal(ノーマル)|-|
+|withdraw(からにこもる)|Water(水)|-|
+|Protect(まもる)|Normal(ノーマル)|-|
 
 
 
