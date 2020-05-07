@@ -209,6 +209,6 @@ ages = ages.stream()
  
  ここで登場した`.forEach()`も終端操作の一つである。
  
- 今更であるが、`.forEach(s -> System.out.println(s))`の`s -> System.out.println(s)`ってなんやねん って思うかもしれないが、これはLambda式という記法である。これに関しての説明は今回はしないが`Java Lambda式`とでも調べたら出てくると思う。ちなみに`System.out::println`はメソッド参照と言う。
+ 今更であるが、`.forEach(s -> System.out.println(s))`の`s -> System.out.println(s)`ってなんやねん って思うかもしれないが、これはLambda式という記法である。`->`は __アロー関数__ と言う。これに関しての説明は今回はしないが`Java Lambda式`とでも調べたら出てくると思う。ちなみに`System.out::println`はメソッド参照と言う。
  
  streamやLambda(ラムダ)式はとても幅広く活用でき、可読性も向上させることができてJava特有の冗長性も少しは減らすことができるのでぜひとも興味がある人は学んでみてください。そして、新しい発見があった場合はぜひとも皆さんで共有してみてください。僕にも教えて下さい。(b2182360)
