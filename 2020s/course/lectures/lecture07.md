@@ -31,7 +31,9 @@
 * 
 * 
 
-技リスト
+技リスト  
+
+|name|attribute|power|
 |:-------:|:------:|:------:|
 |tackle(たいあたり)|Normal(ノーマル)|10|
 |scratch(ひっかく)|Normal(ノーマル)|10|
