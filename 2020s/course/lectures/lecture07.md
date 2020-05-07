@@ -33,14 +33,17 @@
 
 技リスト
 
-|tackle(たいあたり)|Normal|10|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+|tackle(たいあたり)|Normal(ノーマル)|10|
+|scratch(ひっかく)|Normal(ノーマル)|10|
+|bite(かみつく)|Dark(悪)|15|
+|razorLeaf(はっぱカッター)|Grass(草)|12|
+|ember(ひのこ)|Fire(炎)|10|
+|waterGun(みずてっぽう)|Water(水)|10|
+|groml(なきごえ)|Normal(ノーマル)|-|
+|scaryFace(こわいかお)|Normal(ノーマル)|-|
+|leer(にらみつける)|Normal(ノーマル)|-|
+|withdraw(からにこもる)|Water(水)|-|
+|Protect(まもる)|Normal(ノーマル)|-|
 
 
 
