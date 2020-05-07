@@ -35,8 +35,7 @@ for (var num : array) {
 
 #### ArrayList<E>での注意点
 
-ローカル変数の記述を始める際にとりあえず書けばいいと説明してすぐ掌返しみたいで申し訳ないが、  
-何でもかんでも`var`から始めればいいというものではない。  
+ローカル変数の記述を始める際にとりあえず書けばいいと説明してすぐ掌返しみたいで申し訳ないが、何でもかんでも`var`から始めればいいというものではない。  
 
 lecture03 > Exercise3_3.java でVegetableクラスのArrayList<Vegetable>を作成したと思う。  
 これの左辺の型をただ`var`を使って書くと、
@@ -86,8 +85,7 @@ var num = getNum();
 
 ### 利用例
 
-実際、匿名クラスなんてどんなときに使うの(?)って思うかもしれません。実際使う場面は限られている。  
-思いつく簡単な場合を考えてみます。  
+実際、匿名クラスなんてどんなときに使うの(?)って思うかもしれません。実際使う場面は限られている。思いつく簡単な場合を考えてみます。  
 
 とあるButtonクラスがあり、メソッドでonClick()を持っていたとします。
 
@@ -128,7 +126,40 @@ Button stopButton = new Button() {
 はっきり言って僕本人も完璧には理解していませんし、こんな時使うぜ。くらいにしか思ってません。  
 今回のこの例では、バスの降車ボタンを例にしましたが、よく考えるとバスに降車ボタンが一つしかついていないことなんてないので、ちゃんとButtonクラスを継承したStopButtonクラスを作成したほうがいいと思います。(バカ)
 
-## Lambda式
+## Stream API
 
-### Lambda(ラムダ)式とは
+### Stream APIとは
 
+Java 8以降から導入された機能で、配列やCollectionなどの集合体を扱い、値の集計やデータを使った処理などが出来る便利なAPIです。
+
+### 使い方
+
+#### 基本的な操作の流れ
+
+1. Collectionからstreamを取得する。
+2. 取得したstreamに対して何度でも __中間操作__ を行い、自分が意図した形に変換する。
+3.  __終端操作__ を行い、変換したCollectionに適用する。
+
+#### 利用例
+
+この操作の流れだけを見てもしっくりこないと思うので既存のfor文を使った形と今回の __stream__ を使った形を比較しながら見ていく。
+
+- 既存の方法
+```java
+List<String> numTextList = Arrays.asList("0", "1", "2", "3");
+List<Integer> numList = new ArrayList<>();
+for (String numText : numTextList) {
+    numList.add(Integer.parseInt(numText));
+}
+```
+
+- streamを利用した方法
+```java
+List<String> numTextList = Arrays.asList("0", "1", "2", "3");
+List<Integer> numList = numTextList.stream()
+        .map(s- > Integer.parseInt(s))
+        .collect(Collectors.toList());
+```
+
+これらのプログラムは、`List<String>`を`List<Integer>`に変換する場合のプログラムである。今回はListの中身がnullである可能性は考えないこととする。  
+パッと見だとあまり良さがわからないと思う、が明らかに可読性がよくなっている。具体的にどの点が良くなっているのかであるが、
