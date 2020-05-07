@@ -33,8 +33,8 @@
 
 |Cat(炎属性)|Crocodile(水)|Turtle(草)|
 |:-------|:------:|:------:|
-|
-|
+|ember(ひのこ)|waterGun(みずてっぽう)|absorb(すいとる)|
+|groml(なきごえ)|screech(いやなおと)|withdraw(からにこもる)
 |
 |
 
