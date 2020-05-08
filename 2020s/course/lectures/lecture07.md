@@ -49,7 +49,7 @@
 
 モンスターリスト①
 
-|Turtle|Monkey|Penguin|　
+|Turtle|Monkey|Penguin|
 |:-------:|:------:|:------:|
 |HP:55|HP:44|HP:53|
 |attack:17|attack:14|attack:12|
