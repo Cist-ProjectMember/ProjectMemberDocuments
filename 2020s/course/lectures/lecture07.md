@@ -24,7 +24,7 @@
 * MeadowにはTurtle、ForestにはMonkey、OceanにはPenguinが生息している。  
 * 3匹の中から気に入った1匹を選択しインスタンス化しなさい。  
 * name(名前),attribute(属性),hitPoint(体力),attack(攻撃力),block(防御力),speed(素早さ)は引数付きコンストラクタにて初期化しなさい。  
-＊ Monsterのコンストラクタに入れる値は下記のモンスターリストを参照しなさい。  
+* Monsterのコンストラクタに入れる値は下記のモンスターリストを参照しなさい。  
 * Changeはステータスに変化をもたらす技、Contactはダメージを与える技とする。  
 * moveListには下記の技リストを参照しname,attiribute,powerの要素を持つ技を追加しなさい。  
 * effectを持つ技は、その効果を満たすようにメソッドを作成しなさい。  
