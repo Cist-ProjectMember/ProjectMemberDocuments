@@ -56,7 +56,8 @@
 |attack:17|attack:14|attack:12|
 |block:16|block:11|block:13|
 |speed:15|speed:31|speed:20|
-
+  
+  
 ### 課題2
 
 * Exercise7_2クラスを作成し、mainメソッドを作成しなさい。  
@@ -64,18 +65,20 @@
 * Monsterクラスにactionメソッドを作成しなさい。  
 * actionメソッドではmoveListの中に入っている4つの技の中から1つ選択し、相手を攻撃する。  
 * ここでは、(attack+power)×属性相性-block=ダメージとする。  
-
+  
+  
 ### 課題3
 
 * Exercise7_3クラスを作成し、mainメソッドを作成しなさい。  
 * Monsterクラスにevolutionメソッドを作成しなさい。  
 * evolutionメソッドでは、hitPointを30,attackを40,blockを30,speedを20増加させ、新しく技を覚えさせなさい。  
+※　技は4つまでしか覚えることができない。
 * 最初に選んだMonsterを進化させなさい。  
 
 |name|attribute|power|effect|
 |:-------:|:------:|:------:|:------:|
 |leafStorm(リーフストーム)|Grass(草)|65|攻撃時自分のattackを6下げる|
-|flareBlitz(フレアドライブ)|Fire(炎)|６０|相手に与えたダメージの1/3を自分も受ける|
+|flareBlitz(フレアドライブ)|Fire(炎)|60|相手に与えたダメージの1/3を自分も受ける|
 |hydroPump(ハイドロポンプ)|Water(水)|55|20%の確率で攻撃を外す|
 
 
