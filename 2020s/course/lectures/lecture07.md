@@ -43,9 +43,9 @@
 |waterGun(みずてっぽう)|Water(水)|10|-|
 |synthesis(こうごうせい)|Grass(草)|-|recover half of HP|
 |withdraw(からにこもる)|Water(水)|-|block+3|
-|groml(なきごえ)|Normal(ノーマル)|-|attack-3|
-|scaryFace(こわいかお)|Normal(ノーマル)|-|speed-6|
-|leer(にらみつける)|Normal(ノーマル)|-|block-3|
+|groml(なきごえ)|Normal(ノーマル)|-|enemy's attack-3|
+|scaryFace(こわいかお)|Normal(ノーマル)|-|enemy's speed-6|
+|leer(にらみつける)|Normal(ノーマル)|-|enemy's block-3|
 
 
 
