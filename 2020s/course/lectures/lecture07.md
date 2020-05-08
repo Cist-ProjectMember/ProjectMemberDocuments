@@ -43,11 +43,11 @@
 |razorLeaf(はっぱカッター)|Grass(草)|12|-|
 |ember(ひのこ)|Fire(炎)|10|-|
 |waterGun(みずてっぽう)|Water(水)|10|-|
-|synthesis(こうごうせい)|Grass(草)|-|recover half of HP|
-|withdraw(からにこもる)|Water(水)|-|block+3|
-|groml(なきごえ)|Normal(ノーマル)|-|enemy's attack-3|
-|scaryFace(こわいかお)|Normal(ノーマル)|-|enemy's speed-6|
-|leer(にらみつける)|Normal(ノーマル)|-|enemy's block-3|
+|synthesis(こうごうせい)|Grass(草)|-|最大HPの半分を回復する|
+|withdraw(からにこもる)|Water(水)|-|自分のblockを3上昇させる|
+|groml(なきごえ)|Normal(ノーマル)|-|相手のattackを3減少させる|
+|scaryFace(こわいかお)|Normal(ノーマル)|-|相手のspeedを6減少させる|
+|leer(にらみつける)|Normal(ノーマル)|-|相手のblockを3減少させる|
 
 モンスターリスト
 |Turtle(草)|Monkey(炎)|Penguin(水)|
@@ -71,13 +71,15 @@
 
 * Exercise7_3クラスを作成し、mainメソッドを作成しなさい。  
 * Monsterクラスにevolutionメソッドを作成しなさい。  
-* evolutionメソッドでは、hitPointを30,attackを40,blockを30,speedを20増加させ、新しく技を覚えさせなさい。  
+* evolutionメソッドでは、hitPointを30,attackを40,blockを30,speedを20増加させ、新しく技を覚えさせなさい。 
+* TurtleはleafStorm、MonkeyはflareBlitz、PenguinはhydroPumpを覚える。  
 ※　技は4つまでしか覚えることができない。
 * 最初に選んだMonsterを進化させなさい。  
 
+技リスト
 |name|attribute|power|effect|
 |:-------:|:------:|:------:|:------:|
-|leafStorm(リーフストーム)|Grass(草)|65|攻撃時自分のattackを6下げる|
+|leafStorm(リーフストーム)|Grass(草)|65|攻撃時自分のattackを6減少させる|
 |flareBlitz(フレアドライブ)|Fire(炎)|60|相手に与えたダメージの1/3を自分も受ける|
 |hydroPump(ハイドロポンプ)|Water(水)|55|20%の確率で攻撃を外す|
 
