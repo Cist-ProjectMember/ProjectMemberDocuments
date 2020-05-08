@@ -47,16 +47,16 @@
 |groml(なきごえ)|-|相手のattackを3減少させる|
 |leer(にらみつける)|-|相手のblockを3減少させる|
 
-モンスターリスト①　
-|Turtle|Monkey|Penguin|　　　　　　　　　　　　　　　　　　　
+モンスターリスト①
+|Turtle|Monkey|Penguin|　　　　　　　　　　
 |:-------:|:------:|:------:|
 |HP:55|HP:44|HP:53|
 |attack:17|attack:14|attack:12|
 |block:16|block:11|block:13|
 |speed:15|speed:31|speed:20|
 
-モンスターリスト②　
-|Turtle|Monkey|Penguin|　　　　　　　　　　　　　　　　　　　
+モンスターリスト②
+|Turtle|Monkey|Penguin|　　　　　　　　　　　　　
 |:-------:|:------:|:------:|
 |tackle|tackle|tackle|
 |razorLeaf|scratch|Peck|
