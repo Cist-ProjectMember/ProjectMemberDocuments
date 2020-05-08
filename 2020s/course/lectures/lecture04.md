@@ -134,7 +134,7 @@ Fighter2 は倒れた。
 * 可視性は省略されているから自分で判断せよ。 
 * mainの中でATMをインスタンス化する。
 * Accountのコンストラクタはbalanceの初期化を０で行う。
-* ATMのコンストラクタでaccountsを初期化する。
+* ATMのコンストラクタでaccountListを初期化する。
 * registerAccount()はアカウントを登録する。
 * exitsAccount()は引数のnameとnumberからaccountsに存在するかどうかをbooleanで返す。
 * deposit()とwithdraw()は引数のnumberがaccountsに存在するとき、引数のmoneyを利用して入金と引出を行う。
