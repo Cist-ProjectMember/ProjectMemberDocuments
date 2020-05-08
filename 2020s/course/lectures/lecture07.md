@@ -20,12 +20,11 @@
 
 * Exercise7_1クラスを作成し、mainメソッドを作成しなさい。
 * 作成したクラスをカプセル化し、必要に応じてアクセサを新たに追加しなさい。
-* 可視性は省略されているから自分で判断しなさい。
 * Meadow(草原),Forest(森),Ocean(大洋)はMonsterの生息地を示す。
 * MeadowにはTurtle、ForestにはMonkey、OceanにはPenguinが生息している。
 * 3匹の中から気に入った1匹を選択しインスタンス化しなさい。
 * name(名前),attribute(属性),hitPoint(体力),attack(攻撃力),block(防御力),speed(素早さ)は引数付きコンストラクタにて初期化しなさい。
-＊　Monsterのコンストラクタに入れる値は下記のMonsterリストを参照しなさい。
+＊　Monsterのコンストラクタに入れる値は下記のモンスターリストを参照しなさい。
 * moveListには下記の技リストを参照しname,attiribute,powerの要素を持つ技を追加しなさい。
 * effectを持つ技は、その効果を満たすようにメソッドを作成しなさい。
 * 
@@ -48,5 +47,13 @@
 |groml(なきごえ)|Normal(ノーマル)|-|enemy's attack-3|
 |scaryFace(こわいかお)|Normal(ノーマル)|-|enemy's speed-6|
 |leer(にらみつける)|Normal(ノーマル)|-|enemy's block-3|
+
+モンスターリスト
+|Turtle(草)|Monkey(炎)|Penguin(水)|
+|:-------:|:------:|:------:|
+|HP:５５|HP:４４|HP:５３|
+|attack:17|attack:14|attack:12|
+|block:16|block:11|block:13|
+|speed:15|speed:31|speed:20|
 
 [目次へ](../README.md)
