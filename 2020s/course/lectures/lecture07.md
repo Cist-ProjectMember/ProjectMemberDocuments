@@ -16,12 +16,12 @@
 
 以下のクラスを作成しなさい。
 
-![](http://www.plantuml.com/plantuml/png/ZP3BIyD04CRFxbynvDJIJL7m58gq7do0XK8FdhV9e4lt4NOd2Zx-TtV794qz6KZuPhuXl_bc7Ka5wgmHyQXTguAoK1iLuuOew4D7-5XxjzSV29T2RBsBX05MNoLSt8SqTjvwLacUj-uqccPiGN5L0FYop6gvl2vWwzzGv8UfC0n-2YYTibZjAMZtaYerB7HglMhQUUseIk_lXAgFVN4mVjInHMnwRHFlIKUgycULwJT2mABdpYPC-PSe7tRv9t8pSkJjG94ZOox4zv26m-Si2rQp-SdYKx75QchnOTbYDRNoll-xJUlVCN3clCyQNTDPymC0)
+![](http://www.plantuml.com/plantuml/png/ZLBjQi904FpTUuh5Nug9jD1VGOgsK5geLF09phWaXybUk5ihz0Dyrxv8xox96SGV3KcOtGaxCvjRM9Q63tKbx5vH8usi8Q-ajKjcexO7njTSqqPz8jmAiT9a6GtClzETFb8ADokK3bqXdhL1orU8znmbnJwCxaO0EZMgA3drvMnsFuAL_a3807vFftYBq8o3daf91LusDR7CMVWhn81Uw4j0IhB6REDoKU4gsISyjqh5Qws8C_UqNyXytnNRIaTi6yHTXsjdu4rPplnhxkqy207JJdSyq4mk5PENjH-IBADEyjYh955Z8iHFdoOipsUP1ZIUdAbsuO5huP1iVrCWMpWalUV_xQVHHpGXj_UqGDgva_C7)
 
 * Exercise7_1クラスを作成し、mainメソッドを作成しなさい。
 * 作成したクラスをカプセル化し、必要に応じてアクセサを新たに追加しなさい。
 * 可視性は省略されているから自分で判断しなさい。
-* Meadow(草原),forest（森）,Ocean(大洋)はそれぞれのMonsterの生息地を示す。
+* Meadow(草原),Forest（森）,Ocean(大洋)はそれぞれのMonsterの生息地を示す。
 * 
 * 
 * 
