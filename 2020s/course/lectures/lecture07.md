@@ -55,13 +55,6 @@
 |block:16|block:11|block:13|
 |speed:15|speed:31|speed:20|
 
-モンスターリスト②
-|Turtle|Monkey|Penguin|　　　　　　　　　　　　　
-|:-------:|:------:|:------:|
-|tackle|tackle|tackle|
-|razorLeaf|scratch|Peck|
-|synthesis|ember|bubble|
-|withdraw|leer|groml|
   
   
 ### 課題2
