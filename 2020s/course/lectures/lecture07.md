@@ -38,23 +38,30 @@
 |:-------:|:------:|:------:|
 |tackle(たいあたり)|10|-|
 |scratch(ひっかく)|10|-|
-|bite(かみつく)|15|-|
+|Peck(つつく)|15|-|
 |razorLeaf(はっぱカッター)|12|-|
 |ember(ひのこ)|10|-|
-|waterGun(みずてっぽう)|10|-|
+|bubble(あわ)|10|-|
 |synthesis(こうごうせい)|-|最大HPの半分を回復する|
 |withdraw(からにこもる)|-|自分のblockを3上昇させる|
 |groml(なきごえ)|-|相手のattackを3減少させる|
-|scaryFace(こわいかお)|-|相手のspeedを6減少させる|
 |leer(にらみつける)|-|相手のblockを3減少させる|
 
-モンスターリスト①　　　　　　　　　　　　　　　　　　　　　　　　　モンスターリスト②　
+モンスターリスト①　
 |Turtle|Monkey|Penguin|　　　　　　　　　　　　　　　　　　　
 |:-------:|:------:|:------:|
 |HP:55|HP:44|HP:53|
 |attack:17|attack:14|attack:12|
 |block:16|block:11|block:13|
 |speed:15|speed:31|speed:20|
+
+モンスターリスト②　
+|Turtle|Monkey|Penguin|　　　　　　　　　　　　　　　　　　　
+|:-------:|:------:|:------:|
+|tackle|tackle|tackle|
+|razorLeaf|scratch|Peck|
+|synthesis|ember|bubble|
+|withdraw|leer|groml|
   
   
 ### 課題2
