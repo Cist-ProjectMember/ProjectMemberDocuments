@@ -58,7 +58,7 @@
 
 モンスターリスト②
 
-|Turtle|Monkey|Penguin|　　　　　　　　　　　　
+|Turtle|Monkey|Penguin|
 |:-------:|:------:|:------:|
 |tackle|tackle|tackle|
 |razorLeaf|scratch|Peck|
