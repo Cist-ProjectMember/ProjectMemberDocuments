@@ -42,10 +42,8 @@
 |razorLeaf(はっぱカッター)|12|-|
 |ember(ひのこ)|10|-|
 |bubble(あわ)|10|-|
-|synthesis(こうごうせい)|-|最大HPの半分を回復する|
-|withdraw(からにこもる)|-|自分のblockを3上昇させる|
 |groml(なきごえ)|-|相手のattackを3減少させる|
-|leer(にらみつける)|-|相手のblockを3減少させる|
+
 
 モンスターリスト①
 
@@ -60,11 +58,9 @@
 
 |Turtle|Monkey|Penguin|
 |:-------:|:------:|:------:|
-|tackle|tackle|tackle|
-|razorLeaf|scratch|Peck|
-|synthesis|ember|bubble|
-|withdraw|leer|groml|
-
+|1.tackle|1.scratch|1.Peck|
+|2.razorLeaf|.ember|2.bubble|
+|3.groml|3.groml|3.groml|  
   
   
 ### 課題2
