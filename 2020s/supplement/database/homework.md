@@ -16,8 +16,6 @@
 講習会でも説明した通り、データ型は大きく分けて以下のように区別することができます。  
 <a href="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture06.md"><img width="500" alt="illust1" src="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B33.png"></a>
 
-[![](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B33.png)](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture?.md)
-
 　今回はこの図に書かれている型のみで作ります。  
 今回の課題で悩むカラムは「請求書番号」「顧客番号」の番号関連、  
 「請求日」「形状年月」の日付関連の2点だと思います。  
@@ -30,7 +28,7 @@
 ## 余談
 これは応用情報技術者試験の問題を基に作成しています。  
 応用情報技術者試験のほかに、「基本情報技術者試験」「ITパスポート」などの学生向けの資格があります。
-<img width="500" alt="illust1" src="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B311.png">
+[![](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B311.png)](https://www.jitec.ipa.go.jp/1_11seido/seido_gaiyo.html)
 
 自宅にいる時間が多い今だからこそ、何か新しい資格を取ってみてはいかがでしょうか？  
 気になる方がいましたら、[こちら](https://www.jitec.ipa.go.jp/1_11seido/seido_gaiyo.html)が公式サイトとなります。
