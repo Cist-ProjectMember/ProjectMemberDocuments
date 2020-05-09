@@ -14,7 +14,7 @@
 ### データ型
 データ型は宗教問題になりかねになりかねないので、あくまで例として確認ください。  
 講習会でも説明した通り、データ型は大きく分けて以下のように区別することができます。  
-<img width="500" alt="illust1" src="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B33.png">
+<a href="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture06.md"><img width="500" alt="illust1" src="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B33.png"></a>
 
 　今回はこの図に書かれている型のみで作ります。  
 今回の課題で悩むカラムは「請求書番号」「顧客番号」の番号関連、  
