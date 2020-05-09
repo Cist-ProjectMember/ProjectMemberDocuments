@@ -2,7 +2,7 @@
 ## 課題
 次の図を見て、2つのテーブルを作成せよ。
 ただし、データ型及び列制約は自分で考察すること。    
-<img width="500" alt="illust1" src="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B310.png">
+<img width="500" alt="illust1" src="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B310%20(2).png">
 
 図1．販売管理システムのE-R図
 
