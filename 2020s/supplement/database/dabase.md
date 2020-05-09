@@ -2,7 +2,7 @@
 データベース(Database,DB)とは、複数のアプリケーションやユーザーによってデータが共有できるように整理された、データの集合体のこと。<br> DBには「階層型DB」「ネットワーク型DB」など、いくつか種類があるが、現在では「リレーショナルDB」が主流となっている。また、データベースを管理するシステムのことを、データベース管理システム(DBMS)という。<br>
 DBMSの一種にRDBMS(リレーショナルDBMS)がある。これは、行と列によって構成された「表形式のテーブル」と呼ばれるデータの集合を、互いに関連付けて関係モデルを使ったデータベースのことである。<br>  
 RDBMSでは、表の行（横）を「タプル(レコード)」、表の列（縦）を「カラム」、表のマスを「フィールド」、表を「テーブル」と呼ぶ。リレーションとはテーブル同士の関係を設定し、関連付けるものである。2つ以上のテーブルから関連性のあるものを結合して新しい表を作ったり、フィールドの値を更新すると、関連性のあるテーブルの値も自動的に更新したりできる。<br>  
-<img width="500" alt="illust1" src="https://github.com/emm93892/ProjectMemberDocuments/blob/master/2020s/supplement/database/%E5%9B%B31.png">
+<img width="500" alt="illust1" src="https://github.com/emm93892/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B31.png">
 
 # SQLとは？
 SQL(Structured Query Language：構造化問合せ言語)とは、RDBMSを操作するための言語だ。<br>データベース自体にはExcelのように検索機能や他のシートを参照したりする機能はない。<br>データを利用するには都度プログラムが必要であり、そのプログラム言語こそがSQLである。<br>
