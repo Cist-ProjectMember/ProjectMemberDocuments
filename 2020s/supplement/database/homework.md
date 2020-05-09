@@ -16,6 +16,8 @@
 講習会でも説明した通り、データ型は大きく分けて以下のように区別することができます。  
 <a href="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture06.md"><img width="500" alt="illust1" src="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B33.png"></a>
 
+[![](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B33.png)](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture?.md)
+
 　今回はこの図に書かれている型のみで作ります。  
 今回の課題で悩むカラムは「請求書番号」「顧客番号」の番号関連、  
 「請求日」「形状年月」の日付関連の2点だと思います。  
