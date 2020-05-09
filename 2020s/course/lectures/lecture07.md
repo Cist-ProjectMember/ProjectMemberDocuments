@@ -27,10 +27,7 @@
 * moveListには下記の技リストを参照しname,powerの要素を持つ技を追加しなさい。 
 * 各モンスターが持つ技はモンスターリスト②を参照しなさい。
 * effectを持つ技は、その効果を満たすようにメソッドを作成しなさい。  
-* 
-* 
-* 
-* 
+* どのMonsterをインスタンス化したのかを分かるように表示させなさい。  
 
 技リスト  
 
@@ -58,9 +55,9 @@
 
 |Turtle|Monkey|Penguin|
 |:-------:|:------:|:------:|
-|1.tackle|1.scratch|1.Peck|
-|2.razorLeaf|.ember|2.bubble|
-|3.groml|3.groml|3.groml|  
+|tackle|scratch|Peck|
+|razorLeaf|ember|bubble|
+|groml|groml|groml|  
   
   
 ### 課題2
@@ -69,7 +66,10 @@
 * 課題1でインスタンス化したMonsterとは別に野生のMonsterを新たにインスタンス化しなさい。  
 * Monsterクラスにactionメソッドを作成しなさい。  
 * actionメソッドではmoveListの中に入っている4つの技の中から1つ選択し、相手を攻撃する。  
-* 野生のMonsterはランダムに4つの技の中から一つを使ってくるようにしなさい。
-* ここでは、attack+power-block=ダメージとする。  
+* 野生のMonsterはランダムに4つの技の中から一つを使ってくるようにしなさい。  
+* ここでは、attack+power-block=ダメージとする。 
+* whileを用いて、どちらかのFighterが倒れるまで攻撃を繰り返しなさい。  
+* ダメージが発生するごとに残りHPを表示させなさい。  
+* ifを用いて勝敗を表示しなさい。
 
 [目次へ](../README.md)
