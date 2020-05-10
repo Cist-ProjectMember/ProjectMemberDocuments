@@ -6,9 +6,8 @@
 ## 課題
 
 　次の図を見て、2つのテーブルを作成せよ。
-ただし、データ型及び列制約は自分で考察すること。  
-また、各名称を英語で記載すること。  
-H2のデータ型は[ここ](http://www.h2database.com/html/datatypes.html)を参照せよ。
+ただし、データ型及び列制約は自分で考察すること。
+また、各名称を英語で記載すること。H2のデータ型は[ここ](http://www.h2database.com/html/datatypes.html)を参照せよ。  
 <br>
 <img width="500" alt="illust1" src="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B310%20(2).png">
 
