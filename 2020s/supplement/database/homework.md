@@ -45,10 +45,6 @@ CREATE TABLE BILL(
 ### データ型
 
 　データ型は宗教問題になりかねになりかねないので、あくまで例として確認ください。  
-講習会でも説明した通り、データ型は大きく分けて以下のように区別することができます。 
-<br>
-<img width="500" alt="illust1" src="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B33.png">
-
 今回の課題はカラムを番号関連、日付関連、金額関連、テキスト関連で分けられます。  
 それぞれについて解説していきます。
 
