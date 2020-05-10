@@ -57,8 +57,8 @@ CREATE TABLE BILL(
 
 #### 日付
 
-　日付や時刻には _DATETIME_ ,  _DATE_ ,  _TIME_ 、 _TIMESTAMP_ など数多くの方が存在します。  
-最初のころは、時刻は _TIME_ ・日付は _DATE_ ・日時は _DATETIME_ と覚えていただいていいと思います。  
+　日付や時刻には __DATETIME__ ,  __DATE__ ,  __TIME__ 、 __TIMESTAMP__ など数多くの方が存在します。  
+最初のころは、時刻は __TIME__ ・日付は __DATE__ ・日時は __DATETIME__ と覚えていただいていいと思います。  
 今回は「請求日」と「計上年月」の2点でどちらも日付なので"DATE"が適切だと思います。  
 
 #### 金額
