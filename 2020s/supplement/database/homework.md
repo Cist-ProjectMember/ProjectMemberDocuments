@@ -8,6 +8,7 @@
 　次の図を見て、2つのテーブルを作成せよ。
 ただし、データ型及び列制約は自分で考察すること。  
 また、各名称を英語で記載すること。  
+H2のデータ型は[ここ](http://www.h2database.com/html/datatypes.html)を参照せよ。
 <br>
 <img width="500" alt="illust1" src="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B310%20(2).png">
 
@@ -15,17 +16,29 @@
 
 ## 解答
 
-　データベースはどれが正しいなどは決めづらいのであくまで例として参考にしてください。
+　データベースはどれが正しいなどは決めづらいのであくまで例として参考にしてください。  
+英語については僕も得意ではないので間違っているところがあれば3年生に教えてください。  
 ```sql
 # 解答例
-#顧客テーブル
+# 顧客テーブル
 CREATE TABLE CLIENT(
-     CUST_ID varchar(16) PRIMARY KEY,
-     CUST_NAME varchar(32),
-     ACCOUNT_REPRESENTATIVE varchar(32)
-     ACCOUNT_EXECUTIVE varchar(4),
-     CUST_ADDRESS varchar(4)
+     CUST_ID                  char(5)        PRIMARY KEY,
+     CUST_NAME                varchar(60),
+     ACCOUNT_REPRESENTATIVE   varchar(60),
+     ACCOUNT_EXECUTIVE        varchar(60),
+     CUST_ADDRESS             varchar(483)
  );
+# 請求テーブル
+CREATE TABLE BILL(
+     BILL_ID             char(5)   PRIMARY KEY,
+     CUST_ID             char(5),
+     BILL_DATE           DATE,
+     ACCOUNTING          DATE,
+     BILL_AMOUNT         NUMERIC,
+     PURCHASE_AMOUNT     NUMERIC,
+     CLEAR_AMOUNT        NUMERIC,
+     FOREIGN KEY (CUST_ID) REFERENCES CLIENT (CUST_ID)
+);
 ```
 
 ## 解説 
@@ -37,19 +50,37 @@ CREATE TABLE CLIENT(
 <br>
 <img width="500" alt="illust1" src="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B33.png">
 
-　今回はこの図に書かれている型のみで作ります。  
-これ以外のH2DBのデータ型について知りたい方は[こちら](http://www.h2database.com/html/datatypes.html)を参考にしてください。  
-今回の課題で悩むカラムは「請求書番号」「顧客番号」の番号関連、「請求日」「形状年月」の日付関連の2点だと思います。  
+今回の課題はカラムを番号関連、日付関連、金額関連、テキストで分けられます。  
+それぞれについて解説していきます。
 
-　まずは番号について、番号は学籍番号のように「b21○○○○○」のように数字以外の文字を使うことがよくあります。  
+#### 番号
+
+　番号は学籍番号のように「b21○○○○○」のように数字以外の文字を使うことがよくあります。  
 今回は指定がなかったため、おそらく"INTEGER"などを使用した学生もいるかと思います。  
 どちらが正しいなどはないですが、"CHAR"を使うことがあることも覚えておきましょう。  
+また、charではなくvarcharを使った方がいいという意見もあります。
 
-　次に日付関連です。日付や時刻には"DATETIME", "DATE", "TIME"など数多くの方が存在します。  
-最初のころは、時間は"TIME"・日付は"DATE"・日時は"DATETIME"と覚えていただいていいと思います。  
+#### 日付
+
+　日付や時刻には"DATETIME", "DATE", "TIME"、"TIMESTAMP"など数多くの方が存在します。  
+最初のころは、時刻は"TIME"・日付は"DATE"・日時は"DATETIME"と覚えていただいていいと思います。  
 今回は「請求日」と「計上年月」の2点でどちらも日付なので"DATE"が適切だと思います。  
-<br>
-※詳しくは書きませんが"DATETIME"もありです。これは題材が悪かったためそれにする気持ちもわかります。
+
+#### 金額
+
+　金額は"NUMERIC"もしくは"MONEY"を用いることが多いです。  
+"INTEGER"とは数値の正確さに違いがあり、金額のような正確さが求められるものには"INTEGER"などはあまり適していません。　　
+ただ必ずしも間違っているわけではないです。（データベース本当に難しい・・・）  
+　サイズについてはこの問題では決められないので各自適当に。  
+
+#### テキスト
+
+　テキストはこの場合「顧客名」「顧客担当者名」「営業担当者名」「住所」のことを指します。  
+これらで用いる主な型は"varcher","text","name"です。どれが一番かは僕もわかりません()。  
+　
+ ここではサイズ（型のあとに書く数字）について話します。  
+基本サイズは実際よりも多めに見積もります。  
+今回は[このサイト](https://kyogom.com/tech/design/maxlength/)を基にバイト数を作成しました。  
 
 ### 列制約
 
