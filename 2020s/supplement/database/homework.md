@@ -30,10 +30,10 @@ CREATE TABLE CUSTOMER(
 # 請求テーブル
 CREATE TABLE BILL(
      ID                  CHAR(5)   PRIMARY KEY,
-     CUST_ID             CHAR(5),
-     DATE                DATE,
+     CUSTOMER_ID         CHAR(5),
+     Billing_DATE        DATE,
      APPROPRIATE_DATE    DATE,
-     AMOUNT              NUMERIC,
+     Billing_AMOUNT      NUMERIC,
      PURCHASE_AMOUNT     NUMERIC,
      CLEAR_AMOUNT        NUMERIC,
      FOREIGN KEY (CUST_ID) REFERENCES CUSTOMER (ID)
