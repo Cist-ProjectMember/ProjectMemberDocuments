@@ -21,17 +21,17 @@
 # 解答例
 # 顧客テーブル
 CREATE TABLE CLIENT(
-     CUST_ID                  char(5)        PRIMARY KEY,
-     CUST_NAME                varchar(60),
-     ACCOUNT_REPRESENTATIVE   varchar(60),
-     ACCOUNT_EXECUTIVE        varchar(60),
-     CUST_ADDRESS             varchar(483)
+     CUST_ID                  CHAR(5)        PRIMARY KEY,
+     CUST_NAME                VARCHAR(60),
+     ACCOUNT_REPRESENTATIVE   VARCHAR(60),
+     ACCOUNT_EXECUTIVE        VARCHAR(60),
+     CUST_ADDRESS             VARCHAR(483)
  );
 # 請求テーブル
 CREATE TABLE BILL(
-     BILL_ID             char(5)   PRIMARY KEY,
-     CUST_ID             char(5),
-     BILL_DATE           DATE,
+     BILL_ID             CHAR(5)   PRIMARY KEY,
+     CUST_ID             CHAR(5),
+     BILL_DATE           DATA,
      ACCOUNTING          DATE,
      BILL_AMOUNT         NUMERIC,
      PURCHASE_AMOUNT     NUMERIC,
