@@ -22,10 +22,10 @@
 # 顧客テーブル
 CREATE TABLE CUSTOMER(
      ID                       CHAR(5)        PRIMARY KEY,
-     NAME                VARCHAR(60),
+     NAME                     VARCHAR(60),
      ACCOUNT_REPRESENTATIVE   VARCHAR(60),
      ACCOUNT_EXECUTIVE        VARCHAR(60),
-     ADDRESS             VARCHAR(483)
+     ADDRESS                  VARCHAR(483)
  );
 # 請求テーブル
 CREATE TABLE BILL(
