@@ -49,7 +49,7 @@ CREATE TABLE BILL(
 <br>
 <img width="500" alt="illust1" src="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B33.png">
 
-今回の課題はカラムを番号関連、日付関連、金額関連、テキストで分けられます。  
+今回の課題はカラムを番号関連、日付関連、金額関連、テキスト関連で分けられます。  
 それぞれについて解説していきます。
 
 #### 番号
