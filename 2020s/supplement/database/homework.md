@@ -31,7 +31,7 @@ CREATE TABLE CLIENT(
 CREATE TABLE BILL(
      BILL_ID             CHAR(5)   PRIMARY KEY,
      CUST_ID             CHAR(5),
-     BILL_DATE           DATA,
+     BILL_DATE           DATE,
      ACCOUNTING          DATE,
      BILL_AMOUNT         NUMERIC,
      PURCHASE_AMOUNT     NUMERIC,
