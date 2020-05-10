@@ -20,20 +20,20 @@
 ```sql
 # 解答例
 # 顧客テーブル
-CREATE TABLE CLIENT(
-     CUST_ID                  CHAR(5)        PRIMARY KEY,
-     CUST_NAME                VARCHAR(60),
+CREATE TABLE CUSTOMER(
+     ID                       CHAR(5)        PRIMARY KEY,
+     NAME                VARCHAR(60),
      ACCOUNT_REPRESENTATIVE   VARCHAR(60),
      ACCOUNT_EXECUTIVE        VARCHAR(60),
-     CUST_ADDRESS             VARCHAR(483)
+     ADDRESS             VARCHAR(483)
  );
 # 請求テーブル
 CREATE TABLE BILL(
-     BILL_ID             CHAR(5)   PRIMARY KEY,
+     ID                  CHAR(5)   PRIMARY KEY,
      CUST_ID             CHAR(5),
-     BILL_DATE           DATE,
-     ACCOUNTING          DATE,
-     BILL_AMOUNT         NUMERIC,
+     DATE                DATE,
+     APPROPRIATE_DATE    DATE,
+     AMOUNT              NUMERIC,
      PURCHASE_AMOUNT     NUMERIC,
      CLEAR_AMOUNT        NUMERIC,
      FOREIGN KEY (CUST_ID) REFERENCES CLIENT (CUST_ID)
@@ -94,10 +94,11 @@ CREATE TABLE BILL(
 　次に外部キーの見つけ方ですがこれはとても簡単です。  
 2つのテーブルに共通するカラムがあれば、それが外部キーおよび主キーとなります。  
 今回の問題では「顧客番号」がどちらも含まれていますので、  
-「請求テーブル」の「顧客番号」が外部キー、「顧客テーブル」の「顧客番号」が主キーとなります。  
+「請求テーブル」の「顧客番号」が外部キー、「顧客テーブル」の「顧客番号」が主キーとなります。
+外部キーは"テーブル名_ID"というで作ります。  
 
 　最後に主キーの見つけ方です。主キーは内容が被ることなく、nullにもならないカラムでなければいけません。  
-"テーブル名_ID"という言葉で主キーを意図的に作ることがあります。  
+ 多くの場合IDとなる番号が主キーです。  
 今回の問題では「請求番号」がそれにあたります。  
 
 ## 余談
