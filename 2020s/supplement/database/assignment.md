@@ -112,4 +112,4 @@ CREATE TABLE BILL(
 　今度データベースを扱うにあたってJDBCを使用することが増えてくると思います。  
 JDBCはJava側からデータベースを操作するためのものであり、  
 これからは今回の講習のようにコンソールを直接いじってデータを追加することはなかなかありません。  
-ぜひJDBCも学びましょう。
+昨年使用した講習資料も[こちら](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2019s/course/lecture10.md)に載せておくので、それも参考にぜひJDBCも学びましょう。
