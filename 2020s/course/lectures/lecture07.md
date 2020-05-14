@@ -23,11 +23,20 @@
 * Turtle、Monkey、Penguinの中から気に入った1匹を選択しインスタンス化しなさい。  
 * name(名前),hitPoint(体力),attack(攻撃力),block(防御力),speed(素早さ)は引数付きコンストラクタにて初期化しなさい。  
 * Monsterのコンストラクタに入れる値は下記のモンスターリスト①を参照しなさい。  
-* StatusMoveはステータスに変化をもたらす技、AttackMoveはダメージを与える技とする。  
+* HealMoveは体力を回復技、AttackMoveはダメージを与える技とする。  
 * moveListには下記の技リストを参照しname,powerの要素を持つ技を追加しなさい。 
 * effectを持つ技は、その効果を満たすようにメソッドを作成しなさい。
 * 各モンスターが持つ技はモンスターリスト②を参照しなさい。
 * どのモンスターをインスタンス化したのかを分かるように表示させなさい。  
+
+モンスターリスト①
+
+|Turtle|Monkey|Penguin|
+|:-------:|:------:|:------:|
+|HP:55|HP:44|HP:53|
+|attack:17|attack:14|attack:12|
+|block:16|block:11|block:13|
+|speed:15|speed:31|speed:20|
 
 技リスト  
 
@@ -39,25 +48,16 @@
 |razorLeaf(はっぱカッター)|12|-|
 |ember(ひのこ)|10|-|
 |bubble(あわ)|10|-|
-|groml(なきごえ)|-|相手のattackを3減少させる|
+|Synthesis(こうごうせい)|-|体力を半分回復する|
 
-
-モンスターリスト①
-
-|Turtle|Monkey|Penguin|
-|:-------:|:------:|:------:|
-|HP:55|HP:44|HP:53|
-|attack:17|attack:14|attack:12|
-|block:16|block:11|block:13|
-|speed:15|speed:31|speed:20|
 
 モンスターリスト②
 
 |Turtle|Monkey|Penguin|
 |:-------:|:------:|:------:|
 |tackle|scratch|Peck|
-|razorLeaf|ember|bubble|
-|groml|groml|groml|  
+|razorLeaf|tackle|tackle|
+|Synthesis|ember|bubble|  
   
   
 ### 課題2
