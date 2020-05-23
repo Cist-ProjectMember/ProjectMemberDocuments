@@ -2,7 +2,7 @@
 データベース(Database,DB)とは、複数のアプリケーションやユーザーによってデータが共有できるように整理された、データの集合体のこと。<br> DBには「階層型DB」「ネットワーク型DB」など、いくつか種類があるが、現在では「リレーショナルDB」が主流となっている。また、データベースを管理するシステムのことを、データベース管理システム(DBMS)という。<br>
 DBMSの一種にRDBMS(リレーショナルDBMS)がある。これは、行と列によって構成された「表形式のテーブル」と呼ばれるデータの集合を、互いに関連付けて関係モデルを使ったデータベースのことである。<br>  
 RDBMSでは、表の行（横）を「タプル(レコード)」、表の列（縦）を「カラム」、表のマスを「フィールド」、表を「テーブル」と呼ぶ。リレーションとはテーブル同士の関係を設定し、関連付けるものである。2つ以上のテーブルから関連性のあるものを結合して新しい表を作ったり、フィールドの値を更新すると、関連性のあるテーブルの値も自動的に更新したりできる。<br>  
-<img width="500" alt="illust1" src="https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/supplement/database/image/%E5%9B%B31.png">
+<img width="500" alt="illust1" src="https://github.com/emm93892/ProjectMemberDocuments/blob/master/2020s/supplement/database/%E5%9B%B31.png">
 
 # SQLとは？
 SQL(Structured Query Language：構造化問合せ言語)とは、RDBMSを操作するための言語だ。<br>データベース自体にはExcelのように検索機能や他のシートを参照したりする機能はない。<br>データを利用するには都度プログラムが必要であり、そのプログラム言語こそがSQLである。<br>
@@ -118,13 +118,13 @@ ORDER BY 〇〇 ASC/DESCを書くこともでき、ASCが昇順、DESCが降順�
 | english_score | integer |
 
 ***表2 入力情報***
-| id | student_name | math | english |
+| id | student_name | math_score | english |
 -----|--------------|------|--------
 | 1 | A | 60 | 60 |
 | 2 | B | 80 | 80 |
 | 3 | C | 0 | 0 |
 
-####  2.mathを基準に降順でソートしなさい。
+####  2.math_scoreを基準に降順でソートしなさい。
 
 
 ## WHERE
@@ -222,18 +222,31 @@ DROP TABLE account;
 |date|date|
 
 ***表4　入力情報***
-|id|product_name|price|data|
+|id|product_name|price|date|
 ---|---|---|---
-|1|マスク|500|2020-04-01|
-|2|マスク|500|2020-04-01|
-|3|トイレットペーパー|200|2020-04-02|
-|4|トイレットペーパー|200|2020-04-02|
-|5|消毒液|300|2020-04-03|
-|6|消毒液|300|2020-04-03|
-|7|マスク|500|2020-04-04|
-|8|空気除菌剤|5000|2020-04-04|
-|9|タンポポ茶|10000|2020-04-05|
-|10|タンポポ茶|10000|2020-04-05|
+|1|マスク|500|20200401|
+|2|マスク|500|20200401|
+|3|トイレットペーパー|200|20200402|
+|4|トイレットペーパー|200|20200402|
+|5|消毒液|300|20200403|
+|6|消毒液|300|20200403|
+|7|マスク|500|20200404|
+|8|空気除菌剤|5000|20200404|
+|9|タンポポ茶|10000|20200405|
+|10|タンポポ茶|10000|20200405|
+
+```SQL
+values  (1,'マスク',500,20200401),
+            (2,'マスク',500,20200401),
+            (3,'トイレットペーパー',200,20200402),
+            (4,'トイレットペーパー',200,20200402),
+            (5,'消毒液',300,20200403),
+            (6,'消毒液',300,20200403),
+            (7,'マスク',500,20200404),
+            (8,'空気除菌剤',5000,20200404),
+            (9,'タンポポ茶',10000,20200405),
+            (10,'タンポポ茶',10000,20200405);
+```
 
 #### 2.マスクが売れた日の日付を表示しなさい。
 #### 3.2020-04-04から2020-04-05のデータをすべて表示しなさい。
@@ -319,17 +332,18 @@ INNER JOIN faculty ON user.faculty_ID = faculty.ID;
 |4|d|
 |5|e|
 
-#### 2.表7のテーブル構造情報をもとにchoice_electivesを作成し、表8の情報を入れなさい。なお、student_informationのstudent_numberを親カラムとし、choice_electivesのstudent_numberを子カラムとしたforeign key制約も設定しなさい。参照制約動作は親カラムが更新、削除されたら追従する。
+#### 2.表7のテーブル構造情報をもとにchoice_electivesを作成し、表8の情報を入れなさい。その後、テーブルのデータを表示しなさい。なお、student_informationのstudent_numberを親カラムとし、choice_electivesのstudent_idを子カラムとしたforeign key制約も設定しなさい。参照制約動作は親カラムが削除されたら追従する。
+
 
 ***表7 テーブル構造***
 |カラム名|データ型|列制約|備考|
 --|--|--|--
-|student_number|integer|主キー|親テーブル=stundet_infromation、親カラム=student_number、子テーブル=chioce_electives、子カラム=student_number、親カラムが更新、削除されたら子カラムも追従させる。|
+|student_id|integer|主キー|親テーブル=stundet_infromation、親カラム=student_number、子テーブル=chioce_electives、子カラム=student_id、親カラムが更新、削除されたら子カラムも追従させる。|
 |electives_1|varchar(8)|非NULL|   |
 |electives_2|varchar(8)|非NULL|   |
 
 ***表8　入力情報***
-|student_number|electives_1|electives_2|
+|student_id|electives_1|electives_2|
 --|--|--
 |1|数学|英語|
 |2|英語|数学|
