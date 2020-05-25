@@ -136,7 +136,7 @@ Fighter2 は倒れた。
 * Accountのコンストラクタはbalanceの初期化を０で行う。
 * ATMのコンストラクタでaccountListを初期化する。
 * registerAccount()はアカウントを登録する。
-* exitsAccount()は引数のnameとnumberからaccountListに存在するかどうかをbooleanで返す。
+* existsAccount()は引数のnameとnumberからaccountListに存在するかどうかをbooleanで返す。
 * deposit()とwithdraw()は引数のnumberがaccountListに存在するとき、引数のmoneyを利用して入金と引出を行う。
 * withdraw()は残高が足りないときは行えないようにする。
 * それぞれ何か行うたびに、何をしたかわかるように標準出力で表示するようにせよ。
