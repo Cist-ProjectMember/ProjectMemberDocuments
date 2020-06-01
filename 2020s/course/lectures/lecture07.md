@@ -48,7 +48,6 @@
 |razorLeaf(はっぱカッター)|12|-|
 |ember(ひのこ)|10|-|
 |bubble(あわ)|10|-|
-|Synthesis(こうごうせい)|-|体力を半分回復する|
 
 
 モンスターリスト②
@@ -57,7 +56,7 @@
 |:-------:|:------:|:------:|
 |tackle|scratch|Peck|
 |razorLeaf|tackle|tackle|
-|Synthesis|ember|bubble|  
+||ember|bubble|  
   
   
 ### 課題2
