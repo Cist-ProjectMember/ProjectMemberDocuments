@@ -40,7 +40,7 @@
 
 技リスト  
 
-|name|power|effect|
+|name|power|
 |:-------:|:------:|
 |tackle(たいあたり)|10|
 |scratch(ひっかく)|10|
