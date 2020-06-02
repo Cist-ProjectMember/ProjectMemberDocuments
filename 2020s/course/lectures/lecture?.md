@@ -178,7 +178,7 @@ Java 8以降から導入された機能で、配列やCollectionなどの集合�
 List<String> numTextList = Arrays.asList("0", "1", "2", "3");
 List<Integer> numList = new ArrayList<>();
 for (String numText : numTextList) {
-    numList.add(Integer.parseInt(numText));
+    numList.add(Integer.valueOf(numText));
 }
 ```
 
@@ -186,7 +186,7 @@ for (String numText : numTextList) {
 ```java
 List<String> numTextList = Arrays.asList("0", "1", "2", "3");
 List<Integer> numList = numTextList.stream()
-        .map(s- > Integer.parseInt(s))
+        .map(s- > Integer.valueOf(s))
         .collect(Collectors.toList());
 ```
 
