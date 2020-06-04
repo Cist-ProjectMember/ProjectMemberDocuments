@@ -186,7 +186,7 @@ for (String numText : numTextList) {
 ```java
 List<String> numTextList = Arrays.asList("0", "1", "2", "3");
 List<Integer> numList = numTextList.stream()
-        .map(s- > Integer.valueOf(s))
+        .map(s -> Integer.valueOf(s))
         .collect(Collectors.toList());
 ```
 
