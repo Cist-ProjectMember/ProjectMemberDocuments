@@ -125,7 +125,7 @@ public static void main(String[] args) {
 }
 
 //実行結果
-id=aiueo, name=三浦一斗 
+id=b2182360, name=三浦一斗 
 ```
 
 上記のアクセサを利用することで正しく制限することができるようになる。
