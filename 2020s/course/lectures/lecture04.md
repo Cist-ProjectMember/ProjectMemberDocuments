@@ -68,6 +68,11 @@ class Student {
 		this.id = id;
 		this.name = name;
 	}
+	
+	@Override
+	public String toString() {
+		return "id=" + this.id + ", name=" + this.name;
+	}
 }
 
 //main
@@ -75,7 +80,12 @@ public static void main(String[] args) {
 	Student student = new Student("b2182360", "三浦一斗");
 		
 	student.id = "aiueo";
+	
+	System.out.println(student);
 }
+
+//実行結果
+id=aiueo, name=三浦一斗 
 ```
 
 このようなことを防ぐために、正しくカプセル化を行い、アクセサによりフィールドの値の取りうる範囲を制限する
@@ -89,6 +99,11 @@ public class Student {
 	public Student(String id, String name) {
 		this.id = id;
 		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return "id=" + this.id + " name=" + this.name;
 	}
 	
 	public void setId(String id) {
@@ -106,8 +121,11 @@ public static void main(String[] args) {
 	Student student = new Student("b2182360", "三浦一斗");
 		
 	//errorとなる
-	student.setId("aiueo");
+	System.out.println(student);
 }
+
+//実行結果
+id=aiueo, name=三浦一斗 
 ```
 
 上記のアクセサを利用することで正しく制限することができるようになる。
