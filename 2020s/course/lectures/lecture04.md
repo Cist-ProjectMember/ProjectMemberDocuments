@@ -59,6 +59,24 @@ public int getChannel() {
 カプセル化されていないと以下のようなことができてしまう。
 
 ```java
+<-class->
+class Student {
+	String id;
+	String name;
+	
+	Student(String id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+}
+
+<-main->
+Student student = new Student("b2182360", "三浦一斗");
+
+student.id = b2190000;
+```
+
+```java
 Television television = new Television();
 
 television.channel = 2020;
