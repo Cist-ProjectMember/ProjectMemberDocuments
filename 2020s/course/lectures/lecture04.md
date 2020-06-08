@@ -143,27 +143,27 @@ id=b2182360
 
 以下のクラスを作成せよ。  
 
-![](http://www.plantuml.com/plantuml/png/JO-nRiOW38Htde8Hr5RgpFJ_IvKkLQJ_2Pp49LQ8gS39qAhlNYj1LIOuxhl3lbM18jkQJ5s8lw30QiS4jTv52WsRuFkO-K7VQ5_DOTWtYhDW-J7sfUi3iUYbIa6ECZV9i69uQ057O-nJIxWJVxONMjK5zWg328oB-zGCbj2YFkoP9dMftXFjw7mOSau8h6yHfUlTFr8FgTMswttGyqG-z1k5sbI_veOywTv_)
+![](http://www.plantuml.com/plantuml/png/JOx1JiOW48JlF0L7Y9fuvjHUZ5wCIPzWssxQJM5fO5kZndUN-fC_723Bp7p3TbaWoH6yoXln3Wc2dZpat8ia6W_1jodoGD-edzM_eLzeMGNJZz9FAyb791PNJddkyHDJdHa2ka4IyQAKVgYGQOb7NO5hRFAsv444fiqWO_Xo5RRkZ3GNatBlwKHZtHYZH-2YBIYljTlSWxaHsv_jTTsWTmXNKTtqLtN8yn7y7m00)
 * Exercise4_1クラスを作成しmainメソッドを作成せよ。
 * クラス図を見ながらFighterクラスを作成せよ。
-* attack()では引数で受け取ったFighterのHPを自分のstrength分減らし、与えたダメージ量と、ダメージを与えたということを表示する。
-* isAlive()では自分のHPを比較し、生きているかををbooleanで返す。
-* HP, strength, nameは引数付きコンストラクタにて初期化せよ。
+* attack()では引数で受け取ったFighterのHPを自分のpower分減らし、与えたダメージ量と、ダメージを与えたということを表示する。
+* isAlive()では自分のhitPointを比較し、生きているかををbooleanで返す。
+* hitPoint, power, nameは引数付きコンストラクタにて初期化せよ。
 * Fighterを2つインスタンス化し、互いに戦わせる。
 * Fighterのコンストラクタに各自適当に値を見繕いインスタンス化し、main内に保持せよ。
 * whileを用いて、どちらかのFighterが倒れるまで攻撃を繰り返す。
-* ダメージが発生するごとに残りHPを表示する。
+* ダメージが発生するごとに残りhitPointを表示する。
 * ifを用いて勝敗を表示する。
 
 #### 実行結果
 
 ```
 Fighter1 は Fighter2 に 100 ダメージを与えた。
-Fighter2 の残り HP : 80
+Fighter2 の残り hitPoint : 80
 Fighter2 は Fighter1 に 150 ダメージを与えた。
-Fighter1 の残り HP : 60
+Fighter1 の残り hitPoint : 60
 Fighter1 は Fighter2 に 100 ダメージを与えた。
-Fighter2 の残り HP : -20
+Fighter2 の残り hitPoint : -20
 Fighter2 は倒れた。
 ```
 
