@@ -99,10 +99,9 @@ television.setChannel(2020);
 
 以下のクラスを作成せよ。  
 
-![](http://www.plantuml.com/plantuml/png/LSwn3e903CRnlK_H4H86vvjWCRgPy0G5AZGSFNDN63I-knVHHCUclt_orSaeshfuIBFeZI8js7jAgJ6Bqgt6vpveAtV60xmVU9HnCeuFmDF5YHfWiiWwshHVIWkxDjSw0dnriTlgprQ_jWGaC-hdufeJZkvJbcuBCW1AQhniN9Ik2y4pAJoXPXtozXS0)
+![](http://www.plantuml.com/plantuml/png/JO-nRiOW38Htde8Hr5RgpFJ_IvKkLQJ_2Pp49LQ8gS39qAhlNYj1LIOuxhl3lbM18jkQJ5s8lw30QiS4jTv52WsRuFkO-K7VQ5_DOTWtYhDW-J7sfUi3iUYbIa6ECZV9i69uQ057O-nJIxWJVxONMjK5zWg328oB-zGCbj2YFkoP9dMftXFjw7mOSau8h6yHfUlTFr8FgTMswttGyqG-z1k5sbI_veOywTv_)
 * Exercise4_1クラスを作成しmainメソッドを作成せよ。
-* 作成したFighterクラスをカプセル化し、必要に応じてアクセサを新たに追加せよ。
-* 可視性は省略されているから自分で判断せよ。 
+* クラス図を見ながらFighterクラスを作成せよ。
 * attack()では引数で受け取ったFighterのHPを自分のstrength分減らし、与えたダメージ量と、ダメージを与えたということを表示する。
 * isAlive()では自分のHPを比較し、生きているかををbooleanで返す。
 * HP, strength, nameは引数付きコンストラクタにて初期化せよ。
