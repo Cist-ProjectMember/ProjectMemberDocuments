@@ -121,6 +121,7 @@ public static void main(String[] args) {
 	Student student = new Student("b2182360", "三浦一斗");
 		
 	//errorとなる
+	student.id = "aiueo";
 	System.out.println(student);
 }
 
