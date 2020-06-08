@@ -59,7 +59,7 @@ public int getChannel() {
 カプセル化されていないと以下のようなことができてしまう。
 
 ```java
-<-class->
+//class
 class Student {
 	String id;
 	String name;
@@ -70,34 +70,47 @@ class Student {
 	}
 }
 
-<-main->
-Student student = new Student("b2182360", "三浦一斗");
-
-student.id = b2190000;
-```
-
-```java
-Television television = new Television();
-
-television.channel = 2020;
+//main
+public static void main(String[] args) {
+	Student student = new Student("b2182360", "三浦一斗");
+		
+	student.id = "aiueo";
+}
 ```
 
 このようなことを防ぐために、正しくカプセル化を行い、アクセサによりフィールドの値の取りうる範囲を制限する
 
 ```java
-public void setChannel(int channel){
-	if(channel < 0 || channel > 12) this.channel = 0;
-	else this.channel = channel;
+//class
+public class Student {
+	private String id;
+	private String name;
+	
+	public Student(String id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	
+	public void setId(String id) {
+		if (id.startWith("b2") && id.length <= 8){
+			//idが"b2"で始まる かつ ８文字以下である。
+			this.id = id;
+		} else {
+			//error処理をする
+		}
+	}
+}
+
+//main
+public static void main(String[] args) {
+	Student student = new Student("b2182360", "三浦一斗");
+		
+	//errorとなる
+	student.setId("aiueo");
 }
 ```
 
-上記のアクセサを利用することで正しく範囲を制限することができるので以下のような場合はchannelが0になる。
-
-```java
-Television television = new Television();
-
-television.setChannel(2020);
-```
+上記のアクセサを利用することで正しく制限することができるようになる。
 
 ## クラス図について
 
