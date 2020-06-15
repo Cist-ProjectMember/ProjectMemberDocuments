@@ -177,7 +177,7 @@ Fighter2 は倒れた。
 * 可視性は省略されているから自分で判断せよ。 
 * mainの中でATMをインスタンス化する。
 * Accountのコンストラクタはbalanceの初期化を０で行う。
-* ATMのコンストラクタでaccountListを初期化する。
+* ATMのコンストラクタでaccountListを初期化する。Listについてはlecture03の[外部ライブラリの利用](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture03.md#javautilarraylist%E3%82%AF%E3%83%A9%E3%82%B9)を参照。
 * registerAccount()はアカウントを登録する。
 * existsAccount()は引数のnameとnumberからaccountListに存在するかどうかをbooleanで返す。
 * deposit()とwithdraw()は引数のnumberがaccountListに存在するとき、引数のmoneyを利用して入金と引出を行う。
