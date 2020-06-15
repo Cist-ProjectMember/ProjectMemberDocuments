@@ -2,7 +2,7 @@
 
 ## アクセス範囲/アクセス修飾子
 
-全てのクラス、[フィールド、メソッド](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture02.md#%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)にはアクセス範囲が定められており、各クラス、フィールド、メソッドの宣言の前に以下のようなキーワード(アクセス修飾子と呼ぶ)を記述することでアクセス範囲を指定することが出来る。  
+全てのクラス、[フィールド、メソッド](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture02.md#%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)にはアクセス範囲が定められており、各クラス、[フィールド、メソッド](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture02.md#%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)の宣言の前に以下のようなキーワード(アクセス修飾子と呼ぶ)を記述することでアクセス範囲を指定することが出来る。  
 
 |修飾子|公開範囲|
 |:-|:-|
