@@ -2,7 +2,7 @@
 
 ## アクセス範囲/アクセス修飾子
 
-全てのクラス、フィールド、メソッドにはアクセス範囲が定められており、各クラス、フィールド、メソッドの宣言の前に以下のようなキーワード(アクセス修飾子と呼ぶ)を記述することでアクセス範囲を指定することが出来る。  
+全てのクラス、[フィールド、メソッド](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture02.md#%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)にはアクセス範囲が定められており、各クラス、フィールド、メソッドの宣言の前に以下のようなキーワード(アクセス修飾子と呼ぶ)を記述することでアクセス範囲を指定することが出来る。  
 
 |修飾子|公開範囲|
 |:-|:-|
@@ -11,7 +11,7 @@
 |protected|同一クラス/同一パッケージ/サブクラスのみ参照可能|
 |(なし/package private)|同一クラス/同一パッケージのみ参照可能|
 
-理解し辛い人は、とりあえず全てのフィールド/メソッドをprivateとして定義し、必要に応じてprotectedやpublicにすると良い。  
+理解し辛い人は、とりあえず全ての[フィールド/メソッド](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture02.md#%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)をprivateとして定義し、必要に応じてprotectedやpublicにすると良い。  
 
 ```java
 public class Television {
@@ -34,7 +34,7 @@ public class Television {
 
 ## アクセサ(セッター, ゲッター)
 
-どのクラスにおいても、全てのフィールドは基本的にprivateもしくはprotected修飾子が付加されているため、外部からアクセスすることが出来ない。そこで、外部からアクセスする必要があるフィールドにのみ、setter(セッター)、getter(ゲッター)というメソッドをpublicで定義する。セッターとゲッターをまとめてアクセサと呼ぶ。アクセサはメソッド名の命名に規則があり、それぞれ  
+どのクラスにおいても、全ての[フィールド](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture02.md#%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)は基本的にprivateもしくはprotected修飾子が付加されているため、外部からアクセスすることが出来ない。そこで、外部からアクセスする必要がある[フィールド](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture02.md#%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)にのみ、setter(セッター)、getter(ゲッター)という[メソッド](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture02.md#%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)をpublicで定義する。セッターとゲッターをまとめてアクセサと呼ぶ。[アクセサ](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture02.md#%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)はメソッド名の命名に規則があり、それぞれ  
 
 ```java
 public void setChannel(int channel) {
@@ -51,7 +51,7 @@ public int getChannel() {
 
 ## カプセル化
 
-アクセス修飾子により外部からのアクセス範囲を制限し、アクセサにより利用してもらいたいフィールド/メソッドへのアクセスを提供することをカプセル化と呼ぶ。カプセル化はオブジェクト指向プログラミングにおける大きな要素の一つである。大きなプロジェクトにおいては、カプセル化により、利用してもらいたくないクラス/フィールド/メソッドへのアクセスを禁止することで人為的なバグを減らすことが出来る。  
+アクセス修飾子により外部からのアクセス範囲を制限し、アクセサにより利用してもらいたい[フィールド/メソッド](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture02.md#%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)へのアクセスを提供することをカプセル化と呼ぶ。カプセル化はオブジェクト指向プログラミングにおける大きな要素の一つである。大きなプロジェクトにおいては、カプセル化により、利用してもらいたくないクラス/[フィールド/メソッド](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture02.md#%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)へのアクセスを禁止することで人為的なバグを減らすことが出来る。  
 
 現実的な例 :  
 テレビのチャンネルは直接ではなく、テレビに付属するチャンネル変更ボタンやリモコンのチャンネル変更ボタンにより変更してほしい。  
@@ -83,7 +83,7 @@ public static void main(String[] args) {
 id=aiueo
 ```
 
-このようなことを防ぐために、正しくカプセル化を行い、アクセサによりフィールドの値の取りうる範囲を制限する
+このようなことを防ぐために、正しくカプセル化を行い、アクセサにより[フィールド](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture02.md#%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)の値の取りうる範囲を制限する
 
 ```java
 //class
