@@ -18,8 +18,7 @@
 
 ![](http://www.plantuml.com/plantuml/png/RLFR2jim37ttLvZi9UcQifOzXL7QFOmDrZ785pYDQ4qTEyHkkyiA_TVzo6J5Tb8Oj44-biwHZfATTM9mrqunUv6w5uFe-549Q_VE3RAvElXoDBgMlu2_O-nWj7Kmy6oJyR9Sy6oTyKyIL1jl25cKWpoTNOc7rUfznW_c1hpw-toc7qDsSRpGHNdjopzRIcACf7aa-yrugKK7LOszw1EUpj9zDrAx2lzu54GJ3eqoAROzG1lY3fc_Ikig__ZWTRQCyRT199y9B3dozv5_oSSkn_YZCZ5Cv0NIYBRrbBbNgNnKL3SZMtz3rJbew7vMGMt9fMxX1nN7F7isTw98YBHx9GbeZ54WD68dSDz4XrWqWw3FmG-4yUd9PjXaLbAZed6iL898xISA07kmk0TQBMsX6zkVsqW0EKbfUKXPJwC6P1CHRrU3hYYe_KiNvtrCQxy1YhsPhnnBo9iPLlpFZGTBNK_l5hNUcpiCD1dMJNUlUqz9HLfS76YQvsMJeNaKte5kyGFw1m00)
 
-* Exercise7_1クラスを作成し、mainメソッドを作成しなさい。  
-* 作成したクラスをカプセル化し、必要に応じてアクセサを新たに追加しなさい。     
+* Exercise7_1クラスを作成し、mainメソッドを作成しなさい。       
 * Turtle、Monkey、Penguinの中から気に入った1匹を選択しインスタンス化しなさい。  
 * name(名前),hitpoint(体力),attack(攻撃力),block(防御力),speed(素早さ)は引数付きコンストラクタにて初期化しなさい。  
 * Monsterのコンストラクタに入れる値は下記のモンスターリスト①を参照しなさい。  
