@@ -189,7 +189,7 @@ C言語のプロトタイプ宣言と同じような記述が可能である。
 
 ```java
 public 	abstract class AbstractClass {
-		public abstract void execute();		// {} は必要ない
+	public abstract void execute();		// {} は必要ない
 }
 
 public class SubClass extends AbstractClass {
