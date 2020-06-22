@@ -20,7 +20,7 @@
 
 * Exercise7_1クラスを作成し、mainメソッドを作成しなさい。  
 * 上記のクラス図に従ってMonsterクラス、AttackMoveクラス、Fieldクラス、Moveクラスを作成しなさい。
-* クラス図で分からない部分があれば[plantuml](https://plantuml.com/ja/class-diagram)を参照し、各自調べなさい。
+* クラス図で分からない部分があれば[ここ](https://plantuml.com/ja/class-diagram)を参照し、各自調べなさい。
 * Turtle、Monkey、Penguinの中から気に入った1匹を選択しインスタンス化しなさい。  
 * name(名前),hitpoint(体力),attack(攻撃力),block(防御力),speed(素早さ)は引数付きコンストラクタにて初期化しなさい。  
 * Monsterのコンストラクタに入れる値は下記のモンスターリスト①を参照しなさい。  
