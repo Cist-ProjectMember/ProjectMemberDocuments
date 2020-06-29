@@ -1,6 +1,6 @@
 # Javaまとめ
 
-lecture07は今までの知識をフル活用かつ講習では教えていないlambdaなどを使用する超応用問題となってしまいました😢  
+lecture07は今までの知識をフル活用かつ講習では教えていないlambdaなどを使用する超応用問題となってしまいました  
 おそらく三年生でも答えられない部分もあると思うので、各自頑張って調べながらやってください！  
 省略できる処理は省略してしまいましょう。(無駄に長いコードを ”冗長なコード” とも呼ぶ)  
 
@@ -62,7 +62,7 @@ lecture07は今までの知識をフル活用かつ講習では教えていな�
 
 * 課題1でインスタンス化したモンスターとは別に野生のモンスターを新たにインスタンス化しなさい。  
 * FieldクラスのbattleStartメソッドでは素早さの判定、技の選択、Monsterの生死を判定する。
-* battleStartメソッドではlambdaも使用するため、lecture?を参照しなさい。
+* battleStartメソッドではlambdaも使用するため、[lecture?](https://github.com/Cist-ProjectMember/ProjectMemberDocuments/blob/master/2020s/course/lectures/lecture%3F.md)を参照しなさい。
 * MoveメソッドではmoveListの中に入っている3つの技の中から1つ選択する。 
 * 野生のモンスターは3つの技の中からランダムに1つを選択する。
 * バトルを行う際には、speedが高いモンスターから行動を開始しなさい。
